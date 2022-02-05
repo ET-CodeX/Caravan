@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="Heizung_NET" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "DayNightSplitter_Class1"
+			GUID       = "{61C8A3A7-3A99-4280-B512-C4C79210F918}"
+			Class      = "DayNightSplitter_Class"
+			Position   = "(2430,510)"
+			Visualized = "true"
+			Remotely   = "true"
+			CyclicTime = "200 µs">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="DayFanMode"/>
+				<Server Name="DayFanSpeed"/>
+				<Server Name="DayHeaterON"/>
+				<Server Name="DaySetRoomTemp"/>
+				<Server Name="DaySetTempHZS"/>
+				<Server Name="NightFanMode"/>
+				<Server Name="NightFanSpeed"/>
+				<Server Name="NightHeaterOn"/>
+				<Server Name="NightSetRoomTemp"/>
+				<Server Name="NightSetTempHZS"/>
+				<Client Name="DesiredFanMode"/>
+				<Client Name="DesiredFanSpeed"/>
+				<Client Name="DesiredHeaterPWR"/>
+				<Client Name="DesiredHZSTemp"/>
+				<Client Name="DesiredRoomTemp"/>
+				<Client Name="OC_ToTimerClass"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "TempControl_Class1"
+			GUID       = "{2960B9C0-9831-4FAD-BDEB-8F86135CD495}"
+			Class      = "TempControl_Class"
+			Position   = "(750,330)"
+			Visualized = "true"
+			Remotely   = "true"
+			CyclicTime = "50 ms">
+			<Channels>
+				<Server Name="Actual_TempHZS_S"/>
+				<Server Name="Actual_UltraheatTemp_S"/>
+				<Server Name="ActualRoomTemp_S"/>
+				<Server Name="ClassSvr"/>
+				<Server Name="FanMode_S"/>
+				<Server Name="FanSpeed_S"/>
+				<Server Name="HeaterOn_S"/>
+				<Server Name="SetRoomTemp_S"/>
+				<Server Name="SetTempHZS_s"/>
+				<Client Name="ActualRoomTemp_C"/>
+				<Client Name="ActualUltraheatTemp_C" Value="0"/>
+				<Client Name="Heater200Watt_C"/>
+				<Client Name="HeaterOn_C"/>
+				<Client Name="HeaterRun_C"/>
+				<Client Name="MotorRunStop_C"/>
+				<Client Name="SetFanSpeed_C"/>
+				<Client Name="TempHZS_C" Value="0"/>
+			</Channels>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="TempControl_Class1.TempHZS_C" Destination="LseEasy.ActTemperature"/>
+		<Connection Source="TempControl_Class1.ActualRoomTemp_C" Destination="AI0881.TMP_3"/>
+		<Connection Source="TempControl_Class1.ActualUltraheatTemp_C" Destination="AI0881.TMP_4"/>
+		<Connection Source="TempControl_Class1.SetFanSpeed_C" Destination="SR0201.SetSpeed"/>
+		<Connection Source="TempControl_Class1.MotorRunStop_C" Destination="SR0201.Enable"/>
+		<Connection Source="TempControl_Class1.HeaterRun_C" Destination="TO1611.Output2"/>
+		<Connection Source="TempControl_Class1.HeaterOn_C" Destination="TO1611.Output1"/>
+		<Connection Source="TempControl_Class1.Heater200Watt_C" Destination="TO1611.Output3"/>
+		<Connection Source="DayNightSplitter_Class1.OC_ToTimerClass" Destination="Timer_Class1.ClassSvr"/>
+		<Connection Source="DayNightSplitter_Class1.DesiredHZSTemp" Destination="TempControl_Class1.SetTempHZS_s" Vertices="(2430,660),(1726,660),"/>
+		<Connection Source="DayNightSplitter_Class1.DesiredRoomTemp" Destination="TempControl_Class1.SetRoomTemp_S" Vertices="(2430,720),(1726,720),"/>
+		<Connection Source="DayNightSplitter_Class1.DesiredHeaterPWR" Destination="TempControl_Class1.HeaterOn_S" Vertices="(2430,780),(1726,780),"/>
+		<Connection Source="DayNightSplitter_Class1.DesiredFanMode" Destination="TempControl_Class1.FanMode_S" Vertices="(2430,840),(1726,840),"/>
+		<Connection Source="DayNightSplitter_Class1.DesiredFanSpeed" Destination="TempControl_Class1.FanSpeed_S" Vertices="(2430,900),(1726,900),"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

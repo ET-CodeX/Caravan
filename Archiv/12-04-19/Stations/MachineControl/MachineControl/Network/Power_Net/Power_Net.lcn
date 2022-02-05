@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="Power_Net" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "Battery_Class1"
+			GUID       = "{FA33D1CE-9A7B-451D-AC3D-AD7691A5D68E}"
+			Class      = "Battery_Class"
+			Position   = "(1860,540)"
+			Visualized = "true"
+			Remotely   = "true"
+			CyclicTime = "100 ms">
+			<Channels>
+				<Server Name="ActSystemState"/>
+				<Server Name="ActualAmps_S"/>
+				<Server Name="ActualTowCarAMP_S"/>
+				<Server Name="ActualTowCarVoltage_S"/>
+				<Server Name="ActualVoltage_S"/>
+				<Server Name="AhBalance_S"/>
+				<Server Name="AhUsedSinceLastFull_S"/>
+				<Server Name="BattAhRating"/>
+				<Server Name="BattFull_S"/>
+				<Server Name="BattLow_S"/>
+				<Server Name="BattMax_S"/>
+				<Server Name="BattMin_S"/>
+				<Server Name="ClassSvr"/>
+				<Server Name="PercentByVoltage_S"/>
+				<Server Name="RemBattAh_S"/>
+				<Server Name="RESET_AhBalance_S"/>
+				<Server Name="RESET_AhUsedSinceLastFull_S"/>
+				<Server Name="VoltageOffsetHigh_S"/>
+				<Server Name="VoltageOffsetLOW_S"/>
+				<Client Name="ActualAmps1_C"/>
+				<Client Name="ActualAmps2_C"/>
+				<Client Name="ActualTowCarVoltage_C"/>
+				<Client Name="ActualVoltage_C"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "Grid_Class1"
+			GUID       = "{3865C7DC-3BEE-42B5-B33D-26D4FFB09F97}"
+			Class      = "Grid_Class"
+			Position   = "(2940,540)"
+			Visualized = "true"
+			CyclicTime = "50 ms">
+			<Channels>
+				<Server Name="ActualAmps_S"/>
+				<Server Name="ActualPower_S"/>
+				<Server Name="ClassSvr"/>
+				<Server Name="MaxSensorAmps_S"/>
+				<Server Name="Netzspannung"/>
+				<Server Name="ResetKwh_S"/>
+				<Server Name="Wattsec_Used_S"/>
+				<Client Name="ActualAmps_C"/>
+			</Channels>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="Battery_Class1.ActualAmps1_C" Destination="AI0881.TMP_1"/>
+		<Connection Source="Battery_Class1.ActualVoltage_C" Destination="AI0751.AI4"/>
+		<Connection Source="Battery_Class1.ActualAmps2_C" Destination="AI0881.TMP_2"/>
+		<Connection Source="Battery_Class1.ActualTowCarVoltage_C" Destination="AI0751.AI6"/>
+		<Connection Source="Grid_Class1.ActualAmps_C" Destination="AI0751.AI5"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

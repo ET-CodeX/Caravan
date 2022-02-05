@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="Licht_Net" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "NightLight_Class1"
+			GUID       = "{5A0E9BC4-DFA4-49C4-8956-E0185F0AA449}"
+			Class      = "NightLight_Class"
+			Position   = "(1290,450)"
+			Visualized = "true"
+			Remotely   = "true"
+			CyclicTime = "50 µs">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="NightlightHZS_S"/>
+				<Server Name="sBrightness"/>
+				<Client Name="cNightlightSwitch"/>
+				<Client Name="OC_To_Timer_Class" Value="0"/>
+			</Channels>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="NightLight_Class1.OC_To_Timer_Class" Destination="Timer_Class1.ClassSvr"/>
+		<Connection Source="NightLight_Class1.cNightlightSwitch" Destination="SR0201.Led350"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

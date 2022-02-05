@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="IPCONF_IPConfigMC1" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name           = "_IPConfigIF1mc1"
+			GUID           = "{E7E3AA58-5A84-4D52-858B-9EAF99297733}"
+			Class          = "_IPConfigIF"
+			Position       = "(180,180)"
+			Visualized     = "true"
+			Remotely       = "true"
+			BackgroundTime = "100 ms">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="CmdError"/>
+				<Server Name="ExtResetCmd"/>
+				<Server Name="GWAddress"/>
+				<Server Name="IPAddress"/>
+				<Server Name="NetMode"/>
+				<Server Name="SavGWAddress"/>
+				<Server Name="SavIPAddress"/>
+				<Server Name="SavSNMask"/>
+				<Server Name="SNMask"/>
+				<Server Name="TimeoutCnt"/>
+				<Client Name="ChangedIPSettings"/>
+				<Client Name="Interface" Value="1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{8BDB9DED-5FFE-4D44-A28E-E8C19B4E1172}" Class="NetworkConfig">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="GetConfig"/>
+								<Server Name="GWAddress"/>
+								<Server Name="IPAddress"/>
+								<Server Name="SetConfig"/>
+								<Server Name="SNMask"/>
+								<Client Name="coFileSys"/>
+								<Client Name="coIP"/>
+								<Client Name="coSigCLib"/>
+								<Client Name="coStdLib"/>
+								<Client Name="Interface" Value="1"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "_SearchUsbFiletoReset1mc1"
+			GUID           = "{5641C318-ABB9-49E8-966D-92D278E6AB18}"
+			Class          = "_SearchUsbFiletoReset"
+			Position       = "(1830,540)"
+			Visualized     = "false"
+			CyclicTime     = "1000 ms"
+			BackgroundTime = "1000 ms">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="_FileSys"/>
+				<Client Name="_OSKernel"/>
+				<Client Name="FilePathName"/>
+				<Client Name="OutResetCmd"/>
+				<Client Name="SigCLib"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "UsbSearchFileName1mc1"
+			GUID       = "{9CD4469B-046C-4C98-8BD7-BD34768CCA91}"
+			Class      = "StringRAM"
+			Position   = "(1380,660)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Data"/>
+				<Client Name="SingleRealloc" Value="1"/>
+				<Client Name="UseFile"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{1F69B880-FAA2-42FA-9D00-85265E1C4A69}" Class="StringInternal">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="DataBuffer"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+											<Channels>
+												<Server Name="Data"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="DataBuffer" GUID="{167807E4-6D9F-4D9F-A980-81FF93F0EFE0}" Class="RAMex">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="MultiTask"/>
+								<Client Name="ThreadSafe" Value="0"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="_SearchUsbFiletoReset1mc1.OutResetCmd" Destination="_IPConfigIF1mc1.ExtResetCmd" Vertices="(1830,870),(976,870),"/>
+		<Connection Source="_SearchUsbFiletoReset1mc1.FilePathName" Destination="UsbSearchFileName1mc1.Data" Vertices="(1830,810),(1770,810),(1770,750),(1696,750),"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

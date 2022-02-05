@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="Heizung_NET" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "TempControl_Class1"
+			GUID       = "{2960B9C0-9831-4FAD-BDEB-8F86135CD495}"
+			Class      = "TempControl_Class"
+			Position   = "(750,330)"
+			Visualized = "true"
+			Remotely   = "true"
+			CyclicTime = "50 ms">
+			<Channels>
+				<Server Name="Actual_TempHZS_S"/>
+				<Server Name="Actual_UltraheatTemp_S"/>
+				<Server Name="ActualRoomTemp_S"/>
+				<Server Name="ClassSvr"/>
+				<Server Name="FanSpeed_S"/>
+				<Server Name="HeaterOn_S"/>
+				<Server Name="SetRoomTemp_S"/>
+				<Server Name="SetTempHZS_s"/>
+				<Client Name="ActualRoomTemp_C"/>
+				<Client Name="ActualUltraheatTemp_C"/>
+				<Client Name="HeaterRun_C"/>
+				<Client Name="MotorRunStop_C"/>
+				<Client Name="SetFanSpeed_C"/>
+				<Client Name="TempHZS_C" Value="0"/>
+			</Channels>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="TempControl_Class1.TempHZS_C" Destination="LseEasy.ActTemperature"/>
+		<Connection Source="TempControl_Class1.ActualRoomTemp_C" Destination="AI0881.TMP_3"/>
+		<Connection Source="TempControl_Class1.ActualUltraheatTemp_C" Destination="AI0881.TMP_4"/>
+		<Connection Source="TempControl_Class1.SetFanSpeed_C" Destination="SR0201.SetSpeed"/>
+		<Connection Source="TempControl_Class1.MotorRunStop_C" Destination="SR0201.Enable"/>
+		<Connection Source="TempControl_Class1.HeaterRun_C" Destination="TO1611.Output2"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

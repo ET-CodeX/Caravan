@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HWClassInfo>
+  <HWDevice ModuleID="1050" SubModuleID="0" ModType="OnboardIO">
+    <Types>
+      <Device Name="CP102 IOs" ClassName="CP102_IOs" DisplayGroup="Control Systems;CPU Modules" Desc="CP102 IOs">      
+      </Device>
+    </Types>
+  </HWDevice>
+  <Class Name="CP102_IOs" >
+    <!-- Uplinks and Downlinks -->
+    <Uplink   Name="HwControl"  Channel="To_HwControl" BusType="OnBoardIO"/>    
+    <!-- Interfaces for CPU_IOs Classes -->
+    <Downlink Name="CAN_1_Connect"    BusType="CAN-INTERFACE"            Port="0" Sort="1"  Desc="Connects a CAN communication class" />
+  </Class>
+</HWClassInfo>

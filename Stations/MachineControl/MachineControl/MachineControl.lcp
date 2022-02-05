@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Project
+	Version            = "13"
+	Name               = "MachineControl"
+	OnlineConnection   = "Caravan_MC"
+	SolutionType       = "Large"
+	WriteSrvListOnSave = "true"
+	CLASSType          = "true">
+	<OnlineConnectionInfo>
+		<TCPIP ConfigName="Caravan_MC" BUS="3" Password="" IP="192.168.1.36" PORT="1954" SomeFlags="0" PLCID="" Repeater="0" SSLTLS="0" Favorite="0"/>
+	</OnlineConnectionInfo>
+	<HeaderFiles>
+		<File Path=".\Include\unit.h"/>
+		<File Path=".\Include\global.h"/>
+		<File Path=".\Include\UserDef.h"/>
+		<File Path=".\Include\types.h"/>
+		<File Path=".\Include\channels.h"/>
+		<File Path=".\Include\C_global.h"/>
+		<File Path=".\Include\C_types.h"/>
+		<File Path=".\Include\C_channels.h"/>
+		<File Path=".\Include\lslpublictypes.h"/>
+		<File Path=".\Class\PLC_Info\XRegs.h"/>
+		<File Path=".\LoaderItf.h"/>
+		<File Path=".\Source\interfaces\lsl_st_sysinfo.h"/>
+		<File Path=".\Source\interfaces\Lsl_st_ifssr.h" Global="true"/>
+		<File Path=".\Source\interfaces\lsl_st_pci.h"/>
+		<File Path=".\Source\interfaces\lsl_st_syssernum.h"/>
+		<File Path=".\SystemTypes.h" Global="true"/>
+		<File Path=".\Source\code\OsiBaseNew.h"/>
+		<File Path=".\St_grconst.h" Global="true"/>
+		<File Path=".\St_graph.h" Global="true"/>
+		<File Path=".\MultiTaskTypes.h" Global="true"/>
+		<File Path=".\Source\code\OsiBase.h"/>
+		<File Path=".\GraphicTypes.h" Global="true"/>
+		<File Path=".\Class\SigCLib\SigCLib.h"/>
+		<File Path=".\Class\SigCLib\SigCLibNew.h"/>
+		<File Path=".\Class\SigCLib\CStrLib.h"/>
+		<File Path=".\Class\SigCLib\CTimeLib.h"/>
+		<File Path=".\Class\SigCLib\CSortLib.h"/>
+		<File Path=".\Class\SigCLib\CFileLib.h"/>
+		<File Path=".\Class\SigCLib\CMemLib.h"/>
+		<File Path=".\Class\SigCLib\CNetworkLib.h"/>
+		<File Path=".\Class\SigCLib\DefineCompiler.h"/>
+		<File Path=".\Class\SigCLib\CMathLib.h"/>
+		<File Path=".\Class\SigCLib\CCrcLib.h"/>
+		<File Path=".\Class\SigCLib\CStrLib16.h"/>
+		<File Path=".\Class\SigCLib\CStrLibIntern.h"/>
+		<File Path=".\Class\SigCLib\CStdLib.h"/>
+		<File Path=".\Class\SigCLib\CPlcOnline.h"/>
+		<File Path=".\Class\SigCLib\CSysLib.h"/>
+		<File Path=".\Class\SigCLib\CAtomic.h"/>
+		<File Path=".\Class\SigCLib\CFiFo.h"/>
+		<File Path=".\Class\SigCLib\CRingBuffer.h"/>
+		<File Path=".\Class\SigCLib\CPipe.h"/>
+		<File Path=".\Class\Ram\Ram.h" Global="true"/>
+		<File Path=".\Class\StringInternal\StringDefs.h" Global="true"/>
+		<File Path=".\Class\_SysDateTime\_SysDateTime.h" Global="true"/>
+		<File Path=".\lsl_st_mt.h"/>
+		<File Path=".\Class\_AlarmXBuffer\AlarmXBuffer.h"/>
+		<File Path=".\Class\_AlarmX0Para\_AlarmX0Para.h"/>
+		<File Path=".\Lsl_st_ifssr.h" Global="true"/>
+		<File Path=".\lsl_st_tcp_user.h" Global="true"/>
+		<File Path=".\Class\TCPCommunication\TCPCommunication.h"/>
+		<File Path=".\Class\DataManager\DataManager.h"/>
+		<File Path=".\Class\TCPCommunication\SalamanderDelay.h"/>
+		<File Path=".\Class\DiasMasterC\MasterSettings.h" Global="true"/>
+		<File Path=".\Class\DiasMaster\DIASMaster.h" Global="true"/>
+		<File Path=".\LSL_STITask.h" Global="true"/>
+		<File Path=".\Class\DiasMasterMain\DiasMasterMain.h"/>
+		<File Path=".\Class\I2CCDIAS\EEFuncDef.h" Global="true"/>
+		<File Path=".\Class\VaranManager\VaranManager.h"/>
+		<File Path=".\Class\VaranManager_Base\VaranManager_Base.h" Global="true"/>
+		<File Path=".\Class\SafetyCDIAS_Base\SafetyCDIAS_Base.h"/>
+		<File Path=".\Class\SafetyManager\SafetyManager.h"/>
+		<File Path=".\Source\BusInterface.h"/>
+		<File Path=".\Class\SdiasManager\SdiasManager.h"/>
+		<File Path=".\Class\HwControl\HwControl.h"/>
+		<File Path=".\Class\SdiasBase\SdiasBase.h"/>
+		<File Path=".\Class\HwControl\watchdog.h"/>
+		<File Path=".\Source\interfaces\lsl_st_hardwaretree.h"/>
+		<File Path=".\Source\interfaces\lsl_st_mt.h"/>
+		<File Path=".\Source\interfaces\lsl_st_sdias.h" Global="true"/>
+		<File Path=".\Source\interfaces\lsl_st_pll.h"/>
+		<File Path=".\Class\HwControl\HwControlLogging.h" Global="true"/>
+		<File Path=".\Source\interfaces\lsl_st_kernel.h"/>
+		<File Path=".\Source\interfaces\lsl_st_safety.h"/>
+		<File Path=".\Source\interfaces\lsl_st_tcp_user.h" Global="true"/>
+		<File Path=".\Source\interfaces\lsl_st_varan.h" Global="true"/>
+		<File Path=".\Source\interfaces\lsl_st_cdias.h" Global="true"/>
+		<File Path=".\Source\interfaces\lsl_st_safetydll.h"/>
+		<File Path=".\Source\interfaces\lsl_st_systrace.h"/>
+		<File Path=".\File_IOTypes.h" Global="true"/>
+		<File Path=".\CanTypes.h" Global="true"/>
+		<File Path=".\lsl_st_serial.h" Global="true"/>
+		<File Path=".\Source\Common\hmi_nuc.h"/>
+		<File Path=".\Class\LseEasy\MiniSrcData.h"/>
+		<File Path=".\Class\LseEasy\Create.h"/>
+		<File Path=".\Class\HmiImageList\CBmpConv.h"/>
+		<File Path=".\Source\cppcode\T_nuc.h" Global="true"/>
+		<File Path=".\Source\cppcode\T_types.h" Global="true"/>
+		<File Path=".\Source\cppcode\T_ipc.h" Global="true"/>
+		<File Path=".\Source\cppcode\Comintfc.h" Global="true"/>
+		<File Path=".\Source\cppcode\T_color.h" Global="true"/>
+		<File Path=".\Source\cppcode\T_USER.H" Global="true"/>
+		<File Path=".\IPTypes.h" Global="true"/>
+	</HeaderFiles>
+	<ClassFiles>
+		<File Path=".\Class\PLC_Info\cpu_id.c"/>
+		<File Path=".\Source\code\OsiBaseNew.st"/>
+		<File Path=".\Source\code\OsiBase.st"/>
+		<File Path=".\Class\SigCLib\CStrLib.cpp"/>
+		<File Path=".\Class\SigCLib\CTimeLib.cpp"/>
+		<File Path=".\Class\SigCLib\CSortLib.cpp"/>
+		<File Path=".\Class\SigCLib\CFileLib.cpp"/>
+		<File Path=".\Class\SigCLib\CMemLib.cpp"/>
+		<File Path=".\Class\SigCLib\CNetworkLib.cpp"/>
+		<File Path=".\Class\SigCLib\CMathLib.cpp"/>
+		<File Path=".\Class\SigCLib\CCrcLib.cpp"/>
+		<File Path=".\Class\SigCLib\CStrLib16.cpp"/>
+		<File Path=".\Class\SigCLib\CStdLib.cpp"/>
+		<File Path=".\Class\SigCLib\CPlcOnline.cpp"/>
+		<File Path=".\Class\SigCLib\CSysLib.cpp"/>
+		<File Path=".\Class\SigCLib\CFiFo.cpp"/>
+		<File Path=".\Class\SigCLib\CRingBuffer.cpp"/>
+		<File Path=".\Class\SigCLib\CAtomic.cpp"/>
+		<File Path=".\Class\SigCLib\CPipe.cpp"/>
+		<File Path=".\Class\_AlarmX0Para\_AlarmX0Para.st"/>
+		<File Path=".\Class\_AlarmXBuffer\_AlarmXBuffer.st"/>
+		<File Path=".\Class\_CheckOnlineStatus\_CheckOnlineStatus.st"/>
+		<File Path=".\Class\_CheckSum\_CheckSum.st"/>
+		<File Path=".\Class\_MultiTask\_MultiTask.st"/>
+		<File Path=".\Class\_SIG_LSL_CMultimasterState\_SIG_LSL_CMultimasterState.st"/>
+		<File Path=".\Class\_StdLib\_StdLib.st"/>
+		<File Path=".\Class\_SyncTimePLC\_SyncTimePLC.st"/>
+		<File Path=".\Class\_SysDateTime\_SysDateTime.st"/>
+		<File Path=".\Class\_SysDateTime2\_SysDateTime2.st"/>
+		<File Path=".\Class\_TaskObjectControl\_TaskObjectControl.st"/>
+		<File Path=".\Class\ASCII_BIN\ASCII_BIN.st"/>
+		<File Path=".\Class\CriticalSection\CriticalSection.st"/>
+		<File Path=".\Class\DataManager\DataManager.st"/>
+		<File Path=".\Class\DataManagerFIFO\DataManagerFIFO.st"/>
+		<File Path=".\Class\DataManagerPriority\DataManagerPriority.st"/>
+		<File Path=".\Class\GetOSVersion\GetOSVersion.st"/>
+		<File Path=".\Class\GetTaskHandle\GetTaskHandle.st"/>
+		<File Path=".\Class\MerkerEx\MerkerEx.st"/>
+		<File Path=".\Class\PLC_Info\PLC_Info.st"/>
+		<File Path=".\Class\Ram\Ram.st"/>
+		<File Path=".\Class\RamRingBuffer\RamRingBuffer.st"/>
+		<File Path=".\Class\SigCLib\SigCLib.st"/>
+		<File Path=".\Class\String\String.st"/>
+		<File Path=".\Class\StringInternal\StringInternal.st"/>
+		<File Path=".\Class\System\System.st"/>
+		<File Path=".\Class\TCPCommunication\TCPCommunication.st"/>
+		<File Path=".\Class\TCPCommunicationLogFilter\TCPCommunicationLogFilter.st"/>
+		<File Path=".\Class\UserAlarmGenerator\UserAlarmGenerator.st"/>
+		<File Path=".\Class\VirtualBaseInit\VirtualBaseInit.st"/>
+		<File Path=".\Class\AI075\AI075.st"/>
+		<File Path=".\Class\BusInterfaceSDIASInternal\BusInterfaceSDIASInternal.st"/>
+		<File Path=".\Class\CP102_IOs\CP102_IOs.st"/>
+		<File Path=".\Class\DI203\DI203.st"/>
+		<File Path=".\Class\DiasMaster\DiasMaster.st"/>
+		<File Path=".\Class\DiasMasterC\DiasMasterC.st"/>
+		<File Path=".\Class\DiasMasterMain\DiasMasterMain.st"/>
+		<File Path=".\Class\DiasMasterPostScan\DiasMasterPostScan.st"/>
+		<File Path=".\Class\EEPROM\EEPROM.st"/>
+		<File Path=".\Class\Hub_Base\Hub_Base.st"/>
+		<File Path=".\Class\Hub_Base_Root\Hub_Base_Root.st"/>
+		<File Path=".\Class\HwBase\HwBase.st"/>
+		<File Path=".\Class\HwBaseCDIAS\HwBaseCDIAS.st"/>
+		<File Path=".\Class\HwControl\HwControl.st"/>
+		<File Path=".\Class\HwControlBase\HwControlBase.st"/>
+		<File Path=".\Class\HWRtPostScan\HWRtPostScan.st"/>
+		<File Path=".\Class\I2CCDIAS\I2CCDIAS.st"/>
+		<File Path=".\Class\SafetyCDIAS_Base\SafetyCDIAS_Base.st"/>
+		<File Path=".\Class\SafetyManager\SafetyManager.st"/>
+		<File Path=".\Class\SafetyUDP\SafetyUDP.st"/>
+		<File Path=".\Class\SdiasBase\SdiasBase.st"/>
+		<File Path=".\Class\SdiasHubBase\SdiasHubBase.st"/>
+		<File Path=".\Class\SdiasManager\SdiasManager.st"/>
+		<File Path=".\Class\SdiasPLC\SdiasPLC.st"/>
+		<File Path=".\Class\SR020\SR020.st"/>
+		<File Path=".\Class\SyncCall\SyncCall.st"/>
+		<File Path=".\Class\TO161\TO161.st"/>
+		<File Path=".\Class\Varan_Base\Varan_Base.st"/>
+		<File Path=".\Class\VaranManager\VaranManager.st"/>
+		<File Path=".\Class\VaranManager_Base\VaranManager_Base.st"/>
+		<File Path=".\Class\WatchdogDias\WatchdogDias.st"/>
+		<File Path=".\Class\XXXBase_IOs\XXXBase_IOs.st"/>
+		<File Path=".\Class\_Can\_Can.st"/>
+		<File Path=".\Class\_FileSys\_FileSys.st"/>
+		<File Path=".\Class\_OSKernel\_OSKernel.st"/>
+		<File Path=".\Class\_CanLib\_CanLib.st"/>
+		<File Path=".\Class\_SerLib\_SerLib.st"/>
+		<File Path=".\Class\RamFile\RamFile.st"/>
+		<File Path=".\Class\LseEasy\CreateScreen.c"/>
+		<File Path=".\Class\LseEasy\CreateUtils.c"/>
+		<File Path=".\Class\HmiImageList\CBmpConv.cpp"/>
+		<File Path=".\Class\HmiAsciiBuffer\HmiAsciiBuffer.st"/>
+		<File Path=".\Class\HmiBaseList\HmiBaseList.st"/>
+		<File Path=".\Class\HmiChkBitList\HmiChkBitList.st"/>
+		<File Path=".\Class\HmiColorMap\HmiColorMap.st"/>
+		<File Path=".\Class\HmiComPort\HmiComPort.st"/>
+		<File Path=".\Class\HmiFile\HmiFile.st"/>
+		<File Path=".\Class\HmiFont35\HmiFont35.st"/>
+		<File Path=".\Class\HmiFontList\HmiFontList.st"/>
+		<File Path=".\Class\HmiFunctionList\HmiFunctionList.st"/>
+		<File Path=".\Class\HmiFunctionList35\HmiFunctionList35.st"/>
+		<File Path=".\Class\HmiImage35\HmiImage35.st"/>
+		<File Path=".\Class\HmiImageList\HmiImageList.st"/>
+		<File Path=".\Class\HmiMapFile\HmiMapFile.st"/>
+		<File Path=".\Class\HmiMemCircle\HmiMemCircle.st"/>
+		<File Path=".\Class\HmiMemImage\HmiMemImage.st"/>
+		<File Path=".\Class\HmiMemIO\HmiMemIO.st"/>
+		<File Path=".\Class\HmiMemLine\HmiMemLine.st"/>
+		<File Path=".\Class\HmiMemRectangle\HmiMemRectangle.st"/>
+		<File Path=".\Class\HmiMemText\HmiMemText.st"/>
+		<File Path=".\Class\HmiMemZorder\HmiMemZorder.st"/>
+		<File Path=".\Class\HmiProject35\HmiProject35.st"/>
+		<File Path=".\Class\HmiProjectList\HmiProjectList.st"/>
+		<File Path=".\Class\HmiScreen\HmiScreen.st"/>
+		<File Path=".\Class\HmiSetUpList\HmiSetUpList.st"/>
+		<File Path=".\Class\HmiSetupList35\HmiSetupList35.st"/>
+		<File Path=".\Class\HmiShemeList\HmiShemeList.st"/>
+		<File Path=".\Class\HmiShemeList35\HmiShemeList35.st"/>
+		<File Path=".\Class\HmiStateBit35\HmiStateBit35.st"/>
+		<File Path=".\Class\HmiStrLib\HmiStrLib.st"/>
+		<File Path=".\Class\HmiTextList\HmiTextList.st"/>
+		<File Path=".\Class\HmiTextList35\HmiTextList35.st"/>
+		<File Path=".\Class\HmiUniBuffer\HmiUniBuffer.st"/>
+		<File Path=".\Class\HmiUnitList\HmiUnitList.st"/>
+		<File Path=".\Class\HmiUtils\HmiUtils.st"/>
+		<File Path=".\Class\HmiVarInfoList\HmiVarInfoList.st"/>
+		<File Path=".\Class\HmiVarList\HmiVarList.st"/>
+		<File Path=".\Class\HmiVarList35\HmiVarList35.st"/>
+		<File Path=".\Class\LseEasy\LseEasy.st"/>
+		<File Path=".\Class\HmiCanSendReceive\HmiCanSendReceive.st"/>
+		<File Path=".\Class\HmiComPortCan\HmiComPortCan.st"/>
+		<File Path=".\Class\TempControl_Class\TempControl_Class.st"/>
+		<File Path=".\Class\NightLight_Class\NightLight_Class.st"/>
+		<File Path=".\Class\Timer_Class\Timer_Class.st"/>
+		<File Path=".\Source\cppcode\T_alarm.cpp"/>
+		<File Path=".\Source\cppcode\T_batch.cpp"/>
+		<File Path=".\Source\cppcode\T_bmp.cpp"/>
+		<File Path=".\Source\cppcode\T_com.cpp"/>
+		<File Path=".\Source\cppcode\T_complr.cpp"/>
+		<File Path=".\Source\cppcode\T_copy.cpp"/>
+		<File Path=".\Source\cppcode\T_crc.cpp"/>
+		<File Path=".\Source\cppcode\T_ctext.cpp"/>
+		<File Path=".\Source\cppcode\T_cursor.cpp"/>
+		<File Path=".\Source\cppcode\T_Diag.cpp"/>
+		<File Path=".\Source\cppcode\T_direct.cpp"/>
+		<File Path=".\Source\cppcode\T_edit.cpp"/>
+		<File Path=".\Source\cppcode\T_file.cpp"/>
+		<File Path=".\Source\cppcode\T_font.cpp"/>
+		<File Path=".\Source\cppcode\T_gfx.cpp"/>
+		<File Path=".\Source\cppcode\T_ibxlst.cpp"/>
+		<File Path=".\Source\cppcode\T_icon.cpp"/>
+		<File Path=".\Source\cppcode\T_init.cpp"/>
+		<File Path=".\Source\cppcode\T_kbrd.cpp"/>
+		<File Path=".\Source\cppcode\T_lib.cpp"/>
+		<File Path=".\Source\cppcode\T_LseOsz.cpp"/>
+		<File Path=".\Source\cppcode\T_main.cpp"/>
+		<File Path=".\Source\cppcode\T_memo.cpp"/>
+		<File Path=".\Source\cppcode\t_menu.cpp"/>
+		<File Path=".\Source\cppcode\T_obj.cpp"/>
+		<File Path=".\Source\cppcode\T_outio.cpp"/>
+		<File Path=".\Source\cppcode\T_ovrlod.cpp"/>
+		<File Path=".\Source\cppcode\T_pal.cpp"/>
+		<File Path=".\Source\cppcode\T_picmem.cpp"/>
+		<File Path=".\Source\cppcode\T_picpic.cpp"/>
+		<File Path=".\Source\cppcode\T_picsub.cpp"/>
+		<File Path=".\Source\cppcode\T_popsub.cpp"/>
+		<File Path=".\Source\cppcode\T_popup.cpp"/>
+		<File Path=".\Source\cppcode\T_pos.cpp"/>
+		<File Path=".\Source\cppcode\T_prj.cpp"/>
+		<File Path=".\Source\cppcode\T_save.cpp"/>
+		<File Path=".\Source\cppcode\T_scan.cpp"/>
+		<File Path=".\Source\cppcode\T_schema.cpp"/>
+		<File Path=".\Source\cppcode\T_scroll.cpp"/>
+		<File Path=".\Source\cppcode\T_Scrsvr.cpp"/>
+		<File Path=".\Source\cppcode\T_seek.cpp"/>
+		<File Path=".\Source\cppcode\T_Sett.cpp"/>
+		<File Path=".\Source\cppcode\T_setup.cpp"/>
+		<File Path=".\Source\cppcode\T_soft.cpp"/>
+		<File Path=".\Source\cppcode\T_stack.cpp"/>
+		<File Path=".\Source\cppcode\t_text.cpp"/>
+		<File Path=".\Source\cppcode\T_tool.cpp"/>
+		<File Path=".\Source\cppcode\T_urge.cpp"/>
+		<File Path=".\Source\cppcode\T_user.cpp"/>
+		<File Path=".\Source\cppcode\T_valid.cpp"/>
+		<File Path=".\Source\cppcode\T_varia.cpp"/>
+		<File Path=".\Source\cppcode\T_win.cpp"/>
+		<File Path=".\Source\cppcode\T_Hotkey.cpp"/>
+		<File Path=".\Source\cppcode\T_3d.cpp"/>
+		<File Path=".\Source\cppcode\t_urge1.cpp"/>
+		<File Path=".\Source\cppcode\t_move.cpp"/>
+		<File Path=".\Source\cppcode\t_watch.cpp"/>
+		<File Path=".\Source\cppcode\t_lang.cpp"/>
+		<File Path=".\Source\cppcode\T_JPG.cpp"/>
+		<File Path=".\Source\cppcode\T_Help.cpp"/>
+		<File Path=".\Source\cppcode\t_theme.cpp"/>
+		<File Path=".\Source\cppcode\T_render.cpp"/>
+		<File Path=".\Source\cppcode\T_comid.cpp"/>
+		<File Path=".\Source\cppcode\T_slider.cpp"/>
+		<File Path=".\Source\cppcode\T_explor.cpp"/>
+		<File Path=".\Source\cppcode\T_mesbox.cpp"/>
+		<File Path=".\Source\cppcode\T_task2.cpp"/>
+		<File Path=".\Source\cppcode\T_Tree.cpp"/>
+		<File Path=".\Source\cppcode\T_picadd.cpp"/>
+		<File Path=".\Source\cppcode\T_gfxgif.cpp"/>
+		<File Path=".\Source\cppcode\T_combox.cpp"/>
+		<File Path=".\Source\cppcode\T_piccar.cpp"/>
+		<File Path=".\Source\cppcode\T_convert.cpp"/>
+		<File Path=".\Source\cppcode\T_Offline.cpp"/>
+		<File Path=".\Source\cppcode\T_WinMove.cpp"/>
+		<File Path=".\Class\_AlarmDisplay\_AlarmDisplay.st"/>
+		<File Path=".\Class\_Bit32\_Bit32.st"/>
+		<File Path=".\Class\_Bit32Ram\_Bit32Ram.st"/>
+		<File Path=".\Class\_Global\_Global.st"/>
+		<File Path=".\Class\_Grafix\_Grafix.st"/>
+		<File Path=".\Class\_HotAlarm\_HotAlarm.st"/>
+		<File Path=".\Class\_LanguageSelection\_LanguageSelection.st"/>
+		<File Path=".\Class\_LimitMax\_LimitMax.st"/>
+		<File Path=".\Class\_LimitMin\_LimitMin.st"/>
+		<File Path=".\Class\_Lse\_Lse.st"/>
+		<File Path=".\Class\_MyIO\_MyIO.st"/>
+		<File Path=".\Class\_OsziLSE\_OsziLSE.st"/>
+		<File Path=".\Class\_OsziLSEBackground\_OsziLSEBackground.st"/>
+		<File Path=".\Class\_Radio32\_Radio32.st"/>
+		<File Path=".\Class\_Radio32Ram\_Radio32Ram.st"/>
+		<File Path=".\Class\_Screen\_Screen.st"/>
+		<File Path=".\Class\_ScrollArea\_ScrollArea.st"/>
+		<File Path=".\Class\_ScrollArea2\_ScrollArea2.st"/>
+		<File Path=".\Class\_ToolCat\_ToolCat.st"/>
+		<File Path=".\Class\_XAccess\_XAccess.st"/>
+		<File Path=".\Class\GetBroadCastData\GetBroadCastData.st"/>
+		<File Path=".\Class\Graphic\Graphic.st"/>
+		<File Path=".\Class\Level_Class\Level_Class.st"/>
+		<File Path=".\Class\LevelFilter_Class\LevelFilter_Class.st"/>
+		<File Path=".\Class\Battery_Class\Battery_Class.st"/>
+		<File Path=".\Class\AI088\AI088.st"/>
+		<File Path=".\Class\Grid_Class\Grid_Class.st"/>
+		<File Path=".\Class\_IP\_IP.st"/>
+		<File Path=".\Class\_IPConfigIF\_IPConfigIF.st"/>
+		<File Path=".\Class\_SearchUsbFiletoReset\_SearchUsbFiletoReset.st"/>
+		<File Path=".\Class\NetworkConfig\NetworkConfig.st"/>
+		<File Path=".\Class\RAMex\RAMex.st"/>
+		<File Path=".\Class\StringRAM\StringRAM.st"/>
+		<File Path=".\Class\FreshWaterTank_Class\FreshWaterTank_Class.st"/>
+		<File Path=".\Class\InputChange\InputChange.st"/>
+		<File Path=".\Class\DayNightSplitter_Class\DayNightSplitter_Class.st"/>
+	</ClassFiles>
+	<NetworkFiles>
+		<File Path=".\Network\STDAlarm\STDAlarm.lcn"/>
+		<File Path=".\Network\STDCommunicationToHMI\STDCommunicationToHMI.lcn"/>
+		<File Path=".\Network\STDPLCInfoPLC\STDPLCInfoPLC.lcn"/>
+		<File Path=".\Network\STDTimeSync\STDTimeSync.lcn"/>
+		<File Path=".\Network\HW_Network\HW_Network.lcn"/>
+		<File Path=".\Network\LseEasyMain\LseEasyMain.lcn"/>
+		<File Path=".\Network\Heizung_NET\Heizung_NET.lcn"/>
+		<File Path=".\Network\Licht_Net\Licht_Net.lcn"/>
+		<File Path=".\Network\Manage_Net\Manage_Net.lcn"/>
+		<File Path=".\Network\Level_Net\Level_Net.lcn"/>
+		<File Path=".\Network\Power_Net\Power_Net.lcn"/>
+		<File Path=".\Network\IPCONF_IPConfigMC1\IPCONF_IPConfigMC1.lcn"/>
+		<File Path=".\Network\Water_Net\Water_Net.lcn"/>
+	</NetworkFiles>
+	<ObjectFiles>
+		<File Path=".\Loader\Source\Loader.lob" Downloadable="false"/>
+	</ObjectFiles>
+	<DocuFiles>
+		<File Path=".\Class\_AlarmXBuffer\_AlarmXBuffer.pdf"/>
+		<File Path=".\Class\_AlarmXBuffer\_AlarmXBuffer_en.pdf"/>
+		<File Path=".\Class\TCPCommunication\TCPCommunication.pdf"/>
+		<File Path=".\Class\GetOSVersion\GetOSVersion_de.pdf"/>
+		<File Path=".\Class\_CheckOnlineStatus\_CheckOnlineStatus_de.pdf"/>
+		<File Path=".\Class\_CheckOnlineStatus\_CheckOnlineStatus_en.pdf"/>
+		<File Path=".\Class\GetOSVersion\GetOSVersion_en.pdf"/>
+		<File Path=".\Class\_SyncTimePLC\_SyncTimePLC_en.pdf"/>
+		<File Path=".\Class\_SyncTimePLC\_SyncTimePLC_de.pdf"/>
+		<File Path=".\Class\UserAlarmGenerator\UserAlarmGenerator_de.pdf"/>
+		<File Path=".\Class\UserAlarmGenerator\UserAlarmGenerator_en.pdf"/>
+		<File Path=".\Class\GetBroadCastData\GetBroadcastData.pdf"/>
+		<File Path=".\Class\GetBroadCastData\GetBroadcastData_eng.pdf"/>
+		<File Path=".\Class\_Bit32\Bit32.pdf"/>
+		<File Path=".\Class\_Bit32\Bit32_eng.pdf"/>
+		<File Path=".\Class\_IPConfigIF\_IPConfigIF_de.pdf"/>
+		<File Path=".\Class\_IPConfigIF\_IPConfigIF_en.pdf"/>
+		<File Path=".\Class\_SearchUsbFiletoReset\_SearchUsbFiletoReset_de.pdf"/>
+		<File Path=".\Class\_SearchUsbFiletoReset\_SearchUsbFiletoReset_en.pdf"/>
+	</DocuFiles>
+	<Options>
+		<Target UseFPU="true" Processor="ARM">
+		</Target>
+		<Compiler
+			CompilerVersion         = "56"
+			VariableNeverUsed       = "true"
+			ValueNeverUsed          = "true"
+			LabelNeverUsed          = "true"
+			ParameterNeverUsed      = "true"
+			VariableUnitialized     = "true"
+			RetValueUnitialized     = "true"
+			PrivateDataAccess       = "true"
+			SemicolonMissing        = "true"
+			ConditionConstant       = "true"
+			ExactTypeChecking       = "true"
+			CheckConnectionTypes    = "true"
+			CompileCFiles           = "false"
+			Alignment               = "4 Byte"
+			ReducedClientDependency = "true"
+			MaxModuleErrorCount     = "100"
+			MathLibrary             = "BSD Library">
+		</Compiler>
+		<Directories
+			Class       = ".\Class\"
+			Network     = ".\Network\"
+			Source      = ".\Source\"
+			Include     = ".\Include\"
+			Loader      = ".\Loader\"
+			PrjInternal = ".\ProjectInternal\">
+		</Directories>
+	</Options>
+	<SigmatekFolders>
+		<OSInterfaceFolders>
+			<Folder Name="old">
+				<Class Name="Graphic"/>
+				<Class Name="System"/>
+			</Folder>
+		</OSInterfaceFolders>
+		<Folder Name="Hardware">
+			<Folder Name="Analog">
+				<Class Name="AI075"/>
+				<Class Name="AI088"/>
+			</Folder>
+			<Folder Name="Axis">
+				<Class Name="SR020"/>
+			</Folder>
+			<Folder Name="ControlSystems">
+				<Folder Name="CPUModules">
+					<Class Name="CP102_IOs"/>
+				</Folder>
+			</Folder>
+			<Folder Name="Digital">
+				<Class Name="DI203"/>
+				<Class Name="TO161"/>
+			</Folder>
+			<Folder Name="Internal">
+				<Class Name="BusInterfaceSDIASInternal"/>
+				<Class Name="DiasMaster"/>
+				<Class Name="DiasMasterMain"/>
+				<Class Name="DiasMasterPostScan"/>
+				<Class Name="EEPROM"/>
+				<Class Name="Hub_Base"/>
+				<Class Name="Hub_Base_Root"/>
+				<Class Name="HwBase"/>
+				<Class Name="HwBaseCDIAS"/>
+				<Class Name="HwControlBase"/>
+				<Class Name="HWRtPostScan"/>
+				<Class Name="I2CCDIAS"/>
+				<Class Name="SafetyCDIAS_Base"/>
+				<Class Name="SafetyManager"/>
+				<Class Name="SafetyUDP"/>
+				<Class Name="SdiasBase"/>
+				<Class Name="SdiasHubBase"/>
+				<Class Name="SdiasManager"/>
+				<Class Name="SyncCall"/>
+				<Class Name="Varan_Base"/>
+				<Class Name="VaranManager"/>
+				<Class Name="VaranManager_Base"/>
+				<Class Name="WatchdogDias"/>
+				<Class Name="XXXBase_IOs"/>
+			</Folder>
+			<Folder Name="Manager">
+				<Class Name="DiasMasterC"/>
+				<Class Name="HwControl"/>
+				<Class Name="SdiasPLC"/>
+			</Folder>
+			<Folder Name="Special">
+				<Folder Name="Info">
+					<Class Name="PLC_Info"/>
+				</Folder>
+			</Folder>
+		</Folder>
+		<Folder Name="System">
+			<Folder Name="Memory">
+				<Class Name="MerkerEx"/>
+				<Class Name="Ram"/>
+				<Class Name="RAMex"/>
+				<Class Name="String"/>
+				<Class Name="StringInternal"/>
+				<Class Name="StringRAM"/>
+				<Class Name="VirtualBaseInit"/>
+			</Folder>
+			<Folder Name="Miscellaneous">
+				<Class Name="_SysDateTime"/>
+				<Class Name="_SysDateTime2"/>
+			</Folder>
+			<Folder Name="Visualisation">
+				<Folder Name="LseEasy">
+					<Folder Name="Internal">
+						<Folder Name="Hmi35">
+							<Class Name="HmiFont35"/>
+							<Class Name="HmiFunctionList35"/>
+							<Class Name="HmiImage35"/>
+							<Class Name="HmiProject35"/>
+							<Class Name="HmiSetupList35"/>
+							<Class Name="HmiShemeList35"/>
+							<Class Name="HmiStateBit35"/>
+							<Class Name="HmiTextList35"/>
+							<Class Name="HmiVarList35"/>
+						</Folder>
+						<Folder Name="HmiCommunication">
+							<Class Name="HmiCanSendReceive"/>
+							<Class Name="HmiComPort"/>
+							<Class Name="HmiComPortCan"/>
+						</Folder>
+						<Folder Name="HmiMiscellaneous">
+							<Class Name="HmiBaseList"/>
+							<Class Name="HmiChkBitList"/>
+							<Class Name="HmiFontList"/>
+							<Class Name="HmiFunctionList"/>
+							<Class Name="HmiImageList"/>
+							<Class Name="HmiMapFile"/>
+							<Class Name="HmiProjectList"/>
+							<Class Name="HmiSetUpList"/>
+							<Class Name="HmiShemeList"/>
+						</Folder>
+						<Folder Name="HmiScreen">
+							<Class Name="HmiColorMap"/>
+							<Class Name="HmiMemCircle"/>
+							<Class Name="HmiMemImage"/>
+							<Class Name="HmiMemIO"/>
+							<Class Name="HmiMemLine"/>
+							<Class Name="HmiMemRectangle"/>
+							<Class Name="HmiMemText"/>
+							<Class Name="HmiMemZorder"/>
+							<Class Name="HmiScreen"/>
+						</Folder>
+						<Folder Name="HmiText">
+							<Class Name="HmiAsciiBuffer"/>
+							<Class Name="HmiTextList"/>
+							<Class Name="HmiUniBuffer"/>
+						</Folder>
+						<Folder Name="HmiUtils">
+							<Class Name="HmiFile"/>
+							<Class Name="HmiStrLib"/>
+							<Class Name="HmiUtils"/>
+						</Folder>
+						<Folder Name="HmiVariable">
+							<Class Name="HmiUnitList"/>
+							<Class Name="HmiVarInfoList"/>
+							<Class Name="HmiVarList"/>
+						</Folder>
+					</Folder>
+					<Folder Name="Project">
+						<Class Name="LseEasy"/>
+					</Folder>
+				</Folder>
+				<Folder Name="LseRtk">
+					<Folder Name="Alarm">
+						<Folder Name="PLC">
+							<Class Name="_AlarmX0Para"/>
+							<Class Name="_AlarmXBuffer"/>
+						</Folder>
+						<Folder Name="Visu">
+							<Class Name="_AlarmDisplay"/>
+							<Class Name="_HotAlarm"/>
+						</Folder>
+					</Folder>
+					<Folder Name="Project">
+						<Class Name="_Lse"/>
+					</Folder>
+					<Folder Name="UserInterface">
+						<Class Name="_Bit32"/>
+						<Class Name="_Bit32Ram"/>
+						<Class Name="_Global"/>
+						<Class Name="_LanguageSelection"/>
+						<Class Name="_LimitMax"/>
+						<Class Name="_LimitMin"/>
+						<Class Name="_MyIO"/>
+						<Class Name="_OsziLSE"/>
+						<Class Name="_OsziLSEBackground"/>
+						<Class Name="_Radio32"/>
+						<Class Name="_Radio32Ram"/>
+						<Class Name="_Screen"/>
+						<Class Name="_ScrollArea"/>
+						<Class Name="_ScrollArea2"/>
+						<Class Name="_ToolCat"/>
+						<Class Name="_XAccess"/>
+						<Class Name="GetBroadCastData"/>
+					</Folder>
+				</Folder>
+			</Folder>
+		</Folder>
+		<Folder Name="Template">
+			<Folder Name="Communication">
+				<Class Name="_CheckOnlineStatus"/>
+				<Class Name="_SyncTimePLC"/>
+			</Folder>
+			<Folder Name="IPConfiguration">
+				<Class Name="_IPConfigIF"/>
+				<Class Name="_SearchUsbFiletoReset"/>
+			</Folder>
+		</Folder>
+		<Folder Name="Tools">
+			<Folder Name="_old">
+				<Folder Name="Memory">
+					<Class Name="RamFile"/>
+				</Folder>
+			</Folder>
+			<Folder Name="Communication">
+				<Class Name="_CanLib"/>
+				<Class Name="_SerLib"/>
+				<Folder Name="TCPCom">
+					<Class Name="DataManager"/>
+					<Class Name="TCPCommunication"/>
+					<Class Name="TCPCommunicationLogFilter"/>
+					<Folder Name="Internal">
+						<Class Name="DataManagerFIFO"/>
+						<Class Name="DataManagerPriority"/>
+					</Folder>
+				</Folder>
+			</Folder>
+			<Folder Name="Conversion">
+				<Class Name="ASCII_BIN"/>
+			</Folder>
+			<Folder Name="Divers">
+				<Class Name="_CheckSum"/>
+				<Class Name="CriticalSection"/>
+				<Class Name="GetTaskHandle"/>
+				<Class Name="NetworkConfig"/>
+				<Class Name="RamRingBuffer"/>
+			</Folder>
+		</Folder>
+	</SigmatekFolders>
+	<ClassFolders>
+		<Folder Name="Heating">
+			<Class Name="DayNightSplitter_Class"/>
+			<Class Name="TempControl_Class"/>
+		</Folder>
+		<Folder Name="Level">
+			<Class Name="Level_Class"/>
+			<Class Name="LevelFilter_Class"/>
+		</Folder>
+		<Folder Name="Lightning">
+			<Class Name="NightLight_Class"/>
+		</Folder>
+		<Folder Name="Manage">
+			<Class Name="Timer_Class"/>
+		</Folder>
+		<Folder Name="Power">
+			<Class Name="Battery_Class"/>
+			<Class Name="Grid_Class"/>
+		</Folder>
+		<Folder Name="Template">
+			<Folder Name="Alarm">
+				<Class Name="UserAlarmGenerator"/>
+			</Folder>
+			<Folder Name="Diagnostic">
+				<Class Name="GetOSVersion"/>
+			</Folder>
+		</Folder>
+		<Folder Name="Water">
+			<Class Name="FreshWaterTank_Class"/>
+			<Class Name="InputChange"/>
+		</Folder>
+	</ClassFolders>
+	<NetworkFolders>
+		<Folder Name="LseEasy">
+			<Network Name="LseEasyMain"/>
+		</Folder>
+		<Folder Name="Template">
+			<Folder Name="IPCONF">
+				<Folder Name="MachineControl">
+					<Network Name="IPCONF_IPConfigMC1"/>
+				</Folder>
+			</Folder>
+			<Folder Name="STD">
+				<Folder Name="MachineControl">
+					<Network Name="STDAlarm"/>
+					<Network Name="STDCommunicationToHMI"/>
+					<Network Name="STDPLCInfoPLC"/>
+					<Network Name="STDTimeSync"/>
+				</Folder>
+			</Folder>
+		</Folder>
+		<Folder Name="USER_Net">
+			<Network Name="Heizung_NET"/>
+			<Network Name="Level_Net"/>
+			<Network Name="Licht_Net"/>
+			<Network Name="Manage_Net"/>
+			<Network Name="Power_Net"/>
+			<Network Name="Water_Net"/>
+		</Folder>
+	</NetworkFolders>
+	<Units>
+		<UnitGrp Name="Acceleration">
+			<Unit Name="mmPsec2" Factor="1" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Angle">
+			<Unit Name="deg" Factor="10000" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Area">
+			<Unit Name="mm2" Factor="10" Ref="S" Comment="x.x sqare millimeter"/>
+		</UnitGrp>
+		<UnitGrp Name="Force">
+			<Unit Name="kN" Factor="1000 N" BaseDivisor="1000" Ref="S" Base="N"/>
+			<Unit Name="N" Factor="1" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Length">
+			<Unit Name="m" Factor="1000 mm" BaseDivisor="1000" Ref="S" Base="mm"/>
+			<Unit Name="mm" Factor="10000" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Memory">
+			<Unit Name="GB" Factor="1024 MB" BaseDivisor="1024" Ref="S" Base="MB"/>
+			<Unit Name="kB" Factor="1024" Ref="S"/>
+			<Unit Name="MB" Factor="1024 kB" BaseDivisor="1024" Ref="S" Base="kB"/>
+		</UnitGrp>
+		<UnitGrp Name="Pressure">
+			<Unit Name="bar" Factor="1000" Ref="S" Comment="x.xxx Bar ( MilliBar)"/>
+		</UnitGrp>
+		<UnitGrp Name="Revolution">
+			<Unit Name="RPM" Factor="1000" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Speed">
+			<Unit Name="mlpmin" Factor="1" Ref="S"/>
+			<Unit Name="mmpsec" Factor="10000" Ref="S"/>
+		</UnitGrp>
+		<UnitGrp Name="Time">
+			<Unit Name="hours" Factor="60 min" BaseDivisor="60" Ref="S" Base="min"/>
+			<Unit Name="min" Factor="60 secs" BaseDivisor="60" Ref="S" Base="secs"/>
+			<Unit Name="ms" Factor="1" Ref="S"/>
+			<Unit Name="sec" Factor="1000" Ref="S"/>
+			<Unit Name="secs" Factor="1000 ms" BaseDivisor="1000" Ref="S" Base="ms"/>
+		</UnitGrp>
+		<UnitGrp Name="Volume">
+			<Unit Name="ccm" Factor="1" Ref="S" Comment="cubic centimeter"/>
+		</UnitGrp>
+	</Units>
+</Project>

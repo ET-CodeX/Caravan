@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HWClassInfo>
+  <HWDevice ModuleID="1007" SubModuleID="0x0" ModType="M_SDIAS" Desc="SDIAS Analog In Module; 6x Analog In (Analog In 1 can be also used as Temperature Input); 1x Temperature In" OrderNr="20-009-075">
+    <Types>
+      <Device Name="AI075" ClassName="AI075" DisplayGroup="Analog" Default="true" PowerLoss="2500">
+        <Power Voltage="5000" Supply="0" Drain="55"/>
+        <Power Voltage="24000" Supply="0" Drain="100"/>
+      </Device>
+    </Types>
+    <VisualData>
+      <VisualView TypeId="0" Size="10,120">
+        <VisualModule ImgPath=".\S-Dias\S-DIAS Grundmodul.xaml" Position="0,0" Width="12.5" Height="101.8">
+          <!-- Texte -->
+          <VisualTexts>
+            <VisualText Text="AI 075" FontFamily="ARIAL" Italic="true" FontSize="12" ClrForeground="4294967295" FontWeight="1" LineHeight="10" Width="7.94" Height="5.82" Left="4.76" Top="10.05" />
+            <VisualText Text="S" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="9" />
+            <VisualText Text="U" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="11.64" />
+            <VisualText Text="X1" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="15.61" />
+            <VisualText Text="1+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.81" Left="0.26" Top="17.99" />
+            <VisualText Text="1-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="21.17" />
+            <VisualText Text="2+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="24.34" />
+            <VisualText Text="2-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="27.52" />
+            <VisualText Text="X2" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="30.96" />
+            <VisualText Text="3+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="33.34" />
+            <VisualText Text="3-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="36.51" />
+            <VisualText Text="4+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="39.69" />
+            <VisualText Text="4-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="42.86" />
+            <VisualText Text="X3" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="46.3" />
+            <VisualText Text="5+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="48.68" />
+            <VisualText Text="5-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="51.86" />
+            <VisualText Text="6+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="55.03" />
+            <VisualText Text="6-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="58.21" />
+            <VisualText Text="X4" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="61.65" />
+            <VisualText Text="R" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="64.03" />
+            <VisualText Text="R" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="67.2" />
+            <VisualText Text="R" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="70.38" />
+            <VisualText Text="R" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="73.55" />
+            <VisualText Text="X5" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="76.99" />
+            <VisualText Text="R" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="79.38" />
+            <VisualText Text="R" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="82.55" />
+            <VisualText Text="K+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="85.72" />
+            <VisualText Text="K-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="88.9" />
+          </VisualTexts>
+          <!-- Leds -->
+          <VisualLeds>
+            <VisualLed Description="Module state" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="10.32">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" DataString="AI075.ClassState" Value="0" />
+                </Activator>
+              </Behaviour>
+              <Behaviour ClrForeground="4278255360" Interval="200">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" Negate="true" DataString="AI075.ClassState" Value="0" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed DataString="AI075.LedControl" Description="User" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="12.96">
+              <Behaviour ClrForeground="4278229503">
+                <Activator TypeId="3" DataString="AI075.LedControl" Value="1" />
+              </Behaviour>
+              <Behaviour ClrForeground="4278229503" Interval="500">
+                <Activator TypeId="3" DataString="AI075.LedControl" Value="2" />
+              </Behaviour>
+              <Behaviour ClrForeground="4278229503" Interval="250">
+                <Activator TypeId="3" DataString="AI075.LedControl" Value="3" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X1-->
+            <!-- X2-->
+            <!-- X3-->
+            <!-- X4-->
+            <VisualLed Description="Error Reference" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342177535" Width="1.32" Height="1.32" Left="2.12" Top="65.35">
+              <Behaviour ClrForeground="4278190335">
+                <Activator TypeId="3" DataString="AI075.OverCurrent" Value="1" />
+              </Behaviour>
+              <Behaviour ClrForeground="4278190335" Interval="50">
+                <Activator TypeId="3" DataString="AI075.ShortCircuit" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X5-->
+          </VisualLeds>
+          <!-- Stecker -->
+          <VisualConnectors>
+            <VisualConnector Description="X1" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="16.93">
+              <ConnectorPin DataString="AI075.AI1" Description="Sensor 1+" TypeId="1" />
+              <ConnectorPin DataString="AI075.AI1" Description="Sensor 1-" TypeId="1" />
+              <ConnectorPin DataString="AI075.AI2" Description="Sensor 2+" TypeId="1" />
+              <ConnectorPin DataString="AI075.AI2" Description="Sensor 2-" TypeId="1" />
+            </VisualConnector>
+            <VisualConnector Description="X2" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="32.28">
+              <ConnectorPin DataString="AI075.AI3" Description="Sensor 3+" TypeId="1" />
+              <ConnectorPin DataString="AI075.AI3" Description="Sensor 3-" TypeId="1" />
+              <ConnectorPin DataString="AI075.AI4" Description="Sensor 4+" TypeId="1" />
+              <ConnectorPin DataString="AI075.AI4" Description="Sensor 4-" TypeId="1" />
+            </VisualConnector>
+            <VisualConnector Description="X3" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="47.62">
+              <ConnectorPin DataString="AI075.AI5" Description="Sensor 5+" TypeId="1" />
+              <ConnectorPin DataString="AI075.AI5" Description="Sensor 5-" TypeId="1" />
+              <ConnectorPin DataString="AI075.AI6" Description="Sensor 6+" TypeId="1" />
+              <ConnectorPin DataString="AI075.AI6" Description="Sensor 6-" TypeId="1" />
+            </VisualConnector>
+            <VisualConnector Description="X4" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="62.97">
+              <ConnectorPin DataString="AI075.RefVoltageOK" Description="Reference" TypeId="1" />
+              <ConnectorPin DataString="AI075.RefVoltageOK" Description="Reference" TypeId="1" />
+              <ConnectorPin DataString="AI075.RefVoltageOK" Description="Reference" TypeId="1" />
+              <ConnectorPin DataString="AI075.RefVoltageOK" Description="Reference" TypeId="1" />
+            </VisualConnector>
+            <VisualConnector Description="X5" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="78.32">
+              <ConnectorPin DataString="AI075.RefVoltageOK" Description="Reference" TypeId="1" />
+              <ConnectorPin DataString="AI075.RefVoltageOK" Description="Reference" TypeId="1" />
+              <ConnectorPin DataString="AI075.TI" Description="KTY+" TypeId="1" />
+              <ConnectorPin DataString="AI075.TI" Description="KTY-" TypeId="1" />
+            </VisualConnector>
+          </VisualConnectors>
+        </VisualModule>
+      </VisualView>
+    </VisualData>
+  </HWDevice>
+  <Class Name="AI075">
+    <Uplink Name="SdiasIn" BusType="SDIAS" PlaceName="Place" />
+    <!-- General -->
+    <Property Name="Required" Channel="Required" Editor="Combo:1=Module is required;0=Module is not required" Desc="0=module is not required 1=module is required (CPU will crash if module is missing)" />
+    <IOState Name="Class State" Channel="ClassState" Desc="This server shows the status of the hardware class. If the state is not equal than _ClassOK, an error has occurred " Type="" />
+    <IOState Name="Device ID" Channel="DeviceID" IsInfo="true" Type="" Desc="This server shows the device ID  of the hardware module" />
+    <IOState Name="FPGA Version" Channel="FPGAVersion" Format="V{5-8}.{1-4}" IsInfo="true" Desc="Shows the actual FPGA version of the module in the format x.y (e.g. 16#10 means v1.0)" />
+    <IOState Name="Hardware Version" Channel="HwVersion" IsInfo="true" Format="V{9-16}.{5-8}{1-4}" Type="" Desc="Shows the hardware version of the module" /> 
+    <IOState Name="Serial Number" Channel="SerialNo" IsInfo="true" Type="" Desc="Shows the Serial Number of the hardware module" />
+    <IOState Name="Retry Counter" Channel="RetryCounter" Desc="Is incremented in case of incorrect data transfer." />
+    <Output Name="LED Control" Channel="LEDControl" Type="Digital" Desc="Sets a LED on hardware, to detect module. (0=LED off; 1=LED on; 2=blinking slowly; 3=blinking fast)" />
+    <IOState Name="Firmware Version" Channel="FirmwareVersion" Format="V{13-16}{9-12}.{5-8}{1-4}" IsInfo="true" Type="" Desc="This server shows the firmware version of the hardware module" />
+    <IOState Name="Firmware Status" Channel="FWErrorBits" Type="" Desc="Firmware Status:Bit0..DC not Ok; Bit1..No Sync; Bit2..Flash data CRC error; Bit3..RAM data CRC error; Bit4..No valid EEPROM Version" />
+    <IOComment Name="---------------------- Analog Inputs -----------------------" IsInfo="true" Desc=""/>
+    <!-- Analog Input 1 -->
+    <Input Name="Analog Input 1" Channel="AI1" IsConfig="true" Desc="Analog Input 1. Invalid value is 16#80000010." Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="A1I Config" Channel="AI1Config" Desc="Analog Input 1" Editor="Combo:0=analog in (Range: -10V...+10V);1=analog in with ground reference (Range: -10V...+10V);2=temperature input with KTY (Range: -50°C...+150°C);3=temperature input with PT1000 (Range: -125°C...+850°C)" />
+      <Property Name="AI1 minimal value" Channel="AI1_Min" Desc="The scale of analog input can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AI1 maximal value" Channel="AI1_Max" Desc="The scale of analog input can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AI1 cut off frequency" Channel="AI1_Freq" Editor="Combo:0=1000 Hz; 1=500 Hz; 2=250 Hz; 3=100 Hz; 4=50 Hz; 5=25 Hz; 6=10 Hz" Desc="Cut off frequency for analog in low pass filter" />
+      <Property Name="Analog Input 1 Sample Point" Channel="AI1SamplePoint" Desc="Samplepoint of Analog Input 1 in µs. &#xD;&#xA;-1 ... Feature not available (Firmwareversion too old. Must be 1.30 or higher to support this feature)." Type="Analog" Editor="EditNumber:Signed;Dec"/>
+    </Input>
+    <Input Name="Analog Input 1 Sample Point" Channel="AI1SamplePoint" Desc="Samplepoint of Analog Input 1 in µs. &#xD;&#xA;-1 ... Feature not available (Firmwareversion too old. Must be 1.30 or higher to support this feature)." Type="Analog" Editor="EditNumber:Signed;Dec"/>
+    
+    <!-- Analog Input 2 -->
+    <Input Name="Analog Input 2" Channel="AI2" IsConfig="true" Desc="Analog Input 2. Invalid value is 16#80000010." Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="AI2 Config" Channel="AI2Config" Desc="Analog Input 2" Editor="Combo:0=analog in (Range: -10V...+10V);1=analog in with ground reference (Range: -10V...+10V)" />
+      <Property Name="AI2 minimal value" Channel="AI2_Min" Desc="The scale of analog input can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AI2 maximal value" Channel="AI2_Max" Desc="The scale of analog input can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AI2 cut off frequency" Channel="AI2_Freq" Editor="Combo:0=1000 Hz; 1=500 Hz; 2=250 Hz; 3=100 Hz; 4=50 Hz; 5=25 Hz; 6=10 Hz" Desc="Cut off frequency for analog in low pass filter" />
+      <Property Name="Analog Input 2 Sample Point" Channel="AI2SamplePoint" Desc="Samplepoint of Analog Input 2 in µs. &#xD;&#xA;-1 ... Feature not available (Firmwareversion too old. Must be 1.30 or higher to support this feature)." Type="Analog" Editor="EditNumber:Signed;Dec"/>
+    </Input>
+    <Input Name="Analog Input 2 Sample Point" Channel="AI2SamplePoint" Desc="Samplepoint of Analog Input 2 in µs. &#xD;&#xA;-1 ... Feature not available (Firmwareversion too old. Must be 1.30 or higher to support this feature)." Type="Analog" Editor="EditNumber:Signed;Dec"/>
+
+    <!-- Analog Input 3 -->
+    <Input Name="Analog Input 3" Channel="AI3" IsConfig="true" Desc="Analog Input 3. Invalid value is 16#80000010." Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="AI3 Config" Channel="AI3Config" Desc="Analog Input 3" Editor="Combo:0=analog in (Range: -10V...+10V);1=analog in with ground reference (Range: -10V...+10V)" />
+      <Property Name="AI3 minimal value" Channel="AI3_Min" Desc="The scale of analog input can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AI3 maximal value" Channel="AI3_Max" Desc="The scale of analog input can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AI3 cut off frequency" Channel="AI3_Freq" Editor="Combo:0=1000 Hz; 1=500 Hz; 2=250 Hz; 3=100 Hz; 4=50 Hz; 5=25 Hz; 6=10 Hz" Desc="Cut off frequency for analog in low pass filter" />
+       <Property Name="Analog Input 3 Sample Point" Channel="AI3SamplePoint" Desc="Samplepoint of Analog Input 3 in µs. &#xD;&#xA;-1 ... Feature not available (Firmwareversion too old. Must be 1.30 or higher to support this feature)." Type="Analog" Editor="EditNumber:Signed;Dec"/>
+    </Input>
+    <Input Name="Analog Input 3 Sample Point" Channel="AI3SamplePoint" Desc="Samplepoint of Analog Input 3 in µs. &#xD;&#xA;-1 ... Feature not available (Firmwareversion too old. Must be 1.30 or higher to support this feature)." Type="Analog" Editor="EditNumber:Signed;Dec"/>
+
+    <!-- Analog Input 4 -->
+    <Input Name="Analog Input 4" Channel="AI4" IsConfig="true" Desc="Analog Input 4. Invalid value is 16#80000010." Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="A14 Config" Channel="AI4Config" Desc="Analog Input 4" Editor="Combo:0=analog in (Range: -10V...+10V);1=analog in with ground reference (Range: -10V...+10V)" />
+      <Property Name="AI4 minimal value" Channel="AI4_Min" Desc="The scale of analog input can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AI4 maximal value" Channel="AI4_Max" Desc="The scale of analog input can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AI4 cut off frequency" Channel="AI4_Freq" Editor="Combo:0=1000 Hz; 1=500 Hz; 2=250 Hz; 3=100 Hz; 4=50 Hz; 5=25 Hz; 6=10 Hz" Desc="Cut off frequency for analog in low pass filter" />
+      <Property Name="Analog Input 4 Sample Point" Channel="AI4SamplePoint" Desc="Samplepoint of Analog Input 4 in µs. &#xD;&#xA;-1 ... Feature not available (Firmwareversion too old. Must be 1.30 or higher to support this feature)." Type="Analog" Editor="EditNumber:Signed;Dec"/>
+    </Input>
+    <Input Name="Analog Input 4 Sample Point" Channel="AI4SamplePoint" Desc="Samplepoint of Analog Input 4 in µs. &#xD;&#xA;-1 ... Feature not available (Firmwareversion too old. Must be 1.30 or higher to support this feature)." Type="Analog" Editor="EditNumber:Signed;Dec"/>
+
+    <!-- Analog Input 5 -->
+    <Input Name="Analog Input 5" Channel="AI5" IsConfig="true" Desc="Analog Input 5. Invalid value is 16#80000010." Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="AI5 Config" Channel="AI5Config" Desc="Analog Input 5" Editor="Combo:0=analog in (Range: -10V...+10V);1=analog in with ground reference (Range: -10V...+10V)" />
+      <Property Name="AI5 minimal value" Channel="AI5_Min" Desc="The scale of analog input can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AI5 maximal value" Channel="AI5_Max" Desc="The scale of analog input can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AI5 cut off frequency" Channel="AI5_Freq" Editor="Combo:0=1000 Hz; 1=500 Hz; 2=250 Hz; 3=100 Hz; 4=50 Hz; 5=25 Hz; 6=10 Hz" Desc="Cut off frequency for analog in low pass filter" />
+      <Property Name="Analog Input 5 Sample Point" Channel="AI5SamplePoint" Desc="Samplepoint of Analog Input 5 in µs. &#xD;&#xA;-1 ... Feature not available (Firmwareversion too old. Must be 1.30 or higher to support this feature)." Type="Analog" Editor="EditNumber:Signed;Dec"/>
+    </Input>
+    <Input Name="Analog Input 5 Sample Point" Channel="AI5SamplePoint" Desc="Samplepoint of Analog Input 5 in µs. &#xD;&#xA;-1 ... Feature not available (Firmwareversion too old. Must be 1.30 or higher to support this feature)." Type="Analog" Editor="EditNumber:Signed;Dec"/>
+
+    <!-- Analog Input 6 -->
+    <Input Name="Analog Input 6" Channel="AI6" IsConfig="true" Desc="Analog Input 6. Invalid value is 16#80000010." Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="AI6 Config" Channel="AI6Config" Desc="Analog Input 6" Editor="Combo:0=analog in (Range: -10V...+10V);1=analog in with ground reference (Range: -10V...+10V)" />
+      <Property Name="AI6 minimal value" Channel="AI6_Min" Desc="The scale of analog input can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AI6 maximal value" Channel="AI6_Max" Desc="The scale of analog input can be selected by this client (corresponds to +/-10V) as initvalue." Editor="EditNumber:Signed;Dec" />
+      <Property Name="AI6 cut off frequency" Channel="AI6_Freq" Editor="Combo:0=1000 Hz; 1=500 Hz; 2=250 Hz; 3=100 Hz; 4=50 Hz; 5=25 Hz; 6=10 Hz" Desc="Cut off frequency for analog in low pass filter" />
+      <Property Name="Analog Input 6 Sample Point" Channel="AI6SamplePoint" Desc="Samplepoint of Analog Input 6 in µs. &#xD;&#xA;-1 ... Feature not available (Firmwareversion too old. Must be 1.30 or higher to support this feature)." Type="Analog" Editor="EditNumber:Signed;Dec"/>
+    </Input>
+    <Input Name="Analog Input 6 Sample Point" Channel="AI6SamplePoint" Desc="Samplepoint of Analog Input 6 in µs. &#xD;&#xA;-1 ... Feature not available (Firmwareversion too old. Must be 1.30 or higher to support this feature)." Type="Analog" Editor="EditNumber:Signed;Dec"/>
+
+    <!-- KTY Temperature Input -->
+    <Input Name="Temperature Input" Channel="TI" IsConfig="true" Desc="Temperature Input. Invalid value is 16#80000010." Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="TI Config" Channel="TIConfig" Desc="Temperature Input" Editor="Combo:0=temperature input with KTY (Range: -50°C...+150°C);1=temperature input with PT1000 (Range: -125°C...+850°C)" />
+      <Property Name="Temperature Input Sample Point" Channel="TISamplePoint" Desc="Samplepoint of Temperature Input in µs. &#xD;&#xA;-1 ... Feature not available (Firmwareversion too old. Must be 1.30 or higher to support this feature)." Type="Analog" Editor="EditNumber:Signed;Dec"/>
+    </Input>
+    <Input Name="Temperature Input Sample Point" Channel="TISamplePoint" Desc="Samplepoint of Temperature Input in µs. &#xD;&#xA;-1 ... Feature not available (Firmwareversion too old. Must be 1.30 or higher to support this feature)." Type="Analog" Editor="EditNumber:Signed;Dec"/>
+
+    <!-- Sample Point Configuration-->
+    <Input Name="Activate Sample Point Configuration" Channel="ActivateSamplePointConfig" Desc="This server is used to activate and deactivate the sample point configuration in the firmware. &#xD;&#xA;0 .. deactivate&#xD;&#xA;1 .. activate." Type="Analog" Editor="EditNumber:Signed;Dec"/>
+    <Input Name="Sample Point State" Channel="SamplePointState" Desc="Shows the state of the Sample point configuration of the firmware. Bit1 ... Samplepoints settings were corrected by firmware due to invalid settings (difference between two sample points too small, 2 sample points have the same value)&#xD;&#xA;Bit2 ... Samplepoints could not be corrected by firmware&#xD;&#xA;Bit3 ... Bustime which is set by hardwareclass is invalid&#xD;&#xA;Bit4 ... Transfered bustime and measured bustime are different." Type="Analog" Editor="EditNumber:Signed;Dec"/>
+
+    <Property Name="Use Sample Point Configuration" Channel="UseSamplePointConfig" Desc="This setting is used to set the communication type of the configuration data between the hardwareclass and the firmware.&#xD;&#xA;0 .. Old Communication type is used&#xD;&#xA;1 .. New Communication type is used (Needed for Sample Point Feature).&#xD;&#xA;If the setting is 1 and an old firmware is used the class state is set to _ClientNotReady." Editor="Combo:0=Sample point configuration inactive; 1=Sample point configuration active) " />
+       
+    <!-- General -->
+    <IOState Name="Cable Break" Channel="CableBreak" Type="Analog" Desc="Cable break detection:Bit0..AI1; Bit1..AI2; Bit2..AI3; Bit3..AI4; Bit4..AI5;Bit5..AI6; Bit6..TI" />
+    <IOState Name="Short Circuit" Channel="ShortCircuit" Type="Analog" Desc="Short circuit detection:Bit0..AI1 (only temperature input); Bit1..TI" />
+    <IOState Name="Reference Voltage OK" Channel="RefVoltageOK" Type="Analog" Desc="0=Reference Voltage Error | 1=Reference Voltage Ok" />
+    <IOState Name="Input Over Current" Channel="OverCurrent" Type="Analog" Desc="Input Current too high" />
+    
+    <Script Name="AI075">
+    <Parameter Name="UseSamplePointConfig" Type="Client" Channel="UseSamplePointConfig" Desc="" />
+<Code>
+def compPost_AI075(element, parameters):
+  
+  if parameters['varanBridge']:
+    parameters['AddToSDiasTime'] = True
+    element['result']['optional'] =  {'PDO': {'Wr':[], 'Rd':[], 'WrDyn':[], 'RdDyn':[]}}    
+    SDIASPDORdAdd(0x12,element)    
+    if operator.gt(element['options']['UseSamplePointConfig'], 0):
+      SDIASPDOWrAdd(0x0F,element)
+
+</Code>
+    </Script>        
+  </Class>
+</HWClassInfo>

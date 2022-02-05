@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="Water_Net" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name           = "FreshWaterTank_Class1"
+			GUID           = "{D70A125C-69D5-445C-9017-4EC3E6F702C8}"
+			Class          = "FreshWaterTank_Class"
+			Position       = "(2430,600)"
+			Visualized     = "true"
+			CyclicTime     = "50 ms"
+			BackgroundTime = "1000 ms">
+			<Channels>
+				<Server Name="Check_S"/>
+				<Server Name="ClassSvr"/>
+				<Server Name="Level_S"/>
+				<Client Name="Start_Check"/>
+				<Client Name="Water_100"/>
+				<Client Name="Water_25"/>
+				<Client Name="Water_50"/>
+				<Client Name="Water_75"/>
+				<Client Name="WaterPump"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "InputChange1"
+			GUID       = "{60A71E77-27B4-4696-A9C8-EFDD53C7972C}"
+			Class      = "InputChange"
+			Position   = "(1380,660)"
+			Visualized = "false"
+			CyclicTime = "100 ms">
+			<Channels>
+				<Server Name="Out1"/>
+				<Server Name="Out2"/>
+				<Server Name="Out3"/>
+				<Server Name="Out4"/>
+				<Client Name="Input1"/>
+				<Client Name="Input2"/>
+				<Client Name="Input3"/>
+				<Client Name="Input4"/>
+			</Channels>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="FreshWaterTank_Class1.Start_Check" Destination="__IO_Element11" Vertices="(2430,690),(2370,690)," IOObject="IO_Element1"/>
+		<Connection Source="InputChange1.Input4" Destination="__IO_Element51" Vertices="(1380,930),(1170,930)," IOObject="IO_Element5"/>
+		<Connection Source="InputChange1.Input3" Destination="__IO_Element41" Vertices="(1380,870),(1170,870)," IOObject="IO_Element4"/>
+		<Connection Source="InputChange1.Input2" Destination="__IO_Element31" Vertices="(1380,810),(1170,810)," IOObject="IO_Element3"/>
+		<Connection Source="InputChange1.Input1" Destination="__IO_Element21" Vertices="(1380,750),(1170,750)," IOObject="IO_Element2"/>
+		<Connection Source="FreshWaterTank_Class1.WaterPump" Destination="__IO_Element61" Vertices="(2430,990),(2340,990)," IOObject="IO_Element6"/>
+		<Connection Source="FreshWaterTank_Class1.Water_25" Destination="InputChange1.Out1" Vertices="(2430,750),(1680,750),"/>
+		<Connection Source="FreshWaterTank_Class1.Water_50" Destination="InputChange1.Out2" Vertices="(2430,810),(1680,810),"/>
+		<Connection Source="FreshWaterTank_Class1.Water_75" Destination="InputChange1.Out3" Vertices="(2430,870),(1680,870),"/>
+		<Connection Source="FreshWaterTank_Class1.Water_100" Destination="InputChange1.Out4" Vertices="(2430,930),(1680,930),"/>
+	</Connections>
+	<!-- List of temp data objects in this network -->
+	<IOObjects>
+		<IOObject KeyName="__IO_Element11" Name="IO_Element1" Position="(2070,660)" Client="FreshWaterTank_Class1.Start_Check"/>
+		<IOObject KeyName="__IO_Element21" Name="IO_Element2" Position="(870,720)" Client="InputChange1.Input1"/>
+		<IOObject KeyName="__IO_Element31" Name="IO_Element3" Position="(870,780)" Client="InputChange1.Input2"/>
+		<IOObject KeyName="__IO_Element41" Name="IO_Element4" Position="(870,840)" Client="InputChange1.Input3"/>
+		<IOObject KeyName="__IO_Element51" Name="IO_Element5" Position="(870,900)" Client="InputChange1.Input4"/>
+		<IOObject KeyName="__IO_Element61" Name="IO_Element6" Position="(2040,960)" Client="FreshWaterTank_Class1.WaterPump"/>
+	</IOObjects>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

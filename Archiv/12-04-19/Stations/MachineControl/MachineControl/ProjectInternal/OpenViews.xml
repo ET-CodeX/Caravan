@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<OpenViews>
+	<View Key="Power_Net" Type="0"/>
+	<View Key="HW_Network" Type="0"/>
+	<View Key="Battery_Class" Type="2" LineNr="178"/>
+	<View Key="Battery_Class" Type="2" LineNr="178"/>
+	<Setting Variable="OutputDebugger" Value="0"/>
+</OpenViews>

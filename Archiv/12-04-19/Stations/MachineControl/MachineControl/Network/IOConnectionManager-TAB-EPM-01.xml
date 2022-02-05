@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<IOConnectionManager Version="2" Detail="0" PLC="">
+	<!-- List of Entries -->
+	<Entry Name="**IOCONN_EMPTY**" Objectsize="284">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="AI0881" Server="TMP_1" ObjClt="Battery_Class1" Client="ActualAmps1_C" IOI="Input" Type="Analog" SortIndex="3" KeyName="000003"/>
+			<IOConnection ObjSrv="AI0751" Server="AI4" ObjClt="Battery_Class1" Client="ActualVoltage_C" IOI="Input" Type="Analog" SortIndex="4" KeyName="000004"/>
+			<IOConnection ObjSrv="AI0881" Server="TMP_2" ObjClt="Battery_Class1" Client="ActualAmps2_C" IOI="Input" Type="Analog" SortIndex="5" KeyName="000005"/>
+			<IOConnection ObjSrv="AI0751" Server="AI6" ObjClt="Battery_Class1" Client="ActualTowCarVoltage_C" IOI="Input" Type="Analog" SortIndex="6" KeyName="000006"/>
+			<IOConnection ObjSrv="AI0881" Server="TMP_3" ObjClt="TempControl_Class1" Client="ActualRoomTemp_C" IOI="Input" Type="Analog" SortIndex="7" KeyName="000007"/>
+			<IOConnection ObjSrv="AI0881" Server="TMP_4" ObjClt="TempControl_Class1" Client="ActualUltraheatTemp_C" IOI="Input" Type="Analog" SortIndex="8" KeyName="000008"/>
+			<IOConnection ObjSrv="SR0201" Server="SetSpeed" ObjClt="TempControl_Class1" Client="SetFanSpeed_C" IOI="Output" Type="Analog" SortIndex="9" KeyName="000009"/>
+			<IOConnection ObjSrv="SR0201" Server="Enable" ObjClt="TempControl_Class1" Client="MotorRunStop_C" IOI="Output" Type="Digital" SortIndex="10" KeyName="000010"/>
+			<IOConnection ObjSrv="TO1611" Server="Output2" ObjClt="TempControl_Class1" Client="HeaterRun_C" IOI="Output" Type="Digital" SortIndex="12" KeyName="000012"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="IO_Element" Objectsize="284" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="AI0751" Server="AI2" ObjClt="LevelFilter_Class1" Client="X_IN_C" IOI="Input" Type="Analog" SortIndex="0" KeyName="000000"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="IO_Element0" Objectsize="284" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="AI0751" Server="AI3" ObjClt="LevelFilter_Class1" Client="Y_IN_C" IOI="Input" Type="Analog" SortIndex="1" KeyName="000001"/>
+		</IOConnections>
+	</Entry>
+	<!-- List of Folders -->
+</IOConnectionManager>

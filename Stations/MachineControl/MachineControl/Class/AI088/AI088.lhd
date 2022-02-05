@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HWClassInfo>
+  <HWDevice ModuleID="1009" SubModuleID="0x0" ModType="M_SDIAS" Desc="SDIAS Analog In Module; 8x Temperature In for selectable thermocouple elements; 2x Temperature In for KTY-temperature sensors" OrderNr="20-009-088">
+    <Types>
+      <Device Name="AI088" ClassName="AI088" DisplayGroup="Analog" Default="true" PowerLoss="2500">
+        <Power Voltage="5000" Supply="0" Drain="68"/>
+        <Power Voltage="24000" Supply="0" Drain="90"/>
+      </Device>
+    </Types>
+    <VisualData>
+      <VisualView TypeId="0" Size="10,120">
+        <VisualModule ImgPath=".\S-Dias\S-DIAS Grundmodul.xaml" Position="0,0" Width="12.5" Height="101.8">
+          <!-- Texte -->
+          <VisualTexts>
+            <VisualText Text="AI 088" FontFamily="ARIAL" Italic="true" FontSize="12" ClrForeground="4294967295" FontWeight="1" LineHeight="10" Width="7.94" Height="5.82" Left="4.76" Top="10.05" />
+            <VisualText Text="S" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="9" />
+            <VisualText Text="U" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="11.64" />
+            <VisualText Text="X1" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="15.61" />
+            <VisualText Text="1+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.81" Left="0.26" Top="17.99" />
+            <VisualText Text="1-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="21.17" />
+            <VisualText Text="2+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="24.34" />
+            <VisualText Text="2-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="27.52" />
+            <VisualText Text="X2" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="30.96" />
+            <VisualText Text="3+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="33.34" />
+            <VisualText Text="3-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="36.51" />
+            <VisualText Text="4+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="39.69" />
+            <VisualText Text="4-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="42.86" />
+            <VisualText Text="X3" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="46.3" />
+            <VisualText Text="5+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="48.68" />
+            <VisualText Text="5-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="51.86" />
+            <VisualText Text="6+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="55.03" />
+            <VisualText Text="6-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="58.21" />
+            <VisualText Text="X4" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="61.65" />
+            <VisualText Text="7+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="64.03" />
+            <VisualText Text="7-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="67.2" />
+            <VisualText Text="8+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="70.38" />
+            <VisualText Text="8-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="73.55" />
+            <VisualText Text="X5" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="76.99" />
+            <VisualText Text="K+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="79.38" />
+            <VisualText Text="K-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="82.55" />
+            <VisualText Text="K+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="85.72" />
+            <VisualText Text="K-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="88.9" />
+          </VisualTexts>
+          <!-- Leds -->
+          <VisualLeds>
+            <VisualLed Description="Module state" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="10.32">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" DataString="AI088.ClassState" Value="0" />
+                </Activator>
+              </Behaviour>
+              <Behaviour ClrForeground="4278255360" Interval="200">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" Negate="true" DataString="AI088.ClassState" Value="0" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed DataString="AI088.LedControl" Description="User" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="12.96">
+              <Behaviour ClrForeground="4278229503">
+                <Activator TypeId="3" DataString="AI088.LedControl" Value="1" />
+              </Behaviour>
+              <Behaviour ClrForeground="4278229503" Interval="500">
+                <Activator TypeId="3" DataString="AI088.LedControl" Value="2" />
+              </Behaviour>
+              <Behaviour ClrForeground="4278229503" Interval="250">
+                <Activator TypeId="3" DataString="AI088.LedControl" Value="3" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X1-->
+            <!-- X2-->
+            <!-- X3-->
+            <!-- X4-->
+            <!-- X5-->
+          </VisualLeds>
+          <!-- Stecker -->
+          <VisualConnectors>
+            <VisualConnector Description="X1" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="16.93">
+              <ConnectorPin DataString="AI088.TMP_1" Description="Temperature Input 1+" TypeId="1" />
+              <ConnectorPin DataString="AI088.TMP_1" Description="Temperature Input 1-" TypeId="1" />
+              <ConnectorPin DataString="AI088.TMP_2" Description="Temperature Input 2+" TypeId="1" />
+              <ConnectorPin DataString="AI088.TMP_2" Description="Temperature Input 2-" TypeId="1" />
+            </VisualConnector>
+            <VisualConnector Description="X2" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="32.28">
+              <ConnectorPin DataString="AI088.TMP_3" Description="Temperature Input 3+" TypeId="1" />
+              <ConnectorPin DataString="AI088.TMP_3" Description="Temperature Input 3-" TypeId="1" />
+              <ConnectorPin DataString="AI088.TMP_4" Description="Temperature Input 4+" TypeId="1" />
+              <ConnectorPin DataString="AI088.TMP_4" Description="Temperature Input 4-" TypeId="1" />
+            </VisualConnector>
+            <VisualConnector Description="X3" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="47.62">
+              <ConnectorPin DataString="AI088.TMP_5" Description="Temperature Input 5+" TypeId="1" />
+              <ConnectorPin DataString="AI088.TMP_5" Description="Temperature Input 5-" TypeId="1" />
+              <ConnectorPin DataString="AI088.TMP_6" Description="Temperature Input 6+" TypeId="1" />
+              <ConnectorPin DataString="AI088.TMP_6" Description="Temperature Input 6-" TypeId="1" />
+            </VisualConnector>
+            <VisualConnector Description="X4" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="62.97">
+              <ConnectorPin DataString="AI088.TMP_7" Description="Temperature Input 7+" TypeId="1" />
+              <ConnectorPin DataString="AI088.TMP_7" Description="Temperature Input 7-" TypeId="1" />
+              <ConnectorPin DataString="AI088.TMP_8" Description="Temperature Input 8+" TypeId="1" />
+              <ConnectorPin DataString="AI088.TMP_8" Description="Temperature Input 8-" TypeId="1" />
+            </VisualConnector>
+            <VisualConnector Description="X5" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="78.32">
+              <ConnectorPin DataString="AI088.KTY_1" Description="KTY Temperature Input 1+" TypeId="1" />
+              <ConnectorPin DataString="AI088.KTY_1" Description="Temperature Input Ground" TypeId="1" />
+              <ConnectorPin DataString="AI088.KTY_2" Description="KTY Temperature Input 2+" TypeId="1" />
+              <ConnectorPin DataString="AI088.KTY_2" Description="Temperature Input Ground" TypeId="1" />
+            </VisualConnector>
+          </VisualConnectors>
+        </VisualModule>
+      </VisualView>
+    </VisualData>
+  </HWDevice>
+  <Class Name="AI088">
+    <Uplink Name="SdiasIn" BusType="SDIAS" PlaceName="Place" /> 
+    <!-- General -->
+    <Property Name="Required" Channel="Required" Editor="Combo:1=Module is required;0=Module is not required" Desc="0=module is not required 1=module is required (CPU will crash if module is missing)" />
+    <IOState Name="Class State" Channel="ClassState" Desc="This server shows the status of the hardware class. If the state is not equal than _ClassOK, an error has occurred " Type="" />
+    <IOState Name="Device ID" Channel="DeviceID" IsInfo="true" Type="" Desc="This server shows the device ID  of the hardware module" />
+    <IOState Name="FPGA Version" Channel="FPGAVersion" Format="V{5-8}.{1-4}" IsInfo="true" Desc="Shows the actual FPGA version of the module in the format x.y (e.g. 16#10 means v1.0)" />
+    <IOState Name="Hardware Version" Channel="HwVersion" IsInfo="true" Format="V{9-16}.{5-8}{1-4}" Type="" Desc="Shows the hardware version of the module" /> 
+    <IOState Name="Serial Number" Channel="SerialNo" IsInfo="true" Type="" Desc="Shows the Serial Number of the hardware module" />
+    <IOState Name="Retry Counter" Channel="RetryCounter" Desc="Is incremented in case of incorrect data transfer." />
+    <Output Name="LED Control" Channel="LEDControl" Type="Digital" Desc="Sets a LED on hardware, to detect module. (0=LED off; 1=LED on; 2=blinking slowly; 3=blinking fast)" />
+    <IOState Name="Firmware Version" Channel="FirmwareVersion" Format="V{13-16}{9-12}.{5-8}{1-4}" IsInfo="true" Type="" Desc="This server shows the firmware version of the hardware module - format 16#XX.YY: e.g. 16#0100 means v1.0." />
+    <IOState Name="Firmware Status" Channel="FWErrorBits" Type="" Desc="Firmware Status:&#13;&#10;Bit1..DC not Ok&#13;&#10;Bit2..No Sync&#13;&#10;Bit3..Flash data CRC error&#13;&#10;Bit4..RAM data CRC error&#13;&#10;Bit5..No valid EEPROM Version&#13;&#10;Bit6..Bus Timing Error" />
+    <IOComment Name="-------------------- Temperature Inputs --------------------" IsInfo="true" Desc=""/>
+    <!-- Thermocouple Input 1 -->
+    <Input Name="Temperature Input 1" Channel="TMP_1" IsConfig="true" Desc="Thermocouple Element Input 1 in 1/10 °C. Invalid value is -2147483632." Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="Thermocouple element select 1" Channel="TMP_1Select" Desc="Thermocouple element selection for Temperatue Input 1" Editor="Combo:0=Typ J (Fe-CuNi  0... +690°C); 1=Typ K (NiCr-Ni  0... +940°C); 2=Typ T (Cu-CuNi  0... +400°C); 3=Typ E (NiCr-CuNi  0... +520°C); 4=Typ N (NiCrSi-NiSi 0...+1080°C); 5=Typ S (Pt10Rh-Pt 0...+1760°C); 6=Typ R (Pt13Rh-Pt 0...+1760°C); 7=Typ B (Pt30Rh-Pt6Rh 0...+1820°C); 8=Typ L (Fe-CuNi 0... +680°C); 9=Typ U (Cu-CuNi 0... +590°C); 10=Analog In (µV)" />
+      <Property Name="Reference temperature sensor select 1" Channel="TMP_1RefSensor" Desc="Select reference KTY input for temperatur compensation" Editor="Combo:0=KTY_1; 1=KTY_2; 2=internal KTY" />
+    </Input>
+    <!-- Thermocouple Input 2 -->
+    <Input Name="Temperature Input 2" Channel="TMP_2" IsConfig="true" Desc="Thermocouple Element Input 2 in 1/10 °C. Invalid value is -2147483632." Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="Thermocouple element select 2" Channel="TMP_2Select" Desc="Thermocouple element selection for Temperatue Input 2" Editor="Combo:0=Typ J (Fe-CuNi  0... +690°C); 1=Typ K (NiCr-Ni  0... +940°C); 2=Typ T (Cu-CuNi  0... +400°C); 3=Typ E (NiCr-CuNi  0... +520°C); 4=Typ N (NiCrSi-NiSi 0...+1080°C); 5=Typ S (Pt10Rh-Pt 0...+1760°C); 6=Typ R (Pt13Rh-Pt 0...+1760°C); 7=Typ B (Pt30Rh-Pt6Rh 0...+1820°C); 8=Typ L (Fe-CuNi 0... +680°C); 9=Typ U (Cu-CuNi 0... +590°C); 10=Analog In (µV)" />
+      <Property Name="Reference temperature sensor select 2" Channel="TMP_2RefSensor" Desc="Select reference KTY input for temperatur compensation" Editor="Combo:0=KTY_1; 1=KTY_2; 2=internal KTY" />
+    </Input>
+    <!-- Thermocouple Input 3 -->
+    <Input Name="Temperature Input 3" Channel="TMP_3" IsConfig="true" Desc="Thermocouple Element Input 3 in 1/10 °C. Invalid value is -2147483632." Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="Thermocouple element select 3" Channel="TMP_3Select" Desc="Thermocouple element selection for Temperatue Input 3" Editor="Combo:0=Typ J (Fe-CuNi  0... +690°C); 1=Typ K (NiCr-Ni  0... +940°C); 2=Typ T (Cu-CuNi  0... +400°C); 3=Typ E (NiCr-CuNi  0... +520°C); 4=Typ N (NiCrSi-NiSi 0...+1080°C); 5=Typ S (Pt10Rh-Pt 0...+1760°C); 6=Typ R (Pt13Rh-Pt 0...+1760°C); 7=Typ B (Pt30Rh-Pt6Rh 0...+1820°C); 8=Typ L (Fe-CuNi 0... +680°C); 9=Typ U (Cu-CuNi 0... +590°C); 10=Analog In (µV)" />
+      <Property Name="Reference temperature sensor select 3" Channel="TMP_3RefSensor" Desc="Select reference KTY input for temperatur compensation" Editor="Combo:0=KTY_1; 1=KTY_2; 2=internal KTY" />
+    </Input>
+    <!-- Thermocouple Input 4 -->
+    <Input Name="Temperature Input 4" Channel="TMP_4" IsConfig="true" Desc="Thermocouple Element Input 4 in 1/10 °C. Invalid value is -2147483632." Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="Thermocouple element select 4" Channel="TMP_4Select" Desc="Thermocouple element selection for Temperatue Input 4" Editor="Combo:0=Typ J (Fe-CuNi  0... +690°C); 1=Typ K (NiCr-Ni  0... +940°C); 2=Typ T (Cu-CuNi  0... +400°C); 3=Typ E (NiCr-CuNi  0... +520°C); 4=Typ N (NiCrSi-NiSi 0...+1080°C); 5=Typ S (Pt10Rh-Pt 0...+1760°C); 6=Typ R (Pt13Rh-Pt 0...+1760°C); 7=Typ B (Pt30Rh-Pt6Rh 0...+1820°C); 8=Typ L (Fe-CuNi 0... +680°C); 9=Typ U (Cu-CuNi 0... +590°C); 10=Analog In (µV)" />
+      <Property Name="Reference temperature sensor select 4" Channel="TMP_4RefSensor" Desc="Select reference KTY input for temperatur compensation" Editor="Combo:0=KTY_1; 1=KTY_2; 2=internal KTY" />
+    </Input>
+    <!-- Thermocouple Input 5 -->
+    <Input Name="Temperature Input 5" Channel="TMP_5" IsConfig="true" Desc="Thermocouple Element Input 5 in 1/10 °C. Invalid value is -2147483632." Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="Thermocouple element select 5" Channel="TMP_5Select" Desc="Thermocouple element selection for Temperatue Input 5" Editor="Combo:0=Typ J (Fe-CuNi  0... +690°C); 1=Typ K (NiCr-Ni  0... +940°C); 2=Typ T (Cu-CuNi  0... +400°C); 3=Typ E (NiCr-CuNi  0... +520°C); 4=Typ N (NiCrSi-NiSi 0...+1080°C); 5=Typ S (Pt10Rh-Pt 0...+1760°C); 6=Typ R (Pt13Rh-Pt 0...+1760°C); 7=Typ B (Pt30Rh-Pt6Rh 0...+1820°C); 8=Typ L (Fe-CuNi 0... +680°C); 9=Typ U (Cu-CuNi 0... +590°C); 10=Analog In (µV)" />
+      <Property Name="Reference temperature sensor select 5" Channel="TMP_5RefSensor" Desc="Select reference KTY input for temperatur compensation" Editor="Combo:0=KTY_1; 1=KTY_2; 2=internal KTY" />
+    </Input>
+    <!-- Thermocouple Input 6 -->
+    <Input Name="Temperature Input 6" Channel="TMP_6" IsConfig="true" Desc="Thermocouple Element Input 6 in 1/10 °C. Invalid value is -2147483632." Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="Thermocouple element select 6" Channel="TMP_6Select" Desc="Thermocouple element selection for Temperatue Input 6" Editor="Combo:0=Typ J (Fe-CuNi  0... +690°C); 1=Typ K (NiCr-Ni  0... +940°C); 2=Typ T (Cu-CuNi  0... +400°C); 3=Typ E (NiCr-CuNi  0... +520°C); 4=Typ N (NiCrSi-NiSi 0...+1080°C); 5=Typ S (Pt10Rh-Pt 0...+1760°C); 6=Typ R (Pt13Rh-Pt 0...+1760°C); 7=Typ B (Pt30Rh-Pt6Rh 0...+1820°C); 8=Typ L (Fe-CuNi 0... +680°C); 9=Typ U (Cu-CuNi 0... +590°C); 10=Analog In (µV)" />
+      <Property Name="Reference temperature sensor select 6" Channel="TMP_6RefSensor" Desc="Select reference KTY input for temperatur compensation" Editor="Combo:0=KTY_1; 1=KTY_2; 2=internal KTY" />
+    </Input>
+    <!-- Thermocouple Input 7 -->
+    <Input Name="Temperature Input 7" Channel="TMP_7" IsConfig="true" Desc="Thermocouple Element Input 7 in 1/10 °C. Invalid value is -2147483632." Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="Thermocouple element select 7" Channel="TMP_7Select" Desc="Thermocouple element selection for Temperatue Input 7" Editor="Combo:0=Typ J (Fe-CuNi  0... +690°C); 1=Typ K (NiCr-Ni  0... +940°C); 2=Typ T (Cu-CuNi  0... +400°C); 3=Typ E (NiCr-CuNi  0... +520°C); 4=Typ N (NiCrSi-NiSi 0...+1080°C); 5=Typ S (Pt10Rh-Pt 0...+1760°C); 6=Typ R (Pt13Rh-Pt 0...+1760°C); 7=Typ B (Pt30Rh-Pt6Rh 0...+1820°C); 8=Typ L (Fe-CuNi 0... +680°C); 9=Typ U (Cu-CuNi 0... +590°C); 10=Analog In (µV)" />
+      <Property Name="Reference temperature sensor select 7" Channel="TMP_7RefSensor" Desc="Select reference KTY input for temperatur compensation" Editor="Combo:0=KTY_1; 1=KTY_2; 2=internal KTY" />
+    </Input>
+    <!-- Thermocouple Input 8 -->
+    <Input Name="Temperature Input 8" Channel="TMP_8" IsConfig="true" Desc="Thermocouple Element Input 8 in 1/10 °C. Invalid value is -2147483632." Type="Analog" Editor="EditNumber:Signed;Dec">
+      <Property Name="Thermocouple element select 8" Channel="TMP_8Select" Desc="Thermocouple element selection for Temperatue Input 8" Editor="Combo:0=Typ J (Fe-CuNi  0... +690°C); 1=Typ K (NiCr-Ni  0... +940°C); 2=Typ T (Cu-CuNi  0... +400°C); 3=Typ E (NiCr-CuNi  0... +520°C); 4=Typ N (NiCrSi-NiSi 0...+1080°C); 5=Typ S (Pt10Rh-Pt 0...+1760°C); 6=Typ R (Pt13Rh-Pt 0...+1760°C); 7=Typ B (Pt30Rh-Pt6Rh 0...+1820°C); 8=Typ L (Fe-CuNi 0... +680°C); 9=Typ U (Cu-CuNi 0... +590°C); 10=Analog In (µV)" />
+      <Property Name="Reference temperature sensor select 8" Channel="TMP_8RefSensor" Desc="Select reference KTY input for temperatur compensation" Editor="Combo:0=KTY_1; 1=KTY_2; 2=internal KTY" />
+    </Input>
+    <!-- KTY  extern 1 / 2 -->
+    <Input Name="KTY Input 1" Channel="KTY_1" Desc="KTY-Sensor Temperature Input 1 in 1/10 °C. Invalid value is -2147483632." Type="Analog" Editor="EditNumber:Signed;Dec" />
+    <Input Name="KTY Input 2" Channel="KTY_2" Desc="KTY-Sensor Temperature Input 2 in 1/10 °C. Invalid value is -2147483632." Type="Analog" Editor="EditNumber:Signed;Dec" />
+    <!-- KTY intern 1 / 2 -->
+    <Input Name="Internal KTY 1" Channel="KTY_Int_1" Desc="Shows the reference temperature measured &#13;&#10;by the internal KTY for temperature inputs 1-4.&#13;&#10;If this function is disabled or not supported (only firmware version 2.00 or higher and&#13;&#10;hardware version 3.00 or higher), the server displays  -2147483632.&#13;&#10;It shows the actual temperature values from &#13;&#10;the sensors in 1/10 °C." Type="Analog" Editor="EditNumber:Signed;Dec" />
+    <Input Name="Internal KTY 2" Channel="KTY_Int_2" Desc="Shows the reference temperature measured &#13;&#10;by the internal KTY for temperature inputs 5-8.&#13;&#10;If this function is disabled or not supported (only firmware version 2.00 or higher and&#13;&#10;hardware version 3.00 or higher), the server displays  -2147483632.&#13;&#10;It shows the actual temperature values from &#13;&#10;the sensors in 1/10 °C." Type="Analog" Editor="EditNumber:Signed;Dec" />
+    <IOState Name="Cable Break" Channel="CableBreak" Type="Analog" Desc="Cable break detection:Bit1..TMP_1&#13;&#10;Bit2..TMP_2&#13;&#10;Bit3..TMP_3&#13;&#10;Bit4..TMP_4&#13;&#10;Bit5..TMP_5&#13;&#10;Bit6..TMP_6&#13;&#10;Bit7..TMP_7&#13;&#10;Bit8..TMP_8&#13;&#10;Bit9..KTY_1&#13;&#10;Bit10..KTY_2" />
+    <IOState Name="Short circuit" Channel="ShortCircuit" Type="Analog" Desc="Short circuit detection:Bit1..KTY_1; Bit2..KTY_2" />
+
+    <Script Name="AI088">    
+    <Parameter Name="TMP_1RefSensor" Type="Client" Channel="TMP_1RefSensor" Desc="" />    
+    <Parameter Name="TMP_2RefSensor" Type="Client" Channel="TMP_2RefSensor" Desc="" />    
+    <Parameter Name="TMP_3RefSensor" Type="Client" Channel="TMP_3RefSensor" Desc="" />    
+    <Parameter Name="TMP_4RefSensor" Type="Client" Channel="TMP_4RefSensor" Desc="" />    
+    <Parameter Name="TMP_5RefSensor" Type="Client" Channel="TMP_5RefSensor" Desc="" />
+    <Parameter Name="TMP_6RefSensor" Type="Client" Channel="TMP_6RefSensor" Desc="" />
+    <Parameter Name="TMP_7RefSensor" Type="Client" Channel="TMP_7RefSensor" Desc="" />
+    <Parameter Name="TMP_8RefSensor" Type="Client" Channel="TMP_8RefSensor" Desc="" />
+<Code>
+def compPost_AI088(element, parameters):  
+  if parameters['varanBridge']:
+    parameters['AddToSDiasTime'] = True
+    element['result']['optional'] =  {'PDO': {'Wr':[], 'Rd':[], 'WrDyn':[], 'RdDyn':[]}}    
+    SDIASPDORdAdd(0x18,element)  
+    if operator.eq(element['options']['TMP_1RefSensor'], 2) or operator.eq(element['options']['TMP_2RefSensor'], 2) or operator.eq(element['options']['TMP_3RefSensor'], 2) or operator.eq(element['options']['TMP_4RefSensor'], 2) or operator.eq(element['options']['TMP_5RefSensor'], 2) or operator.eq(element['options']['TMP_6RefSensor'], 2) or operator.eq(element['options']['TMP_7RefSensor'], 2) or operator.eq(element['options']['TMP_8RefSensor'], 2):
+      SDIASPDORdAdd(0x04,element)
+</Code>
+    </Script>      
+  </Class>
+</HWClassInfo>

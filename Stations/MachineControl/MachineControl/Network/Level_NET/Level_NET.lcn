@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="Level_Net" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "Level_Class1"
+			GUID       = "{C5D7A26B-A17E-417E-B0EA-93A9D0D39B0C}"
+			Class      = "Level_Class"
+			Position   = "(1740,630)"
+			Visualized = "true"
+			Remotely   = "true"
+			CyclicTime = "50 ms">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="Level_X_S"/>
+				<Server Name="Level_Y_S"/>
+				<Server Name="SetZero_S"/>
+				<Server Name="ZeroPositionX_S"/>
+				<Server Name="ZeroPositionY_S"/>
+				<Client Name="PositionInput_X_C"/>
+				<Client Name="PositionInput_Y_C"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "LevelFilter_Class1"
+			GUID       = "{3C5245E4-D13F-4C67-AA13-5D533A0C64D6}"
+			Class      = "LevelFilter_Class"
+			Position   = "(660,570)"
+			Visualized = "false"
+			CyclicTime = "10 ms">
+			<Channels>
+				<Server Name="ChangeX_Y_S"/>
+				<Server Name="ClassSvr"/>
+				<Server Name="Invert_X_S"/>
+				<Server Name="Invert_y_S"/>
+				<Server Name="X_Out_S"/>
+				<Server Name="Y_Out_S"/>
+				<Client Name="X_IN_C"/>
+				<Client Name="Y_IN_C" Value="0"/>
+			</Channels>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="Level_Class1.PositionInput_X_C" Destination="LevelFilter_Class1.X_Out_S" Vertices="(1740,720),(1516,720),"/>
+		<Connection Source="Level_Class1.PositionInput_Y_C" Destination="LevelFilter_Class1.Y_Out_S" Vertices="(1740,780),(1516,780),"/>
+		<Connection Source="LevelFilter_Class1.X_IN_C" Destination="__IO_Element1" Vertices="(660,660),(570,660)," IOObject="IO_Element"/>
+		<Connection Source="LevelFilter_Class1.Y_IN_C" Destination="__IO_Element01" Vertices="(660,720),(570,720)," IOObject="IO_Element0"/>
+	</Connections>
+	<!-- List of temp data objects in this network -->
+	<IOObjects>
+		<IOObject KeyName="__IO_Element01" Name="IO_Element0" Position="(270,690)" Client="LevelFilter_Class1.Y_IN_C"/>
+		<IOObject KeyName="__IO_Element1" Name="IO_Element" Position="(270,630)" Client="LevelFilter_Class1.X_IN_C"/>
+	</IOObjects>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

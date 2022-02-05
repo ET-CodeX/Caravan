@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="IPCONF_IPConfigHMI" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name           = "_IPConfigIF1"
+			GUID           = "{A8EBD23C-9A1E-435E-BEF5-F27E4778C947}"
+			Class          = "_IPConfigIF"
+			Position       = "(1620,300)"
+			Visualized     = "true"
+			Remotely       = "true"
+			BackgroundTime = "100 ms">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="CmdError"/>
+				<Server Name="ExtResetCmd"/>
+				<Server Name="GWAddress"/>
+				<Server Name="IPAddress"/>
+				<Server Name="NetMode"/>
+				<Server Name="SavGWAddress"/>
+				<Server Name="SavIPAddress"/>
+				<Server Name="SavSNMask"/>
+				<Server Name="SNMask"/>
+				<Server Name="TimeoutCnt"/>
+				<Client Name="ChangedIPSettings"/>
+				<Client Name="Interface" Value="1"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{8BDB9DED-5FFE-4D44-A28E-E8C19B4E1172}" Class="NetworkConfig">
+							<Channels>
+								<Server Name="ClassSvr"/>
+								<Server Name="GetConfig"/>
+								<Server Name="GWAddress"/>
+								<Server Name="IPAddress"/>
+								<Server Name="SetConfig"/>
+								<Server Name="SNMask"/>
+								<Client Name="coFileSys"/>
+								<Client Name="coIP"/>
+								<Client Name="coSigCLib"/>
+								<Client Name="coStdLib"/>
+								<Client Name="Interface" Value="1"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "_IPConfigMain1"
+			GUID           = "{305053AF-58C3-4045-8E02-F3C52444321D}"
+			Class          = "_IPConfigMain"
+			Position       = "(810,120)"
+			Visualized     = "true"
+			Remotely       = "true"
+			BackgroundTime = "100 ms">
+			<Channels>
+				<Server Name="CmdIPConfig"/>
+				<Server Name="NoOfStations"/>
+				<Server Name="NrLastMessage"/>
+				<Server Name="Server0"/>
+				<Client Name="_IP"/>
+				<Client Name="ActWindow" Value="0"/>
+				<Client Name="ChangeIsActive" Value="0"/>
+				<Client Name="Lse"/>
+				<Client Name="SigCLib"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{51A6A02F-7368-4C68-9C77-57A8D4C29C42}" Class="_Global">
+							<Channels>
+								<Server Name="Server0"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "_IPConfigStationHMI_IF1"
+			GUID           = "{65D6A8D4-3151-4C73-88FF-12F3ABFF0B7F}"
+			Class          = "_IPConfigStation"
+			Position       = "(2310,120)"
+			Visualized     = "true"
+			Remotely       = "true"
+			BackgroundTime = "100 ms">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="ExtResetCmd"/>
+				<Server Name="Gateway"/>
+				<Server Name="InputDirty"/>
+				<Server Name="IPAddress"/>
+				<Server Name="IsOnlineMM"/>
+				<Server Name="LastError"/>
+				<Server Name="NetMode"/>
+				<Server Name="SavGateway"/>
+				<Server Name="SavIPAddress"/>
+				<Server Name="SavSubnet"/>
+				<Server Name="StationNr"/>
+				<Server Name="StationNrMM"/>
+				<Server Name="Subnet"/>
+				<Server Name="Timeout" Value="30"/>
+				<Server Name="TimeoutCnt"/>
+				<Client Name="_IP"/>
+				<Client Name="_IPConfigIF"/>
+				<Client Name="_IPConfigMain"/>
+				<Client Name="IsInternalIF" Value="1"/>
+				<Client Name="IsMMCommIF" Value="1"/>
+				<Client Name="MMisOnline" Value="0"/>
+				<Client Name="SigCLib"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "_IPConfigStationMC1_IF1"
+			GUID           = "{7DC751D1-027D-442F-BDA0-79C4FA14B5C2}"
+			Class          = "_IPConfigStation"
+			Position       = "(2310,2400)"
+			Visualized     = "true"
+			Remotely       = "true"
+			CyclicTime     = "100 ms"
+			BackgroundTime = "100 ms">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="ExtResetCmd"/>
+				<Server Name="Gateway"/>
+				<Server Name="InputDirty"/>
+				<Server Name="IPAddress"/>
+				<Server Name="IsOnlineMM"/>
+				<Server Name="LastError"/>
+				<Server Name="NetMode"/>
+				<Server Name="SavGateway"/>
+				<Server Name="SavIPAddress"/>
+				<Server Name="SavSubnet"/>
+				<Server Name="StationNr"/>
+				<Server Name="StationNrMM"/>
+				<Server Name="Subnet"/>
+				<Server Name="Timeout" Value="30"/>
+				<Server Name="TimeoutCnt"/>
+				<Client Name="_IP"/>
+				<Client Name="_IPConfigIF"/>
+				<Client Name="_IPConfigMain"/>
+				<Client Name="IsInternalIF" Value="0"/>
+				<Client Name="IsMMCommIF" Value="1"/>
+				<Client Name="MMisOnline" Value="0"/>
+				<Client Name="SigCLib"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name           = "_SearchUsbFiletoReset1"
+			GUID           = "{0EB80C86-9CEB-48C7-BE7A-78BAC55C06A6}"
+			Class          = "_SearchUsbFiletoReset"
+			Position       = "(810,600)"
+			Visualized     = "false"
+			CyclicTime     = "1000 ms"
+			BackgroundTime = "1000 ms">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="_FileSys"/>
+				<Client Name="_OSKernel"/>
+				<Client Name="FilePathName"/>
+				<Client Name="OutResetCmd"/>
+				<Client Name="SigCLib"/>
+			</Channels>
+		</Object>
+		<Object
+			Name       = "Client_Splitter_101"
+			GUID       = "{345885F8-2BF0-4054-859F-F01E005B53DC}"
+			Class      = "Client_Splitter_10"
+			Position   = "(390,840)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="To_Splitt"/>
+				<Client Name="Ch1"/>
+				<Client Name="Ch10"/>
+				<Client Name="Ch2"/>
+				<Client Name="Ch3"/>
+				<Client Name="Ch4"/>
+				<Client Name="Ch5"/>
+				<Client Name="Ch6"/>
+				<Client Name="Ch7"/>
+				<Client Name="Ch8"/>
+				<Client Name="Ch9"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{913E6DA3-DF21-11D5-B925-0010609208D7}" Class="Client_Splitter_Base">
+							<Channels>
+								<Server Name="To_Splitt"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "UsbSearchFileName1"
+			GUID       = "{7647AC03-8072-4CAE-B17F-D106CCD578BF}"
+			Class      = "StringRAM"
+			Position   = "(360,630)"
+			Visualized = "true"
+			Remotely   = "true">
+			<Channels>
+				<Server Name="Data"/>
+				<Client Name="SingleRealloc" Value="1"/>
+				<Client Name="UseFile"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{1F69B880-FAA2-42FA-9D00-85265E1C4A69}" Class="StringInternal">
+							<Channels>
+								<Server Name="Data"/>
+								<Client Name="DataBuffer"/>
+								<Client Name="SingleRealloc" Value="1"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{6CBDDE57-D222-420A-BC45-D2266096244E}" Class="VirtualBaseInit">
+											<Channels>
+												<Server Name="Data"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+						<Object Name="DataBuffer" GUID="{167807E4-6D9F-4D9F-A980-81FF93F0EFE0}" Class="RAMex">
+							<Channels>
+								<Server Name="m_udLength"/>
+								<Client Name="MultiTask"/>
+								<Client Name="ThreadSafe" Value="0"/>
+								<Client Name="UseFile"/>
+							</Channels>
+							<!-- List of Networks in this component -->
+							<Networks>
+								<Network>
+									<!-- List of Components in this network -->
+									<Components>
+										<Object Name="_base" GUID="{69FA3C23-B049-4F83-B4BC-D30F993C8C98}" Class="MerkerEx">
+											<Channels>
+												<Server Name="m_udLength"/>
+												<Client Name="ThreadSafe" Value="0"/>
+											</Channels>
+										</Object>
+									</Components>
+									<Connections>
+									</Connections>
+								</Network>
+							</Networks>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+	</Components>
+	<!-- List of multimaster components in this network -->
+	<RemoteComponents>
+		<RemoteObject Name="MachineControl._IPConfigIF1mc1.ClassSvr" Position="(1080,2670)" Station="MachineControl" Server="_IPConfigIF1mc1.ClassSvr" Objectsize="480"/>
+	</RemoteComponents>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Station="MachineControl" RemoteServer="_IPConfigIF1mc1.ClassSvr" Source="_IPConfigStationMC1_IF1._IPConfigIF" Destination="MachineControl%_IPConfigIF1mc1%ClassSvr" Vertices="(2310,2550),(1576,2700),"/>
+		<Connection Source="_IPConfigStationHMI_IF1._IPConfigMain" Destination="_IPConfigMain1.Server0" Vertices="(2310,210),(1396,210),"/>
+		<Connection Source="_IPConfigMain1.Lse" Destination="Lse.Lse"/>
+		<Connection Source="_IPConfigStationHMI_IF1._IPConfigIF" Destination="_IPConfigIF1.ClassSvr" Vertices="(2310,270),(2117,270),(2117,390),(2056,390),"/>
+		<Connection Source="_IPConfigStationMC1_IF1._IPConfigMain" Destination="_IPConfigMain1.Server0" Vertices="(2310,2490),(1500,2490),(1500,210),(1396,210),"/>
+		<Connection Source="_IPConfigMain1.ChangeIsActive" Destination="STDTCPCommunicationToMC1.DeactivateCom"/>
+		<Connection Source="_IPConfigMain1.ActWindow" Destination="GlobalScreen1.ActWindow"/>
+		<Connection Source="_SearchUsbFiletoReset1.FilePathName" Destination="UsbSearchFileName1.Data" Vertices="(810,870),(750,870),(750,720),(676,720),"/>
+		<Connection Source="_SearchUsbFiletoReset1.OutResetCmd" Destination="Client_Splitter_101.To_Splitt" Vertices="(810,930),(690,930),"/>
+		<Connection Source="Client_Splitter_101.Ch10" Destination="_IPConfigIF1.ExtResetCmd" Vertices="(390,1470),(360,1470),(360,1530),(960,1530),(960,1140),(2100,1140),(2100,990),(2056,990),"/>
+		<Connection Source="Client_Splitter_101.Ch9" Destination="_IPConfigStationHMI_IF1.ExtResetCmd" Vertices="(390,1410),(330,1410),(330,1560),(990,1560),(990,1170),(2940,1170),(2940,1110),(2896,1110),"/>
+		<Connection Source="Client_Splitter_101.Ch6" Destination="_IPConfigStationMC1_IF1.ExtResetCmd" Vertices="(390,1230),(240,1230),(240,3450),(2940,3450),(2940,3390),(2896,3390),"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

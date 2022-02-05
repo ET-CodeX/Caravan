@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<DataAnalyser
+	Samplerate    = "1000"
+	DA_Type       = "0"
+	MaxMemTime    = "0"
+	MaxMem        = "20"
+	TimeRangeStr  = "10000 ms"
+	TimeOffsetStr = "20891 ms"
+	TimeRange     = "10000"
+	TimeOffset    = "20891"
+	ScreenView    = "TREND">
+	<DA_TriggerStart Active="false" Type="Start" Condition="Greater or Equal">
+	</DA_TriggerStart>
+	<DA_TriggerStop Active="false" Type="Stop" Condition="Greater or Equal">
+	</DA_TriggerStop>
+	<DA_Channels>
+		<DA_Channel
+			Name          = "Battery_Class1.ActualAmps_S"
+			Type          = "DINT"
+			ChannelInfo   = "Battery_Class1.ActualAmps_S"
+			ChannelSize   = "4"
+			BitIndex      = "0"
+			Color         = "886118"
+			Active        = "true"
+			LimitHi       = "50000"
+			LimitLo       = "0"
+			IsServer      = "true"
+			ChannelMemOff = "184">
+		</DA_Channel>
+	</DA_Channels>
+	<DA_AuxLines>
+	</DA_AuxLines>
+</DataAnalyser>

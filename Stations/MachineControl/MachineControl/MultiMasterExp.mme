@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<RemoteStation
+	PrjRev   = "0.0"
+	Project  = "MachineControl"
+	IP       = "192.168.1.36"
+	Filename = ".\MachineControl\MachineControl\MachineControl.lcp">
+	<RemoteServers>
+		<RemoteServer Name="AI0751.ClassState" GUID_Svr="{070CD62D-F011-403B-A668-118E2A1842A7}" Class="SdiasBase" DataType="t_e_VaranErrors" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" Type="Object Channel" HasNewInst="true" WriteProtected="true" Comment="Server shows the current Status of the Hardware Class."/>
+		<RemoteServer Name="AI0751.DeviceID" GUID_Svr="{1F67076F-D511-400A-8CEF-0F0E0579EC0B}" DataType="UDINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" WriteProtected="true" Comment="Server shows the DeviceID of the Hardware Module."/>
+		<RemoteServer Name="AI0751.FPGAVersion" GUID_Svr="{D5EF701A-412A-4C34-AA2E-FFC7D82C2F86}" DataType="HDINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" WriteProtected="true" Comment="Server shows the actual FPGA Version of the Module in the format x.y&#13;&#10;&#13;&#10;e.g. 16#10 means v1.0"/>
+		<RemoteServer Name="AI0751.HwVersion" GUID_Svr="{6BF31076-362C-4517-9DA7-F776C9F85012}" DataType="HDINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" WriteProtected="true" Comment="shows hw version in the format xx.yy (16#0120 means v1.20)"/>
+		<RemoteServer Name="AI0751.SerialNo" GUID_Svr="{68FBC413-E3CB-4059-BC09-1D975B4D4819}" Class="String" DataType="UDINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" Type="Object Channel" WriteProtected="true" Comment="Serial number of the Hardware Module."/>
+		<RemoteServer Name="AI0751.RetryCounter" GUID_Svr="{833C80D1-4726-4DCB-B1AB-C268D7D72245}" DataType="UDINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" WriteProtected="true" Comment="Number of Retries on SDIAS-Bus."/>
+		<RemoteServer Name="AI0751.LEDControl" GUID_Svr="{FA9DCFC5-B668-4B7B-8E80-E0410DEF9ED8}" DataType="DINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" Comment="Sets a LED on Hardware, to detect Module.&#13;&#10;0 ... LED off&#13;&#10;1 ... LED on&#13;&#10;2 ... blinking slow&#13;&#10;3 ... blinking fast"/>
+		<RemoteServer Name="AI0751.SDOState" GUID_Svr="{1C3F8C9A-F083-486D-A096-B459EA29A017}" DataType="iprStates" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" Type="Command Channel" HasNewInst="true" WriteProtected="true" Comment="State of the actual SDO Transmission."/>
+		<RemoteServer Name="AI0751.FirmwareVersion" GUID_Svr="{C8B7272F-EF0A-4E33-AF07-8A3D1044D0A5}" DataType="HDINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" WriteProtected="true" Comment="Version of the used firmware&#13;&#10;&#13;&#10;e.g. 16#100 means v1.0"/>
+		<RemoteServer Name="AI0751.FWErrorBits" GUID_Svr="{BA871004-E66C-4CEF-B404-FB53F4979611}" DataType="SdiasBase::t_s_SdiasFWStateStandard" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" WriteProtected="true" Comment="Firmware Status:&#13;&#10;Bit0...DC not Ok&#13;&#10;Bit1...No Sync&#13;&#10;Bit2...Flash data CRC error&#13;&#10;Bit3...Ram data CRC error&#13;&#10;Bit4...No valid EEPROM Version&#13;&#10;Bit5...Bustime not supported"/>
+		<RemoteServer Name="AI0751.AI1" GUID_Svr="{D60301DD-A18F-4B98-8AD0-500122404F22}" DataType="DINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" WriteProtected="true" Comment="Analog input or temperature input. Status query over read().&#13;&#10;The invalid value in case of cable break or short circuit is 16#80000010."/>
+		<RemoteServer Name="AI0751.AI2" GUID_Svr="{FBD61EF2-7CEA-4F9C-B9F7-46D0F4EA9351}" DataType="DINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" WriteProtected="true" Comment="Analog input or temperature input. Status query over read().&#13;&#10;The invalid value in case of cable break or short circuit is 16#80000010."/>
+		<RemoteServer Name="AI0751.AI3" GUID_Svr="{E97F43EC-F73E-47FB-ACA7-B8CFD1A3FE7B}" DataType="DINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" WriteProtected="true" Comment="Analog input or temperature input. Status query over read().&#13;&#10;The invalid value in case of cable break or short circuit is 16#80000010."/>
+		<RemoteServer Name="AI0751.AI4" GUID_Svr="{44D868FC-0A04-45BD-9877-EB1A8FFD00FE}" DataType="DINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" WriteProtected="true" Comment="Analog input or temperature input. Status query over read().&#13;&#10;The invalid value in case of cable break or short circuit is 16#80000010."/>
+		<RemoteServer Name="AI0751.AI5" GUID_Svr="{CF1CE92A-B3B9-4206-BF2F-AF018BC5F98D}" DataType="DINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" WriteProtected="true" Comment="Analog input or temperature input. Status query over read().&#13;&#10;The invalid value in case of cable break or short circuit is 16#80000010."/>
+		<RemoteServer Name="AI0751.AI6" GUID_Svr="{74C55139-502F-4A99-BBEA-F5F032D27F7B}" DataType="DINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" WriteProtected="true" Comment="Analog input or temperature input. Status query over read().&#13;&#10;The invalid value in case of cable break or short circuit is 16#80000010."/>
+		<RemoteServer Name="AI0751.TI" GUID_Svr="{DB4A8AED-C411-4FCD-8C3A-647E5D739BFC}" DataType="DINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" WriteProtected="true" Comment="Temperature input. Status query over read().&#13;&#10;The invalid value in case of cable break or short circuit is 16#80000010."/>
+		<RemoteServer Name="AI0751.CableBreak" GUID_Svr="{5E340F0A-3E71-4A7B-9E8B-9C9B3B8BCDB1}" DataType="BDINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" MMType="BDINT" WriteProtected="true" Comment="Cable break detection:&#13;&#10;Bit0...Cable break on AI1&#13;&#10;Bit1...Cable break on AI2&#13;&#10;Bit2...Cable break on AI3&#13;&#10;Bit3...Cable break on AI4&#13;&#10;Bit4...Cable break on AI5&#13;&#10;Bit5...Cable break on AI6&#13;&#10;Bit6...Cable break on TI&#13;&#10;"/>
+		<RemoteServer Name="AI0751.ShortCircuit" GUID_Svr="{3E8C8F44-DF39-4CAC-9EB5-DB59A029ABFF}" DataType="BDINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" MMType="BDINT" WriteProtected="true" Comment="Short circuit detection:&#13;&#10;Bit0...Short circuit on AI1 (only temerature input)&#13;&#10;Bit1...Short circuit on TI"/>
+		<RemoteServer Name="AI0751.RefVoltageOK" GUID_Svr="{D2239CF2-C803-4849-93ED-EEEF61643C24}" DataType="DINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" WriteProtected="true" Comment="Reference Supply Voltage status."/>
+		<RemoteServer Name="AI0751.OverCurrent" GUID_Svr="{5DC45A47-FA5A-4096-907B-ADD442E5C477}" DataType="DINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" WriteProtected="true" Comment="Analog Input Voltage too high"/>
+		<RemoteServer Name="AI0751.AI1SamplePoint" GUID_Svr="{3D70810C-D732-4C6C-A18A-44ADCACB0255}" DataType="DINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" Comment="Sample point of the respective analog input in µs.&#13;&#10;Valid range: (15µs to (CycleTime - 162µs))&#13;&#10;-1 .. Feature not available or inactive. FW Version must be higher than 1.30 or client ActivateSamplePointConfig has to be 1.,&#13;&#10;-2 .. Invalid input parameter. Value must be between valid range."/>
+		<RemoteServer Name="AI0751.AI2SamplePoint" GUID_Svr="{7FF8F6F0-551C-42B3-896A-CFFF2835F68E}" DataType="DINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" Comment="Sample point of the respective analog input in µs.&#13;&#10;Valid range: (15µs to (CycleTime - 162µs))&#13;&#10;-1 .. Feature not available or inactive. FW Version must be higher than 1.30 or client ActivateSamplePointConfig has to be 1.,&#13;&#10;-2 .. Invalid input parameter. Value must be between valid range."/>
+		<RemoteServer Name="AI0751.AI3SamplePoint" GUID_Svr="{D7465BB4-4210-4E7A-9AAC-3CBD162C8851}" DataType="DINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" Comment="Sample point of the respective analog input in µs.&#13;&#10;Valid range: (15µs to (CycleTime - 162µs))&#13;&#10;-1 .. Feature not available or inactive. FW Version must be higher than 1.30 or client ActivateSamplePointConfig has to be 1.,&#13;&#10;-2 .. Invalid input parameter. Value must be between valid range."/>
+		<RemoteServer Name="AI0751.AI4SamplePoint" GUID_Svr="{1DE000AA-5050-471C-BBA0-90DE2F4F9C16}" DataType="DINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" Comment="Sample point of the respective analog input in µs.&#13;&#10;Valid range: (15µs to (CycleTime - 162µs))&#13;&#10;-1 .. Feature not available or inactive. FW Version must be higher than 1.30 or client ActivateSamplePointConfig has to be 1.,&#13;&#10;-2 .. Invalid input parameter. Value must be between valid range."/>
+		<RemoteServer Name="AI0751.AI5SamplePoint" GUID_Svr="{3C2899E5-30CB-4CF8-8058-9BFB60F4BB24}" DataType="DINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" Comment="Sample point of the respective analog input in µs.&#13;&#10;Valid range: (15µs to (CycleTime - 162µs))&#13;&#10;-1 .. Feature not available or inactive. FW Version must be higher than 1.30 or client ActivateSamplePointConfig has to be 1.,&#13;&#10;-2 .. Invalid input parameter. Value must be between valid range."/>
+		<RemoteServer Name="AI0751.AI6SamplePoint" GUID_Svr="{331E1D65-335E-482B-99B8-22C79EF03E88}" DataType="DINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" Comment="Sample point of the respective analog input in µs.&#13;&#10;Valid range: (15µs to (CycleTime - 162µs))&#13;&#10;-1 .. Feature not available or inactive. FW Version must be higher than 1.30 or client ActivateSamplePointConfig has to be 1.,&#13;&#10;-2 .. Invalid input parameter. Value must be between valid range."/>
+		<RemoteServer Name="AI0751.TISamplePoint" GUID_Svr="{51B5BB64-DB05-4079-B5D5-EA03CC2E0D14}" DataType="DINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" Comment="Sample point of the respective analog input in µs.&#13;&#10;Valid range: (15µs to (CycleTime - 162µs))&#13;&#10;-1 .. Feature not available or inactive. FW Version must be higher than 1.30 or client ActivateSamplePointConfig has to be 1.,&#13;&#10;-2 .. Invalid input parameter. Value must be between valid range."/>
+		<RemoteServer Name="AI0751.ActivateSamplePointConfig" GUID_Svr="{7330205E-E302-4774-AD77-0ABA5A7DBE66}" DataType="DINT" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" Comment="This server is used to activate and deactivate the sample point configuration in the firmware.&#13;&#10;0 .. deactivate&#13;&#10;1 .. activate."/>
+		<RemoteServer Name="AI0751.SamplePointState" GUID_Svr="{D7AC9078-45D4-4432-871D-F6739E2DEBBC}" DataType="AI075::t_s_SamplePointState" GUID_Obj="{5763C07E-AAB1-4F6C-B3D0-D2D96C724C31}" WriteProtected="true" Comment="Shows the state bits of the Sample point configuration of the firmware.&#13;&#10;Bit0 ... Samplepoints settings were corrected by firmware due to invalid settings (difference between two sample points too small, 2 sample points have the same value)&#13;&#10;Bit1 ... Samplepoints could not be corrected by firmware&#13;&#10;Bit2 ... Bustime which is set by hardwareclass is invalid&#13;&#10;Bit3 ... Transfered bustime and measured bustime are different.&#13;&#10;"/>
+		<RemoteServer Name="AI0881.ClassState" GUID_Svr="{070CD62D-F011-403B-A668-118E2A1842A7}" Class="SdiasBase" DataType="t_e_VaranErrors" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" Type="Object Channel" HasNewInst="true" WriteProtected="true" Comment="Server shows the current Status of the Hardware Class."/>
+		<RemoteServer Name="AI0881.DeviceID" GUID_Svr="{1F67076F-D511-400A-8CEF-0F0E0579EC0B}" DataType="UDINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" WriteProtected="true" Comment="Server shows the DeviceID of the Hardware Module."/>
+		<RemoteServer Name="AI0881.FPGAVersion" GUID_Svr="{D5EF701A-412A-4C34-AA2E-FFC7D82C2F86}" DataType="HDINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" WriteProtected="true" Comment="Server shows the actual FPGA Version of the Module in the format x.y&#13;&#10;&#13;&#10;e.g. 16#10 means v1.0"/>
+		<RemoteServer Name="AI0881.HwVersion" GUID_Svr="{6BF31076-362C-4517-9DA7-F776C9F85012}" DataType="HDINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" WriteProtected="true" Comment="shows hw version in the format xx.yy (16#0120 means v1.20)"/>
+		<RemoteServer Name="AI0881.SerialNo" GUID_Svr="{68FBC413-E3CB-4059-BC09-1D975B4D4819}" Class="String" DataType="UDINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" Type="Object Channel" WriteProtected="true" Comment="Serial number of the Hardware Module."/>
+		<RemoteServer Name="AI0881.RetryCounter" GUID_Svr="{833C80D1-4726-4DCB-B1AB-C268D7D72245}" DataType="UDINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" WriteProtected="true" Comment="Number of Retries on SDIAS-Bus."/>
+		<RemoteServer Name="AI0881.LEDControl" GUID_Svr="{FA9DCFC5-B668-4B7B-8E80-E0410DEF9ED8}" DataType="DINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" Comment="Sets a LED on Hardware, to detect Module.&#13;&#10;0 ... LED off&#13;&#10;1 ... LED on&#13;&#10;2 ... blinking slow&#13;&#10;3 ... blinking fast"/>
+		<RemoteServer Name="AI0881.SDOState" GUID_Svr="{1C3F8C9A-F083-486D-A096-B459EA29A017}" DataType="iprStates" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" Type="Command Channel" HasNewInst="true" WriteProtected="true" Comment="State of the actual SDO Transmission."/>
+		<RemoteServer Name="AI0881.FirmwareVersion" GUID_Svr="{5EC27C2C-D730-4134-A679-44C5B3EF892C}" DataType="HDINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" WriteProtected="true" Comment="Version of the used firmware&#13;&#10;&#13;&#10;e.g. 16#100 means v1.0"/>
+		<RemoteServer Name="AI0881.FWErrorBits" GUID_Svr="{B4566F17-27B9-4B2E-A84E-6919B708D32C}" DataType="SdiasBase::t_s_SdiasFWStateStandard" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" WriteProtected="true" Comment="Firmware Status:&#13;&#10;Bit1...DC not Ok&#13;&#10;Bit2...No Sync&#13;&#10;Bit3...Flash data CRC error&#13;&#10;Bit4...Ram data CRC error&#13;&#10;Bit5...No valid EEPROM Version&#13;&#10;Bit6...Bus Time Error&#13;&#10;"/>
+		<RemoteServer Name="AI0881.TMP_1" GUID_Svr="{00685AAB-A9BA-4F76-B00D-BB127F43028E}" DataType="DINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" WriteProtected="true" Comment="Thermocouple  Input in 1/10 °C or in µV corresponding to setting of TMP_xSelect.&#13;&#10;The invalid value in case of Cable Break is &#13;&#10;-2147483632."/>
+		<RemoteServer Name="AI0881.TMP_2" GUID_Svr="{3575F4FB-E428-4B1C-AE5A-28EA0FC88695}" DataType="DINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" WriteProtected="true" Comment="Thermocouple  Input in 1/10 °C or in µV corresponding to setting of TMP_xSelect.&#13;&#10;The invalid value in case of Cable Break is &#13;&#10;-2147483632."/>
+		<RemoteServer Name="AI0881.TMP_3" GUID_Svr="{2F63DDD6-A62A-4CEE-98AC-0B17A4E39FE5}" DataType="DINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" WriteProtected="true" Comment="Thermocouple  Input in 1/10 °C or in µV corresponding to setting of TMP_xSelect.&#13;&#10;The invalid value in case of Cable Break is &#13;&#10;-2147483632."/>
+		<RemoteServer Name="AI0881.TMP_4" GUID_Svr="{21A7C306-263E-4C3C-9E00-9FC5794517AC}" DataType="DINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" WriteProtected="true" Comment="Thermocouple  Input in 1/10 °C or in µV corresponding to setting of TMP_xSelect.&#13;&#10;The invalid value in case of Cable Break is &#13;&#10;-2147483632."/>
+		<RemoteServer Name="AI0881.TMP_5" GUID_Svr="{A8E6A683-3323-45AA-B51E-4AF39CBE718A}" DataType="DINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" WriteProtected="true" Comment="Thermocouple  Input in 1/10 °C or in µV corresponding to setting of TMP_xSelect.&#13;&#10;The invalid value in case of Cable Break is &#13;&#10;-2147483632."/>
+		<RemoteServer Name="AI0881.TMP_6" GUID_Svr="{AEE098A7-C0C8-4250-97AA-FDEA8B368FAA}" DataType="DINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" WriteProtected="true" Comment="Thermocouple  Input in 1/10 °C or in µV corresponding to setting of TMP_xSelect.&#13;&#10;The invalid value in case of Cable Break is &#13;&#10;-2147483632."/>
+		<RemoteServer Name="AI0881.TMP_7" GUID_Svr="{CB4D147C-79B6-4279-B3F2-2A799266DE6F}" DataType="DINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" WriteProtected="true" Comment="Thermocouple  Input in 1/10 °C or in µV corresponding to setting of TMP_xSelect.&#13;&#10;The invalid value in case of Cable Break is &#13;&#10;-2147483632."/>
+		<RemoteServer Name="AI0881.TMP_8" GUID_Svr="{AFBEF1C9-B06E-44E6-B9E0-4AF5736056E9}" DataType="DINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" WriteProtected="true" Comment="Thermocouple  Input in 1/10 °C or in µV corresponding to setting of TMP_xSelect.&#13;&#10;The invalid value in case of Cable Break is &#13;&#10;-2147483632."/>
+		<RemoteServer Name="AI0881.KTY_1" GUID_Svr="{CC1D8C07-FE0B-4F02-A806-B09555966097}" DataType="DINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" WriteProtected="true" Comment="Shows the reference temperature measured &#13;&#10;over KTY input in 1/10 °C.&#13;&#10;The invalid value in case of cable break or &#13;&#10;short circuit is -2147483632. "/>
+		<RemoteServer Name="AI0881.KTY_2" GUID_Svr="{164CA711-05AC-4F16-A26D-983F0C4FDF00}" DataType="DINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" WriteProtected="true" Comment="Shows the reference temperature measured &#13;&#10;over KTY input in 1/10 °C.&#13;&#10;The invalid value in case of cable break or &#13;&#10;short circuit is -2147483632. "/>
+		<RemoteServer Name="AI0881.KTY_Int_1" GUID_Svr="{9F1F8051-724E-4761-8BD8-573961C7192E}" DataType="DINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" WriteProtected="true" Comment="Shows the reference temperature measured by the internal KTY for temperature inputs 1-4 in 1/10°C.&#13;&#10;If this function is disabled or not supported (only firmware version 2.00 or higher and &#13;&#10;hardware version 3.00 or higher), the server displays  -2147483632. "/>
+		<RemoteServer Name="AI0881.KTY_Int_2" GUID_Svr="{0DBC5F39-1C26-49E1-BFAC-D3B0ECAA6F99}" DataType="DINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" WriteProtected="true" Comment="Shows the reference temperature measured by the internal KTY for temperature inputs 5-8 in 1/10°C.&#13;&#10;If this function is disabled or not supported (only firmware version 2.00 or higher and &#13;&#10;hardware version 3.00 or higher), the server displays  -2147483632. "/>
+		<RemoteServer Name="AI0881.CableBreak" GUID_Svr="{1B7D247E-425F-458D-B9B2-019ABA7B771D}" DataType="BDINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" MMType="BDINT" WriteProtected="true" Comment="Cable break detection:&#13;&#10;Bit1...Cable break on TMP_1&#13;&#10;Bit2...Cable break on TMP_2&#13;&#10;Bit3...Cable break on TMP_3&#13;&#10;Bit4...Cable break on TMP_4&#13;&#10;Bit5...Cable break on TMP_5&#13;&#10;Bit6...Cable break on TMP_6&#13;&#10;Bit7...Cable break on TMP_7&#13;&#10;Bit8...Cable break on TMP_8&#13;&#10;Bit9...Cable break on KTY_1&#13;&#10;Bit10...Cable break on KTY_2"/>
+		<RemoteServer Name="AI0881.ShortCircuit" GUID_Svr="{8621D488-0B90-498C-AD96-22D425819778}" DataType="BDINT" GUID_Obj="{8BF54401-989B-420E-8490-C41745545A34}" MMType="BDINT" WriteProtected="true" Comment="Short cut detection:&#13;&#10;Bit1...Short circuit on KTY_1&#13;&#10;Bit2...Short circuit on KTY_2"/>
+		<RemoteServer Name="CP102_IOs2.ClassState" GUID_Svr="{3A3AB6B3-8638-4EBF-BE1F-FF95BD2A673E}" Class="XXXBase_IOs" DataType="DINT" GUID_Obj="{7EE66DE2-174C-4310-819A-C4EA2DCCB75D}" Type="Object Channel" WriteProtected="true" Comment="Shows the state of the class.&#13;&#10;0 ... ok."/>
+		<RemoteServer Name="CP102_IOs2\_base\_CanLib1.Command" GUID_Svr="{F2E35EDC-EC38-404F-8628-971D9597C94C}" Class="_CanLib" DataType="DINT" GUID_Obj="{7EE66DE2-174C-4310-819A-C4EA2DCCB75D}\{6FA03787-D1FE-4FA2-A66B-7549DC47D0B4}\{99F54FB9-50C4-4B09-9754-D88D3CAD66E4}" Type="Object Channel" WriteProtected="true" Comment="Connect a object client"/>
+		<RemoteServer Name="CP102_IOs2\_base\_CanLib1.CanBus" GUID_Svr="{BF716426-E966-4889-A126-00EC213ABFBC}" DataType="DINT" GUID_Obj="{7EE66DE2-174C-4310-819A-C4EA2DCCB75D}\{6FA03787-D1FE-4FA2-A66B-7549DC47D0B4}\{99F54FB9-50C4-4B09-9754-D88D3CAD66E4}" WriteProtected="true" Comment="which CanbusSystem [1,2,...](as initvalue)"/>
+		<RemoteServer Name="CP102_IOs2\_base\_CanLib2.Command" GUID_Svr="{F2E35EDC-EC38-404F-8628-971D9597C94C}" Class="_CanLib" DataType="DINT" GUID_Obj="{7EE66DE2-174C-4310-819A-C4EA2DCCB75D}\{6FA03787-D1FE-4FA2-A66B-7549DC47D0B4}\{AE619A04-D25E-4D1A-A696-5DECE6B25694}" Type="Object Channel" WriteProtected="true" Comment="Connect a object client"/>
+		<RemoteServer Name="CP102_IOs2\_base\_CanLib2.CanBus" GUID_Svr="{BF716426-E966-4889-A126-00EC213ABFBC}" DataType="DINT" GUID_Obj="{7EE66DE2-174C-4310-819A-C4EA2DCCB75D}\{6FA03787-D1FE-4FA2-A66B-7549DC47D0B4}\{AE619A04-D25E-4D1A-A696-5DECE6B25694}" WriteProtected="true" Comment="which CanbusSystem [1,2,...](as initvalue)"/>
+		<RemoteServer
+			Name           = "CP102_IOs2\_base\_SerLib1.Command"
+			GUID_Svr       = "{E2A17142-EF9E-11D5-BDB2-000103C6CD0D}"
+			Class          = "_SerLib"
+			DataType       = "DINT"
+			GUID_Obj       = "{7EE66DE2-174C-4310-819A-C4EA2DCCB75D}\{6FA03787-D1FE-4FA2-A66B-7549DC47D0B4}\{20E65384-3D3B-4ACE-BEEE-0C43CE37B814}"
+			Type           = "Object Channel"
+			HasNewInst     = "true"
+			WriteProtected = "true"
+			Comment        = "for calling global methods">
+			<NewInst>
+				<Function Name="StartUserIPR">
+					<InputParameter>
+						<Parameter Name="Baudrate"/>
+						<Parameter Name="Wordlength"/>
+						<Parameter Name="ParityBits"/>
+						<Parameter Name="StopBits"/>
+					</InputParameter>
+					<OutputParameter>
+						<Parameter Name="ErrorCom"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="StopUserIPR">
+					<OutputParameter>
+						<Parameter Name="ErrorCom"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="SerCloseIPR">
+				</Function>
+				<Function Name="SerSendIPR">
+					<InputParameter>
+						<Parameter Name="SendValue"/>
+					</InputParameter>
+					<OutputParameter>
+						<Parameter Name="ErrorCom"/>
+						<Parameter Name="CorrectSend"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="RecvCharIPR">
+					<OutputParameter>
+						<Parameter Name="ErrorCom"/>
+						<Parameter Name="ReadChar"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="SetOnlineIPR">
+					<InputParameter>
+						<Parameter Name="state"/>
+					</InputParameter>
+					<OutputParameter>
+						<Parameter Name="ErrorCom"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="GetRecvStateIPR">
+					<OutputParameter>
+						<Parameter Name="length"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="GetSendStateIPR">
+					<OutputParameter>
+						<Parameter Name="BytesTooSend"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="GetErrorIPR">
+					<OutputParameter>
+						<Parameter Name="ErrorCom"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="IsInitializedIPR">
+					<OutputParameter>
+						<Parameter Name="state"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="ClearRecBufferIPR">
+					<OutputParameter>
+						<Parameter Name="ErrorCom"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="RtsOnOffIPR">
+					<InputParameter>
+						<Parameter Name="state"/>
+					</InputParameter>
+					<OutputParameter>
+						<Parameter Name="ErrorCode"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="rdRtsIPR">
+					<OutputParameter>
+						<Parameter Name="state"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="rdCtsIPR">
+					<OutputParameter>
+						<Parameter Name="state"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="DtrOnOffIPR">
+					<InputParameter>
+						<Parameter Name="state"/>
+					</InputParameter>
+					<OutputParameter>
+						<Parameter Name="ErrorCode"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="rdDtrIPR">
+					<OutputParameter>
+						<Parameter Name="state"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="rdDcdIPR">
+					<OutputParameter>
+						<Parameter Name="state"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="rdDsrIPR">
+					<OutputParameter>
+						<Parameter Name="state"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="rdRiIPR">
+					<OutputParameter>
+						<Parameter Name="state"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="SetRSModeIPR">
+					<InputParameter>
+						<Parameter Name="Mode"/>
+					</InputParameter>
+					<OutputParameter>
+						<Parameter Name="ErrorCode"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="GetRSModeIPR">
+					<OutputParameter>
+						<Parameter Name="Mode"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="GetInterfaceTypeIPR">
+					<OutputParameter>
+						<Parameter Name="Retcode"/>
+					</OutputParameter>
+				</Function>
+			</NewInst>
+		</RemoteServer>
+		<RemoteServer Name="CP102_IOs2\_base\_SerLib1.Com" GUID_Svr="{D94EFF5B-283A-4927-BF86-6594255D3D0F}" DataType="DINT" GUID_Obj="{7EE66DE2-174C-4310-819A-C4EA2DCCB75D}\{6FA03787-D1FE-4FA2-A66B-7549DC47D0B4}\{20E65384-3D3B-4ACE-BEEE-0C43CE37B814}" WriteProtected="true" Comment="No. of COM: 1-10"/>
+		<RemoteServer
+			Name           = "CP102_IOs2\_base\_SerLib2.Command"
+			GUID_Svr       = "{E2A17142-EF9E-11D5-BDB2-000103C6CD0D}"
+			Class          = "_SerLib"
+			DataType       = "DINT"
+			GUID_Obj       = "{7EE66DE2-174C-4310-819A-C4EA2DCCB75D}\{6FA03787-D1FE-4FA2-A66B-7549DC47D0B4}\{4164A4B8-81D1-4134-8792-127DF657E364}"
+			Type           = "Object Channel"
+			HasNewInst     = "true"
+			WriteProtected = "true"
+			Comment        = "for calling global methods">
+			<NewInst>
+				<Function Name="StartUserIPR">
+					<InputParameter>
+						<Parameter Name="Baudrate"/>
+						<Parameter Name="Wordlength"/>
+						<Parameter Name="ParityBits"/>
+						<Parameter Name="StopBits"/>
+					</InputParameter>
+					<OutputParameter>
+						<Parameter Name="ErrorCom"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="StopUserIPR">
+					<OutputParameter>
+						<Parameter Name="ErrorCom"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="SerCloseIPR">
+				</Function>
+				<Function Name="SerSendIPR">
+					<InputParameter>
+						<Parameter Name="SendValue"/>
+					</InputParameter>
+					<OutputParameter>
+						<Parameter Name="ErrorCom"/>
+						<Parameter Name="CorrectSend"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="RecvCharIPR">
+					<OutputParameter>
+						<Parameter Name="ErrorCom"/>
+						<Parameter Name="ReadChar"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="SetOnlineIPR">
+					<InputParameter>
+						<Parameter Name="state"/>
+					</InputParameter>
+					<OutputParameter>
+						<Parameter Name="ErrorCom"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="GetRecvStateIPR">
+					<OutputParameter>
+						<Parameter Name="length"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="GetSendStateIPR">
+					<OutputParameter>
+						<Parameter Name="BytesTooSend"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="GetErrorIPR">
+					<OutputParameter>
+						<Parameter Name="ErrorCom"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="IsInitializedIPR">
+					<OutputParameter>
+						<Parameter Name="state"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="ClearRecBufferIPR">
+					<OutputParameter>
+						<Parameter Name="ErrorCom"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="RtsOnOffIPR">
+					<InputParameter>
+						<Parameter Name="state"/>
+					</InputParameter>
+					<OutputParameter>
+						<Parameter Name="ErrorCode"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="rdRtsIPR">
+					<OutputParameter>
+						<Parameter Name="state"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="rdCtsIPR">
+					<OutputParameter>
+						<Parameter Name="state"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="DtrOnOffIPR">
+					<InputParameter>
+						<Parameter Name="state"/>
+					</InputParameter>
+					<OutputParameter>
+						<Parameter Name="ErrorCode"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="rdDtrIPR">
+					<OutputParameter>
+						<Parameter Name="state"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="rdDcdIPR">
+					<OutputParameter>
+						<Parameter Name="state"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="rdDsrIPR">
+					<OutputParameter>
+						<Parameter Name="state"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="rdRiIPR">
+					<OutputParameter>
+						<Parameter Name="state"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="SetRSModeIPR">
+					<InputParameter>
+						<Parameter Name="Mode"/>
+					</InputParameter>
+					<OutputParameter>
+						<Parameter Name="ErrorCode"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="GetRSModeIPR">
+					<OutputParameter>
+						<Parameter Name="Mode"/>
+					</OutputParameter>
+				</Function>
+				<Function Name="GetInterfaceTypeIPR">
+					<OutputParameter>
+						<Parameter Name="Retcode"/>
+					</OutputParameter>
+				</Function>
+			</NewInst>
+		</RemoteServer>
+		<RemoteServer Name="CP102_IOs2\_base\_SerLib2.Com" GUID_Svr="{D94EFF5B-283A-4927-BF86-6594255D3D0F}" DataType="DINT" GUID_Obj="{7EE66DE2-174C-4310-819A-C4EA2DCCB75D}\{6FA03787-D1FE-4FA2-A66B-7549DC47D0B4}\{4164A4B8-81D1-4134-8792-127DF657E364}" WriteProtected="true" Comment="No. of COM: 1-10"/>
+		<RemoteServer Name="DI2031.ClassState" GUID_Svr="{070CD62D-F011-403B-A668-118E2A1842A7}" Class="SdiasBase" DataType="t_e_VaranErrors" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" Type="Object Channel" HasNewInst="true" WriteProtected="true" Comment="Server shows the current Status of the Hardware Class."/>
+		<RemoteServer Name="DI2031.DeviceID" GUID_Svr="{1F67076F-D511-400A-8CEF-0F0E0579EC0B}" DataType="UDINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Server shows the DeviceID of the Hardware Module."/>
+		<RemoteServer Name="DI2031.FPGAVersion" GUID_Svr="{D5EF701A-412A-4C34-AA2E-FFC7D82C2F86}" DataType="HDINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Server shows the actual FPGA Version of the Module in the format x.y&#13;&#10;&#13;&#10;e.g. 16#10 means v1.0"/>
+		<RemoteServer Name="DI2031.HwVersion" GUID_Svr="{6BF31076-362C-4517-9DA7-F776C9F85012}" DataType="HDINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="shows hw version in the format xx.yy (16#0120 means v1.20)"/>
+		<RemoteServer Name="DI2031.SerialNo" GUID_Svr="{68FBC413-E3CB-4059-BC09-1D975B4D4819}" Class="String" DataType="UDINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" Type="Object Channel" WriteProtected="true" Comment="Serial number of the Hardware Module."/>
+		<RemoteServer Name="DI2031.RetryCounter" GUID_Svr="{833C80D1-4726-4DCB-B1AB-C268D7D72245}" DataType="UDINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Number of Retries on SDIAS-Bus."/>
+		<RemoteServer Name="DI2031.LEDControl" GUID_Svr="{FA9DCFC5-B668-4B7B-8E80-E0410DEF9ED8}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" Comment="Sets a LED on Hardware, to detect Module.&#13;&#10;0 ... LED off&#13;&#10;1 ... LED on&#13;&#10;2 ... blinking slow&#13;&#10;3 ... blinking fast"/>
+		<RemoteServer Name="DI2031.SDOState" GUID_Svr="{1C3F8C9A-F083-486D-A096-B459EA29A017}" DataType="iprStates" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" Type="Command Channel" HasNewInst="true" WriteProtected="true" Comment="State of the actual SDO Transmission."/>
+		<RemoteServer Name="DI2031.Input1" GUID_Svr="{313AA90B-AF69-4977-BDE4-8DB1E5E60726}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Input 1 value"/>
+		<RemoteServer Name="DI2031.Input2" GUID_Svr="{06ADFDAA-BDB7-4A16-BD3D-A142DA22FA92}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Input 2 value"/>
+		<RemoteServer Name="DI2031.Input3" GUID_Svr="{476FD976-749D-4D67-A47A-3249750A6685}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Input 3 value"/>
+		<RemoteServer Name="DI2031.Input4" GUID_Svr="{B3FBC0FE-ADD7-4D85-8237-64B6B6440BBA}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Input 4 value"/>
+		<RemoteServer Name="DI2031.Input5" GUID_Svr="{3B2D4435-BA23-4103-8ACB-41251E836D53}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Input 5 value"/>
+		<RemoteServer Name="DI2031.Input6" GUID_Svr="{6C594094-F7BA-44F0-A60D-6FEAC0356FDA}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Input 6 value"/>
+		<RemoteServer Name="DI2031.Input7" GUID_Svr="{53A3CFFD-AF8A-4F76-9537-539E9E1B8B53}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Input 7 value"/>
+		<RemoteServer Name="DI2031.Input8" GUID_Svr="{D4CBE20A-51AA-4EDD-B879-D3056A6736DC}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Input 8 value"/>
+		<RemoteServer Name="DI2031.Input9" GUID_Svr="{25EC9AA6-8310-41FD-AEDC-A988EA24D4AC}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Input 9 value"/>
+		<RemoteServer Name="DI2031.Input10" GUID_Svr="{D2DE3B90-631F-4391-AAE1-56E7FC56504C}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Input 10 value"/>
+		<RemoteServer Name="DI2031.Input11" GUID_Svr="{5F539173-7060-4476-B7D5-D0D2A497C4E5}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Input 11 value"/>
+		<RemoteServer Name="DI2031.Input12" GUID_Svr="{1FC8CA9D-1F3B-4EBE-8F85-4D836D39B987}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Input 12 value"/>
+		<RemoteServer Name="DI2031.Input13" GUID_Svr="{AE4A3033-7A54-4630-BE0E-FEF36777DAE2}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Input 13 value"/>
+		<RemoteServer Name="DI2031.Input14" GUID_Svr="{4963011B-9D5C-4D6E-81DB-9344C26BE215}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Input 14 value"/>
+		<RemoteServer Name="DI2031.Input15" GUID_Svr="{7ABF34CB-8D2F-47D6-A92A-BCAEAF098505}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Input 15 value"/>
+		<RemoteServer Name="DI2031.Input16" GUID_Svr="{D6C27268-5BB3-4B47-B741-D4889154071C}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Input 16 value"/>
+		<RemoteServer Name="DI2031.Input17" GUID_Svr="{4C6458C0-EA4F-4040-AB68-6BE6E52BB690}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Input 17 value"/>
+		<RemoteServer Name="DI2031.Input18" GUID_Svr="{AA779C55-7A6C-4481-A962-64A8C8334CB9}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Input 18 value"/>
+		<RemoteServer Name="DI2031.Input19" GUID_Svr="{FF25C82E-A011-4C5B-8635-6F6370AFEEA5}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Input 19 value"/>
+		<RemoteServer Name="DI2031.Input20" GUID_Svr="{8D88D6E9-1F38-493A-83F8-4E3E0BAC5E0A}" DataType="DINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" WriteProtected="true" Comment="Input 20 value"/>
+		<RemoteServer Name="DI2031.InputDouble" GUID_Svr="{69A1DDFA-6F72-40FA-88B9-C56CAD37F5CB}" DataType="BDINT" GUID_Obj="{7609D896-C686-4CE4-8B2E-A0D7A6929F66}" MMType="BDINT" WriteProtected="true" Comment="Bit 0 to 19 ... Input 1 to 20"/>
+		<RemoteServer Name="HwControl1.Control" GUID_Svr="{6E0C095B-B92D-47BE-BA84-39E07206C58D}" Class="HwControlBase" DataType="DINT" GUID_Obj="{E7299562-8F0F-409D-B4C5-73A7E0284B5A}" Type="Object Channel" HasNewInst="true" WriteProtected="true" Comment="connect VaranManager classes"/>
+		<RemoteServer Name="HwControl1.State" GUID_Svr="{662C9213-4BB2-4CC6-AE9F-D19FC74B0F6B}" DataType="t_e_VaranErrors" GUID_Obj="{E7299562-8F0F-409D-B4C5-73A7E0284B5A}" WriteProtected="true" Comment="state of HwControl class"/>
+		<RemoteServer Name="HwControl1.DiasMaster" GUID_Svr="{346AEDBC-831D-4D5C-B71F-A1BF17D120A4}" DataType="DINT" GUID_Obj="{E7299562-8F0F-409D-B4C5-73A7E0284B5A}" Comment="connect to client &apos;to_HWControl&quot; of class DiasMasterC if used (if Server is 1 class is connected)&#13;&#10;"/>
+		<RemoteServer Name="HwControl1.SafetyState" GUID_Svr="{7E088AB6-AB0A-450E-964A-E46FE15A0D4B}" DataType="DINT" GUID_Obj="{E7299562-8F0F-409D-B4C5-73A7E0284B5A}" WriteProtected="true" Comment="Shows state of safety functionality initialisation&#13;&#10;&#13;&#10; 1..OK&#13;&#10; 0..not active or initializing&#13;&#10;-1..failed to allocate memory&#13;&#10;-2..invalid domain number set in this system&#13;&#10;-3..newer OS version required for domain number support&#13;&#10;-4..method to determine domain number not provided by lsl_st_hardwaretree.h&#13;&#10;-5..only 1 instance of safety manager allowed&#13;&#10;-6..a slave system can only have 1 master. check hw class configuration&#13;&#10;-7..invalid module type tried to log in&#13;&#10;-8..couldn&apos;t find InterfaceCRC which is requested by other domain. Check SafetyDesigner projects, most likely the interface variables doesn&apos;t match.&#13;&#10;-9..failed to add a new copy data object to varan manager&#13;&#10;-10..a non-optional module or domain is not available&#13;&#10;-11..timeout in initialisation (see debugger trace or logfile for further details)&#13;&#10;-13..the class safetymanager could not login into the class HwControl."/>
+		<RemoteServer Name="SdiasPLC1.CallCommand" GUID_Svr="{1D4B549F-9FAF-4951-A3A9-982F228F50D2}" DataType="DINT" GUID_Obj="{7400E75A-2A89-4113-BB36-F1D166852B40}" Type="Command Channel" HasNewInst="true" WriteProtected="true" Comment="Command Channel to access the functionality of this class. All methods are access via the NewInst() method of this Server."/>
+		<RemoteServer Name="SdiasPLC1.FirmwareVersion" GUID_Svr="{110EDFDE-5D00-4525-834D-7E99AA65EEF4}" DataType="HDINT" GUID_Obj="{7400E75A-2A89-4113-BB36-F1D166852B40}" WriteProtected="true" Comment="Server shows the actual FW Version of the Module in the format xx.yy&#13;&#10;&#13;&#10;e.g. 16#0130 means v01.30"/>
+		<RemoteServer Name="SdiasPLC1.ClassState" GUID_Svr="{CC338568-5E5E-4B72-BB67-E573CD9CE59F}" DataType="t_e_VaranErrors" GUID_Obj="{7400E75A-2A89-4113-BB36-F1D166852B40}" WriteProtected="true" Comment="Shows the state of the SDIAS Manager."/>
+		<RemoteServer Name="SdiasPLC1.RetryCounter" GUID_Svr="{3BC15DE0-3955-4B15-86D2-18FB43792F0F}" DataType="UDINT" GUID_Obj="{7400E75A-2A89-4113-BB36-F1D166852B40}" WriteProtected="true" Comment="Actual Number of Retries on SDIAS-Bus."/>
+		<RemoteServer Name="SdiasPLC1.IsoWrTaskDuration" GUID_Svr="{107F6C59-3F86-4945-883C-1730324CE708}" DataType="UDINT" GUID_Obj="{7400E75A-2A89-4113-BB36-F1D166852B40}" WriteProtected="true" Comment="time measurement of last iso write task at SDIAS in [µs]"/>
+		<RemoteServer Name="SdiasPLC1.IsoWrTaskMaxDuration" GUID_Svr="{732E66FA-8CD0-4FE7-BB47-F47F45CD63D4}" DataType="UDINT" GUID_Obj="{7400E75A-2A89-4113-BB36-F1D166852B40}" Comment="maximal time measurement of iso write task at SDIAS in [µs]"/>
+		<RemoteServer Name="SdiasPLC1.IsoRdTaskDuration" GUID_Svr="{6DEF0FB2-2B7B-4859-A498-992DF86A9C33}" DataType="UDINT" GUID_Obj="{7400E75A-2A89-4113-BB36-F1D166852B40}" WriteProtected="true" Comment="Time measurement of last iso read task at SDIAS in [µs]&#13;&#10;The measured time could be higher then the calculated time according to bit 4 &#13;&#10;of the manager option bits (0 .. with preprocessor time, 1 .. only execution time)."/>
+		<RemoteServer Name="SdiasPLC1.IsoRdTaskMaxDuration" GUID_Svr="{7407C9C7-AEDD-478D-94B7-18DEC7EA7537}" DataType="UDINT" GUID_Obj="{7400E75A-2A89-4113-BB36-F1D166852B40}" Comment="maximal time measurement of iso read task at SDIAS in [µs]"/>
+		<RemoteServer Name="SdiasPLC1.ManagerOptionBits" GUID_Svr="{1ACFAA3D-1F6C-4193-9962-DACD4520FB4A}" DataType="DINT" GUID_Obj="{7400E75A-2A89-4113-BB36-F1D166852B40}" WriteProtected="true" Comment="Option Bits:&#13;&#10;Bit 0: Interrupts supported&#13;&#10;Bit 1: Half duplex (SDIAS S2), bus scan required&#13;&#10;Bit 2: Far Memory access supported&#13;&#10;Bit 3: Status wait supported (to differ TimeSliceError and TimeSliceErrorIRQ)&#13;&#10;Bit 4: Execution time selection supported&#13;&#10;Bit 5: Task interruption detection supported&#13;&#10;&#13;&#10;"/>
+		<RemoteServer Name="SR0201.ClassState" GUID_Svr="{070CD62D-F011-403B-A668-118E2A1842A7}" Class="SdiasBase" DataType="t_e_VaranErrors" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" Type="Object Channel" HasNewInst="true" WriteProtected="true" Comment="Server shows the current Status of the Hardware Class."/>
+		<RemoteServer Name="SR0201.DeviceID" GUID_Svr="{1F67076F-D511-400A-8CEF-0F0E0579EC0B}" DataType="UDINT" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" WriteProtected="true" Comment="Server shows the DeviceID of the Hardware Module."/>
+		<RemoteServer Name="SR0201.FPGAVersion" GUID_Svr="{D5EF701A-412A-4C34-AA2E-FFC7D82C2F86}" DataType="HDINT" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" WriteProtected="true" Comment="Server shows the actual FPGA Version of the Module in the format x.y&#13;&#10;&#13;&#10;e.g. 16#10 means v1.0"/>
+		<RemoteServer Name="SR0201.HwVersion" GUID_Svr="{6BF31076-362C-4517-9DA7-F776C9F85012}" DataType="HDINT" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" WriteProtected="true" Comment="shows hw version in the format xx.yy (16#0120 means v1.20)"/>
+		<RemoteServer Name="SR0201.SerialNo" GUID_Svr="{68FBC413-E3CB-4059-BC09-1D975B4D4819}" Class="String" DataType="UDINT" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" Type="Object Channel" WriteProtected="true" Comment="Serial number of the Hardware Module."/>
+		<RemoteServer Name="SR0201.RetryCounter" GUID_Svr="{833C80D1-4726-4DCB-B1AB-C268D7D72245}" DataType="UDINT" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" WriteProtected="true" Comment="Number of Retries on SDIAS-Bus."/>
+		<RemoteServer Name="SR0201.LEDControl" GUID_Svr="{FA9DCFC5-B668-4B7B-8E80-E0410DEF9ED8}" DataType="DINT" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" Comment="Sets a LED on Hardware, to detect Module.&#13;&#10;0 ... LED off&#13;&#10;1 ... LED on&#13;&#10;2 ... blinking slow&#13;&#10;3 ... blinking fast"/>
+		<RemoteServer Name="SR0201.SDOState" GUID_Svr="{1C3F8C9A-F083-486D-A096-B459EA29A017}" DataType="iprStates" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" Type="Command Channel" HasNewInst="true" WriteProtected="true" Comment="State of the actual SDO Transmission."/>
+		<RemoteServer Name="SR0201.FirmwareVersion" GUID_Svr="{20910AAF-4461-403C-9B2B-4EDD87ECB06F}" DataType="HDINT" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" WriteProtected="true" Comment="Version of the used firmware"/>
+		<RemoteServer Name="SR0201.ErrorBits" GUID_Svr="{C636C30C-2491-4C12-B617-EE90700D91D5}" DataType="SR020::t_SDIAS_Fw_State_SR" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" WriteProtected="true" Comment="Error Bits:&#13;&#10;Bit0...Not used&#13;&#10;Bit1...No Sync&#13;&#10;Bit2...Flash data CRC error&#13;&#10;Bit3...Ram data CRC error&#13;&#10;Bit4...No valid EEPROM Version&#13;&#10;..&#13;&#10;Bit16..Sequence disabled&#13;&#10;Bit17..Wrong sequence&#13;&#10;Bit18..Absolute time error&#13;&#10;Bit19..Motor current high&#13;&#10;Bit20..Motor current too high&#13;&#10;Bit21..External supply voltage not ok&#13;&#10;Bit22..Motor supply voltage not ok&#13;&#10;Bit23..Periphery reset LED&#13;&#10;Bit24..Periphery reset Motor&#13;&#10;Bit25..Induction voltage too high&#13;&#10;Bit26..Over temperature error&#13;&#10;..&#13;&#10;Bit28..I²T Error&#13;&#10;"/>
+		<RemoteServer Name="SR0201.Led20" GUID_Svr="{4952FC46-601A-4ACD-8DE3-32715E42EC1C}" DataType="DINT" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" Comment="Intensity of the LED (8 Bit Value)."/>
+		<RemoteServer Name="SR0201.Led350" GUID_Svr="{FBE557C2-E061-4010-8765-3239CDF4C48D}" DataType="DINT" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" Comment="Intensity of the LED (8 Bit Value)."/>
+		<RemoteServer Name="SR0201.Enable" GUID_Svr="{D4F6A90D-763E-40F4-90AD-845CDAFE6A59}" DataType="DINT" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" Comment="Server to Enable the DC-Motor&#13;&#10;0 = Disabled&#13;&#10;1 = Enable"/>
+		<RemoteServer Name="SR0201.SetSpeed" GUID_Svr="{C4C3F0CB-31E7-468F-8BCE-3BBA726548AD}" DataType="DINT" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" Comment="Set-Velocity of the Motor. [0.01%]&#13;&#10;Min-Value (negative Direction): -10000 = -100,00%&#13;&#10;Max-Value (positive Direction): 10000  = 100,00%&#13;&#10;"/>
+		<RemoteServer Name="SR0201.MinPulse" GUID_Svr="{F29A3197-B26E-44D6-933C-81E1BE26150F}" DataType="DINT" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" Comment="Minimal Pulsewidth of PWM [0,1%]&#13;&#10;A change of this value will takes action after writing a new value to server SetSpeed."/>
+		<RemoteServer Name="SR0201.MotorCurrent" GUID_Svr="{1A3E7B79-A6C4-481C-915D-7C2E84DA95B5}" DataType="DINT" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" WriteProtected="true" Comment="actual Motor Current [mA]"/>
+		<RemoteServer Name="SR0201.Temperature" GUID_Svr="{10DC733E-42F1-49B0-ACDD-BC9FB3E0D632}" DataType="DINT" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" WriteProtected="true" Comment="actual Temperature of the Module (°C)"/>
+		<RemoteServer Name="SR0201.I2T" GUID_Svr="{D8F24096-C019-4D31-A309-127AE2817976}" DataType="UDINT" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" WriteProtected="true" Comment="actual I²T Value."/>
+		<RemoteServer Name="SR0201.ErrorQuit" GUID_Svr="{A138ABDF-7EE4-4181-ACDC-C09A460A301C}" DataType="DINT" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" Comment="Write 1 to quit the error bits"/>
+		<RemoteServer Name="SR0201.VoltageOk" GUID_Svr="{4C6B6E07-23DF-495B-9EA6-294C395A79D1}" DataType="DINT" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" WriteProtected="true" Comment="Voltage supply is ok"/>
+		<RemoteServer Name="SR0201.VoltageOkMotor" GUID_Svr="{08976ABE-1087-4D65-B17F-64F3494C849D}" DataType="DINT" GUID_Obj="{67A5496D-C512-43AB-B18E-D0D93F890D54}" WriteProtected="true" Comment="Voltage Supply for Motor is Ok"/>
+		<RemoteServer Name="TO1611.ClassState" GUID_Svr="{070CD62D-F011-403B-A668-118E2A1842A7}" Class="SdiasBase" DataType="t_e_VaranErrors" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" Type="Object Channel" HasNewInst="true" WriteProtected="true" Comment="Server shows the current Status of the Hardware Class."/>
+		<RemoteServer Name="TO1611.DeviceID" GUID_Svr="{1F67076F-D511-400A-8CEF-0F0E0579EC0B}" DataType="UDINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" WriteProtected="true" Comment="Server shows the DeviceID of the Hardware Module."/>
+		<RemoteServer Name="TO1611.FPGAVersion" GUID_Svr="{D5EF701A-412A-4C34-AA2E-FFC7D82C2F86}" DataType="HDINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" WriteProtected="true" Comment="Server shows the actual FPGA Version of the Module in the format x.y&#13;&#10;&#13;&#10;e.g. 16#10 means v1.0"/>
+		<RemoteServer Name="TO1611.HwVersion" GUID_Svr="{6BF31076-362C-4517-9DA7-F776C9F85012}" DataType="HDINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" WriteProtected="true" Comment="shows hw version in the format xx.yy (16#0120 means v1.20)"/>
+		<RemoteServer Name="TO1611.SerialNo" GUID_Svr="{68FBC413-E3CB-4059-BC09-1D975B4D4819}" Class="String" DataType="UDINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" Type="Object Channel" WriteProtected="true" Comment="Serial number of the Hardware Module."/>
+		<RemoteServer Name="TO1611.RetryCounter" GUID_Svr="{833C80D1-4726-4DCB-B1AB-C268D7D72245}" DataType="UDINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" WriteProtected="true" Comment="Number of Retries on SDIAS-Bus."/>
+		<RemoteServer Name="TO1611.LEDControl" GUID_Svr="{FA9DCFC5-B668-4B7B-8E80-E0410DEF9ED8}" DataType="DINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" Comment="Sets a LED on Hardware, to detect Module.&#13;&#10;0 ... LED off&#13;&#10;1 ... LED on&#13;&#10;2 ... blinking slow&#13;&#10;3 ... blinking fast"/>
+		<RemoteServer Name="TO1611.SDOState" GUID_Svr="{1C3F8C9A-F083-486D-A096-B459EA29A017}" DataType="iprStates" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" Type="Command Channel" HasNewInst="true" WriteProtected="true" Comment="State of the actual SDO Transmission."/>
+		<RemoteServer Name="TO1611.Output1" GUID_Svr="{A535B172-6509-4D2F-9403-6D76A25EBAB2}" DataType="DINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" Comment="Digital Output 1"/>
+		<RemoteServer Name="TO1611.Output2" GUID_Svr="{08A7B7BF-7444-4F00-A42F-C3B91E1FC977}" DataType="DINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" Comment="Digital Output 2"/>
+		<RemoteServer Name="TO1611.Output3" GUID_Svr="{97021B80-0DEA-4A73-9752-96B36B6B2B6D}" DataType="DINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" Comment="Digital Output 3"/>
+		<RemoteServer Name="TO1611.Output4" GUID_Svr="{B83DA051-C514-415F-B414-2E7A4C67F52A}" DataType="DINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" Comment="Digital Output 4"/>
+		<RemoteServer Name="TO1611.Output5" GUID_Svr="{F39C94BF-9881-432D-B9C9-0BE16D529698}" DataType="DINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" Comment="Digital Output 5"/>
+		<RemoteServer Name="TO1611.Output6" GUID_Svr="{419DED21-ECDC-4290-A3E3-F214FE742F33}" DataType="DINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" Comment="Digital Output 6"/>
+		<RemoteServer Name="TO1611.Output7" GUID_Svr="{0151FAA5-AB72-450E-9D25-DD374BD122BE}" DataType="DINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" Comment="Digital Output 7"/>
+		<RemoteServer Name="TO1611.Output8" GUID_Svr="{629ED003-1CE7-406F-A243-E66325CD076A}" DataType="DINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" Comment="Digital Output 8"/>
+		<RemoteServer Name="TO1611.Output9" GUID_Svr="{172ECE95-D381-46E2-B205-8C0FCFCF1C98}" DataType="DINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" Comment="Digital Output 9"/>
+		<RemoteServer Name="TO1611.Output10" GUID_Svr="{028D539C-1D75-49BE-B037-9FCCEACAA58C}" DataType="DINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" Comment="Digital Output 10"/>
+		<RemoteServer Name="TO1611.Output11" GUID_Svr="{932CF279-7BB4-425A-8212-77CD997D4CCF}" DataType="DINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" Comment="Digital Output 11"/>
+		<RemoteServer Name="TO1611.Output12" GUID_Svr="{F24CCE95-8628-4AAE-A139-D8D11C1760D8}" DataType="DINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" Comment="Digital Output 12"/>
+		<RemoteServer Name="TO1611.Output13" GUID_Svr="{AEAA2D74-3B1D-4DF4-A274-A848D4786748}" DataType="DINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" Comment="Digital Output 13"/>
+		<RemoteServer Name="TO1611.Output14" GUID_Svr="{4447E8E2-E782-44D8-8236-6E1C078E0530}" DataType="DINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" Comment="Digital Output 14"/>
+		<RemoteServer Name="TO1611.Output15" GUID_Svr="{3DD40430-CD20-422C-BC22-94684E5D4185}" DataType="DINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" Comment="Digital Output 15"/>
+		<RemoteServer Name="TO1611.Output16" GUID_Svr="{FDF5B915-2CEE-40EA-B924-E1DAF42E6463}" DataType="DINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" Comment="Digital Output 16"/>
+		<RemoteServer Name="TO1611.OutputWord" GUID_Svr="{7FDBD7FF-D323-44BD-AAD4-1DC8C7A1023C}" DataType="BDINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" MMType="BDINT" Comment="The digital outputs are displayed in this server in a 16-bit field"/>
+		<RemoteServer Name="TO1611.VoltageOkBank1" GUID_Svr="{382154C9-20B2-4EFF-91A5-1800888DAFAD}" DataType="DINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" WriteProtected="true" Comment="Supply voltage ok&#13;&#10;+24V1 (Digital Out 1-8)"/>
+		<RemoteServer Name="TO1611.VoltageOkBank2" GUID_Svr="{F06CD6F6-6DF3-4040-860E-94B0350E38FC}" DataType="DINT" GUID_Obj="{00B4A792-1859-4411-9664-8CBFE3A36FCB}" WriteProtected="true" Comment="Supply voltage ok&#13;&#10;+24V2 (Digital Out 9-16)"/>
+		<RemoteServer Name="_IPConfigIF1mc1.ClassSvr" GUID_Svr="{59A390F3-91B7-4B2D-A6E0-6468470AC799}" Class="NetworkConfig" DataType="DINT" GUID_Obj="{E7E3AA58-5A84-4D52-858B-9EAF99297733}" Type="Object Channel" HasNewInst="true" WriteProtected="true"/>
+		<RemoteServer Name="_IPConfigIF1mc1.IPAddress" GUID_Svr="{DA86FB94-E449-4814-B15F-2A7B43620705}" DataType="HDINT" GUID_Obj="{E7E3AA58-5A84-4D52-858B-9EAF99297733}" Comment="Network Configuration: IP-Address"/>
+		<RemoteServer Name="_IPConfigIF1mc1.SNMask" GUID_Svr="{17FF7BCD-F401-46C6-9904-236CE2A5B038}" DataType="HDINT" GUID_Obj="{E7E3AA58-5A84-4D52-858B-9EAF99297733}" Comment="Network Configuration: Subnet-Mask"/>
+		<RemoteServer Name="_IPConfigIF1mc1.GWAddress" GUID_Svr="{EE2DDCE3-4FD5-4E3F-AF95-F1DBE3EB3B4E}" DataType="HDINT" GUID_Obj="{E7E3AA58-5A84-4D52-858B-9EAF99297733}" Comment="Network Configuration: Gateway-Address"/>
+		<RemoteServer Name="_IPConfigIF1mc1.SetConfig" GUID_Svr="{0ED76C1A-D93C-491F-B0FD-FFACFDFE9CE6}" DataType="NetworkConfig::e_SetOptions" GUID_Obj="{E7E3AA58-5A84-4D52-858B-9EAF99297733}" Comment="Call Write-Methode to set the actual IP-Configuration&#13;&#10;&#13;&#10;1..write the configuration to the autoexec.lsl&#13;&#10;2..set configuration with the OS Interface&#13;&#10;3..write at first the configuration to the autoexec.lsl and afterwards change it with the OS Interface"/>
+		<RemoteServer Name="_IPConfigIF1mc1.GetConfig" GUID_Svr="{87A4A343-AFC5-45CE-853D-9B5CA0A54E53}" DataType="NetworkConfig::e_GetOptions" GUID_Obj="{E7E3AA58-5A84-4D52-858B-9EAF99297733}" Comment="Call Write-Methode to get the actual IP-Configuration&#13;&#10;&#13;&#10;1..read from the autoexec.lsl&#13;&#10;2..read from the OS Interface"/>
+		<RemoteServer Name="UsbSearchFileName1mc1.Data" GUID_Svr="{81990015-D505-4977-9326-733789F9FEAA}" Class="VirtualBaseInit" DataType="UDINT" GUID_Obj="{9CD4469B-046C-4C98-8BD7-BD34768CCA91}" Type="Object Channel" MMType="String"/>
+		<RemoteServer Name="Level_Class1.Level_X_S" GUID_Svr="{294930F6-9DCE-4926-A233-D1476BC88B3D}" DataType="DINT" GUID_Obj="{C5D7A26B-A17E-417E-B0EA-93A9D0D39B0C}"/>
+		<RemoteServer Name="Level_Class1.Level_Y_S" GUID_Svr="{A9EBEE01-DB03-4E84-8485-59931EF4BB64}" DataType="DINT" GUID_Obj="{C5D7A26B-A17E-417E-B0EA-93A9D0D39B0C}"/>
+		<RemoteServer Name="Level_Class1.ZeroPositionX_S" GUID_Svr="{A1D2ACAE-54DE-45DF-A6BF-95DB393CBA51}" DataType="DINT" GUID_Obj="{C5D7A26B-A17E-417E-B0EA-93A9D0D39B0C}"/>
+		<RemoteServer Name="Level_Class1.ZeroPositionY_S" GUID_Svr="{3EA1B879-52AC-4BF4-AAB1-5D80A5F2821E}" DataType="DINT" GUID_Obj="{C5D7A26B-A17E-417E-B0EA-93A9D0D39B0C}"/>
+		<RemoteServer Name="Level_Class1.SetZero_S" GUID_Svr="{B16E1D17-52F9-440C-9340-0D3BAD2C471E}" DataType="DINT" GUID_Obj="{C5D7A26B-A17E-417E-B0EA-93A9D0D39B0C}"/>
+		<RemoteServer Name="NightLight_Class1.NightlightHZS_S" GUID_Svr="{CF0305DE-AE81-4BAD-9447-01E922C9D15D}" DataType="DINT" GUID_Obj="{5A0E9BC4-DFA4-49C4-8956-E0185F0AA449}"/>
+		<RemoteServer Name="Timer_Class1.ClassSvr" GUID_Svr="{B8BC0B1D-52E1-4194-B920-2AEC5B5DCAF2}" Class="Timer_Class" DataType="DINT" GUID_Obj="{56C4DEC9-2C98-470F-9190-6064E8E6CBBB}" Type="Object Channel" WriteProtected="true"/>
+		<RemoteServer Name="Timer_Class1.Nachtmodus_S" GUID_Svr="{4450D9BA-555E-4169-B4B8-20CAEBD2519E}" DataType="DINT" GUID_Obj="{56C4DEC9-2C98-470F-9190-6064E8E6CBBB}"/>
+		<RemoteServer Name="BatterieLow_Error.ClassSvr" GUID_Svr="{BE689487-005D-4C4C-8B98-759BCFF5A930}" Class="_AlarmX0Para" DataType="DINT" GUID_Obj="{1FDC253B-2658-4EB1-B5F4-A0215FC441DC}" Type="Object Channel"/>
+		<RemoteServer Name="AlarmCommunication.ClassSvr" GUID_Svr="{BE689487-005D-4C4C-8B98-759BCFF5A930}" Class="_AlarmX0Para" DataType="DINT" GUID_Obj="{3A3D9FBF-E825-430E-88F9-EFDDD3898420}" Type="Object Channel"/>
+		<RemoteServer Name="_SIG_LSL_CMultimasterState1.Terminal" GUID_Svr="{703A8C69-E610-434A-A566-76AC31FDAE38}" DataType="_SIG_LSL_CMultimasterState::_MMStateSvr" GUID_Obj="{05A75072-960C-427A-BF07-886D906B25DA}" WriteProtected="true"/>
+		<RemoteServer Name="_SIG_LSL_CMultimasterState1.PLC" GUID_Svr="{97119E89-B2D9-484B-B5C6-900947D1F92A}" DataType="_SIG_LSL_CMultimasterState::_MMStateSvr" GUID_Obj="{05A75072-960C-427A-BF07-886D906B25DA}" WriteProtected="true"/>
+		<RemoteServer Name="SyncTimePLC.SyncDate" GUID_Svr="{2AF2D155-09B5-4068-B68C-C099CF73156D}" DataType="HDINT" GUID_Obj="{EAC7E1DA-C454-4C91-8D5A-E20AF6A3B3BC}" Comment="source date (for input)"/>
+		<RemoteServer Name="SyncTimePLC.SyncTime" GUID_Svr="{F191E791-F1DE-4A48-8893-FE7C6584A1E9}" DataType="HDINT" GUID_Obj="{EAC7E1DA-C454-4C91-8D5A-E20AF6A3B3BC}" Comment="source time (for input)"/>
+	</RemoteServers>
+</RemoteStation>

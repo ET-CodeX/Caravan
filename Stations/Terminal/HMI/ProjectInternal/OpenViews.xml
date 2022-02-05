@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<OpenViews>
+	<View Key="Level_NET" Type="0"/>
+	<View Key="LseRtkMain" Type="0"/>
+	<View Key="InputMyIO" Type="2" LineNr="89"/>
+	<View Key="Koordinates_Class" Type="2" LineNr="12"/>
+	<View Key="IPCONF_IPConfigHMI" Type="0"/>
+	<View Key="InputMyIO1" Type="1"/>
+	<View Key="Level_NET" Type="0"/>
+	<Setting Variable="OutputDebugger" Value="8"/>
+</OpenViews>

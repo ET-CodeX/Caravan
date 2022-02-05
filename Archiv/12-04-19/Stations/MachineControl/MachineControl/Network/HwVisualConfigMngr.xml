@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<HwVisualConfigManager>
+	<HwVisualConfig Key="__HW_MAIN_PLC__" DeviceType="CP102" Top="20" Left="20"/>
+	<HwVisualConfig Key="AI0751" Top="177" Left="20"/>
+	<HwVisualConfig Key="AI0881" Top="128.8" Left="20"/>
+	<HwVisualConfig Key="CP102_IOs2" Top="128.8" Left="20"/>
+	<HwVisualConfig Key="DI2031" Top="177" Left="20"/>
+	<HwVisualConfig Key="SR0201" Top="177" Left="20"/>
+	<HwVisualConfig Key="TO1611" Top="177" Left="20"/>
+</HwVisualConfigManager>

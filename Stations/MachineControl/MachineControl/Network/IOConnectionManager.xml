@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<IOConnectionManager Version="2" Detail="0" PLC="">
+	<!-- List of Entries -->
+	<Entry Name="**IOCONN_EMPTY**" Objectsize="284">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="SR0201" Server="Led350" ObjClt="NightLight_Class1" Client="cNightlightSwitch" IOI="Output" Type="Analog" SortIndex="30" KeyName="000002"/>
+			<IOConnection ObjSrv="AI0751" Server="AI6" ObjClt="Battery_Class1" Client="ActualAmps1_C" IOI="Input" Type="Analog" SortIndex="33" KeyName="000003"/>
+			<IOConnection ObjSrv="AI0751" Server="AI4" ObjClt="Battery_Class1" Client="ActualVoltage_C" IOI="Input" Type="Analog" SortIndex="4" KeyName="000004"/>
+			<IOConnection ObjSrv="AI0751" Server="AI1" ObjClt="Battery_Class1" Client="ActualAmps2_C" IOI="Input" Type="Analog" SortIndex="34" KeyName="000005"/>
+			<IOConnection ObjSrv="TO1611" Server="Output16" ObjClt="Grid_Class1" Client="Inverter_C" IOI="Output" Type="Digital" SortIndex="35" KeyName="000006"/>
+			<IOConnection ObjSrv="AI0881" Server="TMP_3" ObjClt="TempControl_Class1" Client="ActualRoomTemp_C" IOI="Input" Type="Analog" SortIndex="7" KeyName="000007"/>
+			<IOConnection ObjSrv="AI0881" Server="TMP_4" ObjClt="TempControl_Class1" Client="ActualUltraheatTemp_C" IOI="Input" Type="Analog" SortIndex="8" KeyName="000008"/>
+			<IOConnection ObjSrv="SR0201" Server="SetSpeed" ObjClt="TempControl_Class1" Client="SetFanSpeed_C" IOI="Output" Type="Analog" SortIndex="9" KeyName="000009"/>
+			<IOConnection ObjSrv="SR0201" Server="Enable" ObjClt="TempControl_Class1" Client="MotorRunStop_C" IOI="Output" Type="Digital" SortIndex="10" KeyName="000010"/>
+			<IOConnection ObjSrv="AI0751" Server="AI5" ObjClt="Grid_Class1" Client="ActualAmps_C" IOI="Input" Type="Analog" SortIndex="15" KeyName="000011"/>
+			<IOConnection ObjSrv="TO1611" Server="Output2" ObjClt="TempControl_Class1" Client="HeaterRun_C" IOI="Output" Type="Digital" SortIndex="12" KeyName="000012"/>
+			<IOConnection ObjSrv="TO1611" Server="Output1" ObjClt="TempControl_Class1" Client="HeaterOn_C" IOI="Output" Type="Digital" SortIndex="13" KeyName="000013"/>
+			<IOConnection ObjSrv="TO1611" Server="Output3" ObjClt="TempControl_Class1" Client="Heater200Watt_C" IOI="Output" Type="Digital" SortIndex="29" KeyName="000015"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="IO_Element" Objectsize="284" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="AI0751" Server="AI2" ObjClt="LevelFilter_Class1" Client="X_IN_C" IOI="Input" Type="Analog" SortIndex="0" KeyName="000000"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="IO_Element0" Objectsize="284" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="AI0751" Server="AI3" ObjClt="LevelFilter_Class1" Client="Y_IN_C" IOI="Input" Type="Analog" SortIndex="1" KeyName="000001"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="IO_Element1" Objectsize="284" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="TO1611" Server="Output5" ObjClt="FreshWaterTank_Class1" Client="Start_Check" IOI="Output" Type="Digital" SortIndex="23" KeyName="000021"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="IO_Element2" Objectsize="284" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="DI2031" Server="Input1" ObjClt="InputChange1" Client="Input1" IOI="Input" Type="Digital" SortIndex="24" KeyName="000022"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="IO_Element3" Objectsize="284" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="DI2031" Server="Input2" ObjClt="InputChange1" Client="Input2" IOI="Input" Type="Digital" SortIndex="25" KeyName="000023"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="IO_Element4" Objectsize="284" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="DI2031" Server="Input3" ObjClt="InputChange1" Client="Input3" IOI="Input" Type="Digital" SortIndex="26" KeyName="000024"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="IO_Element5" Objectsize="284" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="DI2031" Server="Input4" ObjClt="InputChange1" Client="Input4" IOI="Input" Type="Digital" SortIndex="27" KeyName="000025"/>
+		</IOConnections>
+	</Entry>
+	<Entry Name="IO_Element6" Objectsize="284" TempObj="true">
+		<!-- List of Connections -->
+		<IOConnections>
+			<IOConnection ObjSrv="DI2031" Server="Input5" ObjClt="FreshWaterTank_Class1" Client="WaterPump" IOI="Input" Type="Digital" SortIndex="28" KeyName="000026"/>
+		</IOConnections>
+	</Entry>
+	<!-- List of Folders -->
+</IOConnectionManager>

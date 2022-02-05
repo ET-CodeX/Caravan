@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" ?>
+<HWClassInfo>
+  <HWDevice ModuleID="1015" SubModuleID="0x0" ModType="M_SDIAS" Desc="SDIAS DC-Motor Module with 2 x Power LEDs (20mA, 350mA)" OrderNr="20-029-020">
+    <Types>
+      <Device Name="SR020" ClassName="SR020" DisplayGroup="Axis" Default="true" PowerLoss="2500">
+        <Power Voltage="5000" Supply="0" Drain="80"/>
+        <Power Voltage="24000" Supply="0" Drain="20"/>
+      </Device>
+    </Types>
+    <VisualData>
+      <VisualView TypeId="0" Size="10,120">
+        <VisualModule ImgPath=".\S-Dias\S-DIAS Grundmodul.xaml" Position="0,0" Width="12.5" Height="101.8">
+          <!-- Texte -->
+          <VisualTexts>
+            <VisualText Text="SR 020" FontFamily="ARIAL" Italic="true" FontSize="12" ClrForeground="4294967295" FontWeight="1" LineHeight="10" Width="7.94" Height="5.82" Left="4.76" Top="10.05" />
+            <VisualText Text="S" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="9" />
+            <VisualText Text="U" FontFamily="ARIAL" ClrForeground="4294967295" Width="1.59" Height="2.65" Left="0.26" Top="11.64" />
+            <VisualText Text="X1" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="15.61" />
+            <VisualText Text="V+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="17.99" />
+            <VisualText Text="0V" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="21.17" />
+            <VisualText Text="M+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="24.34" />
+            <VisualText Text="M-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="27.52" />
+            <VisualText Text="X2" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="46.3" />
+            <VisualText Text="1+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="48.68" />
+            <VisualText Text="1-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="51.86" />
+            <VisualText Text="2+" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="55.03" />
+            <VisualText Text="2-" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="58.21" />
+            <VisualText Text="X3" FontFamily="ARIAL" ClrForeground="4291330563" ClrBackground="4294967295" Width="3.17" Height="2.38" Left="0.26" Top="76.99" />
+            <VisualText Text="24" FontFamily="ARIAL" ClrForeground="4294967295" Width="2.38" Height="2.65" Left="0.26" Top="79.38" />
+            <VisualText Text="24" FontFamily="ARIAL" ClrForeground="4294967295" Width="2.38" Height="2.65" Left="0.26" Top="82.55" />
+            <VisualText Text="0V" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="85.72" Angle="3" />
+            <VisualText Text="0V" FontFamily="ARIAL" ClrForeground="4294967295" Width="3" Height="2.65" Left="0.26" Top="88.9" />
+          </VisualTexts>
+          <!-- Leds -->
+          <VisualLeds>
+            <VisualLed Description="Module state" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="10.32">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" DataString="SR020.ClassState" Value="0" />
+                </Activator>
+              </Behaviour>
+              <Behaviour ClrForeground="4278255360" Interval="200">
+                <Activator TypeId="4">
+                  <Activator TypeId="1" Value="1" />
+                  <Activator TypeId="3" Negate="true" DataString="SR020.ClassState" Value="0" />
+                </Activator>
+              </Behaviour>
+            </VisualLed>
+            <VisualLed DataString="SR020.LedControl" Description="User" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342216703" Width="1.32" Height="1.32" Left="2.12" Top="12.96">
+              <Behaviour ClrForeground="4278229503">
+                <Activator TypeId="3" DataString="SR020.LedControl" Value="1" />
+              </Behaviour>
+              <Behaviour ClrForeground="4278229503" Interval="500">
+                <Activator TypeId="3" DataString="SR020.LedControl" Value="2" />
+              </Behaviour>
+              <Behaviour ClrForeground="4278229503" Interval="250">
+                <Activator TypeId="3" DataString="SR020.LedControl" Value="3" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X1-->
+            <VisualLed Description="Voltage OK Motor" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342177535" Width="1.32" Height="1.32" Left="2.12" Top="19.31">
+              <Behaviour ClrForeground="4278190335">
+                <Activator TypeId="3" Negate="true" DataString="SR020.VoltageOkMotor" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <VisualLed Description="Motor Enable" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342242560" Width="1.32" Height="1.32" Left="2.12" Top="25.66">
+              <Behaviour ClrForeground="4278255360">
+                <Activator TypeId="3" DataString="SR020.Enable" Value="1" />
+              </Behaviour>
+            </VisualLed>
+            <!-- X3-->
+            <VisualLed Description="Voltage Ok" ImgPath=".\S-Dias\S-DIAS Led.xaml" ClrForeground="1342177535" Width="1.32" Height="1.32" Left="2.12" Top="80.7">
+              <Behaviour ClrForeground="4278190335">
+                <Activator TypeId="3" Negate="true" DataString="SR020.VoltageOk" Value="1" />
+              </Behaviour>
+            </VisualLed>
+          </VisualLeds>
+          <!-- Stecker -->
+          <VisualConnectors>
+            <VisualConnector Description="X1" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="16.93">
+              <ConnectorPin DataString="SR020.VoltageOkMotor" Description="Motor Supply +" TypeId="1" />
+              <ConnectorPin DataString="" Description="GND" TypeId="0" />
+              <ConnectorPin DataString="" Description="Motor +" TypeId="0" />
+              <ConnectorPin DataString="" Description="Motor -" TypeId="0" />
+            </VisualConnector>
+            <VisualConnector Description="X3" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="47.62">
+              <ConnectorPin DataString=""  Description="LED 1+" TypeId="0" />
+              <ConnectorPin DataString="" Description="LED 1-" TypeId="0" />
+              <ConnectorPin DataString="" Description="LED 2+" TypeId="0" />
+              <ConnectorPin DataString="" Description="LED 2-" TypeId="0" />
+            </VisualConnector>
+            <VisualConnector Description="X5" ImgPath=".\S-Dias\S-DIAS Phoenix 4-polig.xaml" Width="7.86" Height="15" Left="3.7" Top="78.32">
+              <ConnectorPin DataString="SR020.VoltageOk" Description="Voltage supply ok" TypeId="1" />
+              <ConnectorPin DataString="SR020.VoltageOk" Description="Voltage supply ok" TypeId="1" />
+              <ConnectorPin DataString="" Description="GND" TypeId="0" />
+              <ConnectorPin DataString="" Description="GND" TypeId="0" />
+            </VisualConnector>
+          </VisualConnectors>
+        </VisualModule>
+      </VisualView>
+    </VisualData>
+  </HWDevice>
+<Class Name="SR020">
+	<Uplink Name="SdiasIn" BusType="SDIAS" PlaceName="Place" />	
+    <!-- General -->
+    <Property Name="Required" Channel="Required" Editor="Combo:1=Module is required;0=Module is not required" Desc="0=module is not required 1=module is required (CPU will crash if module is missing)" />
+    <IOState Name="Class State" Channel="ClassState" Desc="This server shows the status of the hardware class. If the state is not equal than _ClassOK, an error has occurred " Type="" />
+    <IOState Name="Device ID" Channel="DeviceID" IsInfo="true" Type="" Desc="This server shows the device ID  of the hardware module" />
+    <IOState Name="FPGA Version" Channel="FPGAVersion" Format="V{5-8}.{1-4}" IsInfo="true" Desc="Shows the actual FPGA version of the module in the format x.y (e.g. 16#10 means v1.0)" />
+    <IOState Name="Hardware Version" Channel="HwVersion" IsInfo="true" Format="V{9-16}.{5-8}{1-4}" Type="" Desc="Shows the hardware version of the module" /> 
+    <IOState Name="Serial Number" Channel="SerialNo" IsInfo="true" Type="" Desc="This server shows the Serial Number of the hardware module" />
+    <IOState Name="Retry Counter" Channel="RetryCounter" Desc="Is incremented in case of incorrect data transfer." />
+    <Output Name="LED Control" Channel="LEDControl" Type="Digital" Desc="Sets a LED on hardware, to detect module. (0=LED off; 1=LED on; 2=blinking slowly; 3=blinking fast)" />
+ 	
+    <!-- Firmware States -->
+    <IOState Name="Firmware Version" Channel="FirmwareVersion" Format="V{13-16}{9-12}.{5-8}{1-4}" IsInfo="true" Type="Analog" Desc="This server shows the firmware version of the hardware module"/>
+    <IOState Name="Error Bits" Channel="ErrorBits" Type="Analog" Desc="Error bits:&#13;&#10;Bit0...DC not Ok&#13;&#10;Bit1...No Sync&#13;&#10;Bit2...Flash data CRC error&#13;&#10;Bit3...Ram data CRC error&#13;&#10;Bit4...No valid EEPROM Version&#13;&#10;..&#13;&#10;Bit16..Sequence disabled&#13;&#10;Bit17..Wrong sequence&#13;&#10;Bit18..Absolute time error&#13;&#10;Bit19..Motor current high&#13;&#10;Bit20..Motor current too high&#13;&#10;Bit21..External supply voltage not ok&#13;&#10;Bit22..Motor supply voltage not ok&#13;&#10;Bit23..Periphery reset LED&#13;&#10;Bit24..Periphery reset Motor&#13;&#10;Bit25..Induction voltage too high&#13;&#10;Bit26..Over temperature error&#13;&#10;..&#13;&#10;Bit28..I²T Error&#13;&#10;"/>
+     <!-- Module States -->	
+    <IOState Name="Voltage OK"	Channel="VoltageOk"		Desc="Voltage supply is ok"  Type="Digital" />	
+    <IOState Name="Voltage OK Motor"	Channel="VoltageOkMotor"	Desc="Voltage supply for motor ok"  Type="Digital" />	
+   
+    <!-- Motor Settings -->
+    <IOComment Name="-------------------------- Motor ---------------------------" IsInfo="true" Desc=""/>
+    <Property Name="PWM Period" Channel="PWMPeriod" Desc="Periode of pwm-signal [us]" Editor="EditNumber:Signed;Dec"/>
+    <Property Name="i2t threshold" Channel="I2TThreshold" Desc="This client is used to set the I2C threshold in percent of the maximum threshold (maximum allowed I2T value of the hardware). A violation of this threshold causes an I2T error which leads to a switching off of the motor output." Editor="EditNumber:Signed;Dec"/>
+    <Output Name="Enable" Channel="Enable" Desc="0=motor off, 1=motor on" Type="Digital" />	
+    <Output Name="Set Speed" Channel="SetSpeed" Desc="Sets the velocity of the motor. [0,01%] Range:-10000 to 10000 (-100,00% to 100,00%)" Type="Analog" Editor="Range:-10000..10000" />
+    <Output Name="Minimal Pulsewidth" Channel="MinPulse" Desc="minimal pulsewidth of pwm-signal [0,1%] ( 10=1%, 1000=100%)" Type="Analog" Editor="Range:0..1000" />
+    <Input Name="Motor Current" Channel="MotorCurrent" Desc="actual Motor Currnet [mA]" Type="Analog" />
+    <Input Name="Temperature" Channel="Temperature" Desc="actual Temperature of the Module (K)" Type="Analog" />
+    <Input Name="I²T" Channel="I2T" Desc="actual I²T Value." Type="Analog" />	
+    <Output Name="Quit Errors" Channel="ErrorQuit" Desc="Write 1 to quit the error bits" Type="Digital" />    
+
+    <!-- LED Outputs -->
+    <IOComment Name="----------------------- LED Outputs ------------------------" IsInfo="true" Desc=""/>
+    <Output Name="Led 20" Channel="Led20" Desc="Intensity of the LED (8 Bit value)" Type="Analog" />
+    <Output Name="Led 350" Channel="Led350" Desc="Intensity of the LED (8 Bit value)" Type="Analog" />
+
+    <Script Name="SR020">
+<Code>
+def compPost_SR020(element, parameters):
+  
+  if parameters['varanBridge']:
+    parameters['AddToSDiasTime'] = True
+    element['result']['optional'] =  {'PDO': {'Wr':[], 'Rd':[], 'WrDyn':[], 'RdDyn':[]}}    
+    SDIASPDORdAdd(0xE,element)
+    SDIASPDOWrAdd(0xE,element)
+
+</Code>
+    </Script>       
+  </Class>
+</HWClassInfo>

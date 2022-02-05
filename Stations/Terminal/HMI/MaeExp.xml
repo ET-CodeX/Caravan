@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<File CRC="560A25F9" Version="1.1">
+	<Types>
+		<Type Name="_IMA" Datatype="UDINT" TypeId="ENUM">
+			<Elements>
+				<Type Name="IMA_PICTURE" Value="0"/>
+				<Type Name="IMA_WINDOW" Value="1"/>
+				<Type Name="IMA_GLOBAL" Value="2"/>
+				<Type Name="IMA_POPUP" Value="3"/>
+				<Type Name="IMA_SCREENSAVER" Value="4"/>
+				<Type Name="IMA_TOUCHEDITOR" Value="5"/>
+				<Type Name="IMA_OFF_PICTURE" Value="6"/>
+				<Type Name="IMA_OFF_WINDOW" Value="7"/>
+				<Type Name="IMA_NOTHING" Value="8"/>
+			</Elements>
+		</Type>
+	</Types>
+	<Classes>
+		<Class
+			Name     = "_AlarmDisplay"
+			Datatype = "DINT"
+			Base     = "_ScrollArea"
+			Size     = "428"
+			Guid     = "FC597403-EBE4-11D6-8BC9-0048545E8899">
+		</Class>
+		<Class
+			Name     = "_AlarmX0Para"
+			Datatype = "DINT"
+			Size     = "52"
+			Guid     = "858D5524-F314-4ED8-975A-A123450BF12B">
+			<Servers>
+				<Server Name="ClassSvr" Datatype="DINT" Guid="BE689487-005D-4C4C-8B98-759BCFF5A930" WriteProtected="false" IsAlarm="true"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "_Bit32"
+			Datatype = "BDINT"
+			Size     = "12"
+			Guid     = "65E61F61-D785-11D5-8BC6-0048545E8899">
+			<Servers>
+				<Server Name="Data" Datatype="BDINT" Guid="65E61F62-D785-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "_Global"
+			Datatype = "DINT"
+			Size     = "28"
+			Guid     = "AE55EEC1-6C6D-11D5-8BC6-0048545E8899">
+		</Class>
+		<Class
+			Name     = "_IPConfigIF"
+			Datatype = "DINT"
+			Base     = "NetworkConfig"
+			Size     = "336"
+			Guid     = "07B48D02-17AF-40C3-96FF-E8B2AB5A0E3E">
+			<Servers>
+				<Server Name="IPAddress" Datatype="HDINT" Guid="DA86FB94-E449-4814-B15F-2A7B43620705" WriteProtected="false"/>
+				<Server Name="SNMask" Datatype="HDINT" Guid="17FF7BCD-F401-46C6-9904-236CE2A5B038" WriteProtected="false"/>
+				<Server Name="GWAddress" Datatype="HDINT" Guid="EE2DDCE3-4FD5-4E3F-AF95-F1DBE3EB3B4E" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "_IPConfigMain"
+			Datatype = "DINT"
+			Base     = "_Global"
+			Size     = "640"
+			Guid     = "44CBA06A-C6AD-4544-A504-8AF920587BC9">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="AE55EEC2-6C6D-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="NoOfStations" Datatype="DINT" Guid="324F7F7B-3645-46F6-9613-FBADEA1DB64A" WriteProtected="true"/>
+				<Server Name="CmdIPConfig" Datatype="DINT" Guid="3E6ADB55-D39F-4E42-8BBE-627D963EAA94" WriteProtected="false"/>
+				<Server Name="NrLastMessage" Datatype="DINT" Guid="FD087FF5-04BC-41B8-B5B7-B0F3A9452C3A" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "_IPConfigStation"
+			Datatype = "DINT"
+			Size     = "768"
+			Guid     = "C1ECE2CF-38FC-43C6-AB01-A027547A72B2">
+			<Types>
+				<Type Name="DirtyFlags" Datatype="BDINT" TypeId="BIT">
+					<Elements>
+						<Type Name="IPaddress" BitNo="1"/>
+						<Type Name="Subnet" BitNo="2"/>
+						<Type Name="Gateway" BitNo="3"/>
+						<Type Name="Bit4" BitNo="4"/>
+						<Type Name="Bit5" BitNo="5"/>
+						<Type Name="Bit6" BitNo="6"/>
+						<Type Name="Bit7" BitNo="7"/>
+						<Type Name="Bit8" BitNo="8"/>
+						<Type Name="Bit9" BitNo="9"/>
+						<Type Name="Bit10" BitNo="10"/>
+						<Type Name="Bit11" BitNo="11"/>
+						<Type Name="Bit12" BitNo="12"/>
+						<Type Name="Bit13" BitNo="13"/>
+						<Type Name="Bit14" BitNo="14"/>
+						<Type Name="Bit15" BitNo="15"/>
+						<Type Name="Bit16" BitNo="16"/>
+						<Type Name="Bit17" BitNo="17"/>
+						<Type Name="Bit18" BitNo="18"/>
+						<Type Name="Bit19" BitNo="19"/>
+						<Type Name="Bit20" BitNo="20"/>
+						<Type Name="Bit21" BitNo="21"/>
+						<Type Name="Bit22" BitNo="22"/>
+						<Type Name="Bit23" BitNo="23"/>
+						<Type Name="Bit24" BitNo="24"/>
+						<Type Name="Bit25" BitNo="25"/>
+						<Type Name="Bit26" BitNo="26"/>
+						<Type Name="Bit27" BitNo="27"/>
+						<Type Name="Bit28" BitNo="28"/>
+						<Type Name="Bit29" BitNo="29"/>
+						<Type Name="Bit30" BitNo="30"/>
+						<Type Name="Bit31" BitNo="31"/>
+						<Type Name="Bit32" BitNo="32"/>
+					</Elements>
+				</Type>
+				<Type Name="t_e_NET_MODE" Datatype="UDINT" TypeId="ENUM">
+					<Elements>
+						<Type Name="undef" Value="0"/>
+						<Type Name="InitDeviceIP" Value="1"/>
+						<Type Name="DeviceIP" Value="2"/>
+						<Type Name="SoftwareIP" Value="3"/>
+					</Elements>
+				</Type>
+			</Types>
+			<Servers>
+				<Server Name="IPAddress" Datatype="HDINT" Guid="43CE96D5-9987-4C22-92C5-0FDA596A73E3" WriteProtected="false"/>
+				<Server Name="Subnet" Datatype="HDINT" Guid="7D08E9F1-426F-41DB-88C9-55A3A63FC584" WriteProtected="false"/>
+				<Server Name="Gateway" Datatype="HDINT" Guid="1E990D3C-0436-4494-86F4-2F4DA3C1BC18" WriteProtected="false"/>
+				<Server Name="StationNr" Datatype="DINT" Guid="C7CA0CB5-4EE7-4E53-A841-ED493FB94B21" WriteProtected="false"/>
+				<Server Name="StationNrMM" Datatype="DINT" Guid="EF746CB0-826C-4122-9476-4DF28168A00A" WriteProtected="false"/>
+				<Server Name="Timeout" Datatype="DINT" Guid="07111149-CA23-4EE1-9645-FE6EC532D619" WriteProtected="false"/>
+				<Server Name="TimeoutCnt" Datatype="DINT" Guid="CBCBE07A-3F42-4FB4-A8CE-558C231EDA9F" WriteProtected="false"/>
+				<Server Name="NetMode" Datatype="_IPConfigStation::t_e_NET_MODE" Guid="23A507EB-D3EC-4185-92FD-14810EE78D02" WriteProtected="false"/>
+				<Server Name="IsOnlineMM" Datatype="DINT" Guid="1E41BDDC-198A-48C7-953C-3BD76C7E9549" WriteProtected="true"/>
+				<Server Name="InputDirty" Datatype="_IPConfigStation::DirtyFlags" Guid="F7140E16-2B34-4FF8-9C13-A3C9CAE58DEB" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "_LanguageSelection"
+			Datatype = "DINT"
+			Base     = "_ScrollArea2"
+			Size     = "360"
+			Guid     = "BC506192-0C4D-47B6-B2F3-56341A78235C">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="ActPos" Datatype="DINT" Guid="A65B69FA-2E4C-4E59-9092-9E74F4FC9378" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "_Lse"
+			Datatype = "DINT"
+			Size     = "12316"
+			Guid     = "69AE884A-4EC4-11D5-8991-00902787C19C">
+			<Servers>
+				<Server Name="Lse" Datatype="DINT" Guid="69AE884C-4EC4-11D5-8991-00902787C19C" WriteProtected="true"/>
+				<Server Name="Language" Datatype="DINT" Guid="5A275E6B-60CD-11D6-8BC7-0048545E97D3" WriteProtected="false"/>
+				<Server Name="LseVersion" Datatype="DINT" Guid="336DB2C2-835E-11D6-8BC9-0048545E8899" WriteProtected="true"/>
+				<Server Name="CompilerVersion" Datatype="DINT" Guid="336DB2C3-835E-11D6-8BC9-0048545E8899" WriteProtected="true"/>
+				<Server Name="DelayScreenSaver" Datatype="UDINT" Guid="CCBE10A2-A38E-11D6-8BC9-0048545E8899" WriteProtected="false"/>
+				<Server Name="CommaSign" Datatype="DINT" Guid="BFACB9E1-AE90-11D6-8BC7-0048545E97D3" WriteProtected="false"/>
+				<Server Name="AmericanDateFormat" Datatype="DINT" Guid="BFACB9E2-AE90-11D6-8BC7-0048545E97D3" WriteProtected="false"/>
+				<Server Name="GotAlarm" Datatype="DINT" Guid="D64CF384-ECA3-11D6-8BC9-0048545E8899" WriteProtected="false"/>
+				<Server Name="SeekAlgorithm" Datatype="DINT" Guid="D18C0E41-0066-11D7-8BC9-0048545E8899" WriteProtected="false"/>
+				<Server Name="SystemMessage" Datatype="DINT" Guid="18942021-AC79-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="OpSysVersion" Datatype="UDINT" Guid="88B29A81-1128-11D8-8BCB-0048545E8899" WriteProtected="true"/>
+				<Server Name="DirectionOnEnter" Datatype="DINT" Guid="39C27463-199B-11D8-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="CursorWrapHorizontal" Datatype="DINT" Guid="3F363AA4-20CE-11D8-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="CursorWrapVertical" Datatype="DINT" Guid="3F363AA5-20CE-11D8-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="OfflineMode" Datatype="DINT" Guid="FEDBC901-4B3B-11D8-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="NoExternCom" Datatype="DINT" Guid="04FDBB4B-2284-419B-9FCF-4D70757594D9" WriteProtected="false"/>
+				<Server Name="AmericanTimeFormat" Datatype="DINT" Guid="FA0B643A-6BE7-4928-AE60-9739AC13176B" WriteProtected="false"/>
+				<Server Name="ActivateBubbleHelp" Datatype="DINT" Guid="80500B66-87B7-4E40-98F5-AD0F12D50BD1" WriteProtected="false"/>
+				<Server Name="LseProjectRevision" Datatype="HDINT" Guid="012B7219-A4C4-47A3-AF82-AE662F400058" WriteProtected="true"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "_MyIO"
+			Datatype = "DINT"
+			Size     = "52"
+			Guid     = "1DFA17C1-8CBB-11D5-8BC6-0048545E8899">
+		</Class>
+		<Class
+			Name     = "_Screen"
+			Datatype = "DINT"
+			Size     = "60"
+			Guid     = "E741BF68-4F63-11D5-8991-00902787C19C">
+		</Class>
+		<Class
+			Name     = "_ScrollArea"
+			Datatype = "DINT"
+			Base     = "_MyIO"
+			Size     = "336"
+			Guid     = "EF59612C-EA4A-11D6-8BC9-0048545E8899">
+		</Class>
+		<Class
+			Name     = "_ScrollArea2"
+			Datatype = "DINT"
+			Base     = "_ScrollArea"
+			Size     = "344"
+			Guid     = "81244ED8-C9B8-42A6-9A2A-BA97C8E4658E">
+		</Class>
+		<Class
+			Name     = "_SyncTimeHMI"
+			Datatype = "DATE_LSL"
+			Size     = "84"
+			Guid     = "861E4EDF-4F06-4F3E-8390-CB2ECE4E815E">
+			<Servers>
+				<Server Name="sSyncDate" Datatype="DATE_LSL" Guid="3D757C3C-6FDA-4992-BF44-5E487B23E66E" WriteProtected="false"/>
+				<Server Name="sSyncTime" Datatype="TIME_LSL" Guid="1369DF3B-1062-4103-A355-B85C08AAC6B1" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "_SysDateTime"
+			Datatype = "DATE_LSL"
+			Size     = "76"
+			Guid     = "CBF432E1-D3B3-439C-B706-A16641D03D70">
+			<Servers>
+				<Server Name="SysDate" Datatype="DATE_LSL" Guid="0B477768-BD5B-4C0B-BCA5-9E3AA91B2C1D" WriteProtected="false"/>
+				<Server Name="SysTime" Datatype="TIME_LSL" Guid="01AA06EB-72AD-4AE7-ACC7-2A3FF23A3213" WriteProtected="false"/>
+				<Server Name="DayOfWeek" Datatype="DINT" Guid="9932021F-6C7A-41A0-8E00-CEBE786433C1" WriteProtected="true"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "_WeatherForecast"
+			Datatype = "DINT"
+			Size     = "36604"
+			Guid     = "F46C734F-FB64-4FDB-9C50-5985DD84D5CD">
+			<Servers>
+				<Server Name="Status" Datatype="DINT" Guid="A7135D91-020F-425A-9825-FBB953231BC9" WriteProtected="false"/>
+				<Server Name="AutoUpdate" Datatype="UDINT" Guid="4B5CC98F-4D8A-46B3-9159-F9AD99E61132" WriteProtected="false"/>
+				<Server Name="WeatherURL" Datatype="STRING" Guid="51DDB3B2-6BD3-44AB-98EE-098792BAE937" WriteProtected="false"/>
+				<Server Name="Reset_URL" Datatype="DINT" Guid="2BC43699-9FDA-41EF-A88D-082F649C9C87" WriteProtected="false"/>
+				<Server Name="ProxyIsUsed" Datatype="DINT" Guid="600A4703-770D-405D-A239-05F31795417E" WriteProtected="false"/>
+				<Server Name="ProxyAddress" Datatype="STRING" Guid="66381F65-255D-4E92-87AE-3E7B2C59CF90" WriteProtected="false"/>
+				<Server Name="ProxyPort" Datatype="STRING" Guid="14F20765-B17A-4EAB-9795-606A2D484F3A" WriteProtected="false"/>
+				<Server Name="ProxyUser" Datatype="STRING" Guid="CF452DC3-5069-4C22-B75D-E7209D07D9EA" WriteProtected="false"/>
+				<Server Name="ProxyPassword" Datatype="STRING" Guid="9547E044-68A3-439A-875E-B10F129B78DC" WriteProtected="false"/>
+				<Server Name="WeatherUserID" Datatype="STRING" Guid="49B29A40-103F-45C5-97CB-20C00BE39744" WriteProtected="false"/>
+				<Server Name="WeatherLocMode" Datatype="DINT" Guid="7D5AACCC-2252-4A60-9EDF-1F518C80A119" WriteProtected="false"/>
+				<Server Name="WeatherLocID" Datatype="STRING" Guid="8562372D-07EA-4FCE-A96E-1EB9B82049AE" WriteProtected="false"/>
+				<Server Name="WeatherLocName" Datatype="STRING" Guid="3BD42CE9-22BF-4838-97EB-2BEFF5FDDB0E" WriteProtected="false"/>
+				<Server Name="WeatherLocCountry" Datatype="STRING" Guid="0FF3F436-A20F-489A-919A-8DBF2ABFDF7D" WriteProtected="false"/>
+				<Server Name="LastUpdateTime" Datatype="HDINT" Guid="49CF6C80-32D3-49F6-98AA-D6E5AA06235E" WriteProtected="true"/>
+				<Server Name="LastLocationName" Datatype="STRING" Guid="02D58C75-8D08-43D5-8157-134E63CD5E39" WriteProtected="true"/>
+				<Server Name="Day1_DD_MM" Datatype="STRING" Guid="D89A342A-41A4-45DB-BDE4-592545A830DD" WriteProtected="true"/>
+				<Server Name="Day1SymbolCode0" Datatype="DINT" Guid="DA90631A-CE9D-4CC6-962D-FFCDF88565F9" WriteProtected="true"/>
+				<Server Name="Day1WeatherCode0" Datatype="DINT" Guid="43268B7F-3E05-47C4-B605-662AE1C033E4" WriteProtected="true"/>
+				<Server Name="Day1SymbolCode3" Datatype="DINT" Guid="3760BCA2-EECB-4603-B793-1C8FABEEA7AB" WriteProtected="true"/>
+				<Server Name="Day1WeatherCode3" Datatype="DINT" Guid="6BECA2A2-B849-4DC4-B84C-833D482399FD" WriteProtected="true"/>
+				<Server Name="Day1ActTemperature" Datatype="DINT" Guid="783535FE-C493-46A1-A33D-763974F81EA5" WriteProtected="true"/>
+				<Server Name="Day1MinTemperature" Datatype="DINT" Guid="21EA562A-16DB-4733-9B0E-6592022A6070" WriteProtected="true"/>
+				<Server Name="Day1MaxTemperature" Datatype="DINT" Guid="4FBE260A-AF00-432C-B17E-EDCA28ADE0FD" WriteProtected="true"/>
+				<Server Name="Day1WindSpeed" Datatype="DINT" Guid="3A04704D-8400-46D4-A47A-88140CF9D6B9" WriteProtected="true"/>
+				<Server Name="Day1WindDegree" Datatype="DINT" Guid="2F550BB0-BCEF-4DE5-B2A1-B99105290A0B" WriteProtected="true"/>
+				<Server Name="Day1Pressure" Datatype="DINT" Guid="06A29DEB-16C0-4A42-995A-293B348E73E6" WriteProtected="true"/>
+				<Server Name="Day1Humidity" Datatype="DINT" Guid="0C95C533-287A-42EC-B072-4DF2BB681085" WriteProtected="true"/>
+				<Server Name="Day1Cloudcover" Datatype="DINT" Guid="F46E06D3-F179-4EE3-8013-FFB70F635EAD" WriteProtected="true"/>
+				<Server Name="Day2_DD_MM" Datatype="STRING" Guid="9DDA97A9-3608-4E8B-A015-2C8CC30EA0FF" WriteProtected="true"/>
+				<Server Name="Day2SymbolCode" Datatype="DINT" Guid="F1B07D01-8B22-46AC-976E-F7527E17F4FE" WriteProtected="true"/>
+				<Server Name="Day2WeatherCode" Datatype="DINT" Guid="96F95B5A-1B90-4DFD-B6EB-897C979BED4B" WriteProtected="true"/>
+				<Server Name="Day2MinTemperature" Datatype="DINT" Guid="00C51EF5-116B-4425-A0C5-1B3B6F854324" WriteProtected="true"/>
+				<Server Name="Day2MaxTemperature" Datatype="DINT" Guid="C0200F93-4628-4D73-96DF-69083A735C88" WriteProtected="true"/>
+				<Server Name="Day3_DD_MM" Datatype="STRING" Guid="CE1F1241-AA1E-4952-9B68-CAFD9C0529BD" WriteProtected="true"/>
+				<Server Name="Day3SymbolCode" Datatype="DINT" Guid="68349658-8B5A-46A9-B893-AB6DB9DB2E80" WriteProtected="true"/>
+				<Server Name="Day3WeatherCode" Datatype="DINT" Guid="6A0C21BC-C390-4D19-9AB8-44453B7AED0A" WriteProtected="true"/>
+				<Server Name="Day3MinTemperature" Datatype="DINT" Guid="7B2754F2-AD4E-4011-B911-5A7F8C9D5673" WriteProtected="true"/>
+				<Server Name="Day3MaxTemperature" Datatype="DINT" Guid="278CD5CC-6945-4337-A676-6C1E04302BF2" WriteProtected="true"/>
+				<Server Name="Day4_DD_MM" Datatype="STRING" Guid="6B9DB773-F9E9-42E5-BD3A-C347EF8DF822" WriteProtected="true"/>
+				<Server Name="Day4SymbolCode" Datatype="DINT" Guid="09BC2E10-42B9-4755-A19D-B42C995F52AD" WriteProtected="true"/>
+				<Server Name="Day4WeatherCode" Datatype="DINT" Guid="30AEECBA-B92C-4600-B443-0A7D4F693FDD" WriteProtected="true"/>
+				<Server Name="Day4MinTemperature" Datatype="DINT" Guid="096E868C-419D-4542-80BF-07EEF84B2503" WriteProtected="true"/>
+				<Server Name="Day4MaxTemperature" Datatype="DINT" Guid="F6C73B79-F020-4F5E-85EB-D4350A980DEA" WriteProtected="true"/>
+				<Server Name="Day5_DD_MM" Datatype="STRING" Guid="CB236B0D-174D-4081-8F37-087EEF076E04" WriteProtected="true"/>
+				<Server Name="Day5SymbolCode" Datatype="DINT" Guid="93E44DBE-5BC2-4D14-994D-2C0BD44DAF76" WriteProtected="true"/>
+				<Server Name="Day5WeatherCode" Datatype="DINT" Guid="7D53A247-81F4-4DD8-AEE1-696503EF8840" WriteProtected="true"/>
+				<Server Name="Day5MinTemperature" Datatype="DINT" Guid="BAF5DCEA-8A8C-457D-B6D2-587FC402A338" WriteProtected="true"/>
+				<Server Name="Day5MaxTemperature" Datatype="DINT" Guid="E95D2EBA-01F9-434F-A61F-C5B9CC0FF668" WriteProtected="true"/>
+			</Servers>
+			<Objects>
+				<Object Name="Str_Day1_DD_MM" Datatype="StringRAM" Guid="09D5D687-AD24-4EEE-9E04-015DCA30C787"/>
+				<Object Name="Str_Day2_DD_MM" Datatype="StringRAM" Guid="D251C5B5-164C-4511-8B14-110D7EAF21C9"/>
+				<Object Name="Str_Day3_DD_MM" Datatype="StringRAM" Guid="62680236-C46A-4D92-8F5F-F220F46CD053"/>
+				<Object Name="Str_Day4_DD_MM" Datatype="StringRAM" Guid="EC0223FC-8076-4663-A4D0-16C92ECED3CE"/>
+				<Object Name="Str_Day5_DD_MM" Datatype="StringRAM" Guid="12585415-A731-4650-9E2C-073504589FF3"/>
+				<Object Name="Str_LastLocationName" Datatype="StringRAM" Guid="601BA8D8-1928-4F5E-8BC9-4EE5874FFF83"/>
+				<Object Name="Str_ProxyAddress" Datatype="StringRAM" Guid="2AF4F791-C026-4F6C-94E7-5BEEB54324E6"/>
+				<Object Name="Str_ProxyPassword" Datatype="StringRAM" Guid="D93BE7D8-4882-424C-B416-0B513140D223"/>
+				<Object Name="Str_ProxyPort" Datatype="StringRAM" Guid="EB1D78A6-5952-41F6-AF7F-A238A203D931"/>
+				<Object Name="Str_ProxyUser" Datatype="StringRAM" Guid="A5999CE7-E077-40CD-8518-1EDD386CED7B"/>
+				<Object Name="Str_WeatherLocCountry" Datatype="StringRAM" Guid="E40D0819-9147-480C-B904-2194D96A0176"/>
+				<Object Name="Str_WeatherLocID" Datatype="StringRAM" Guid="B8F86278-E02A-44DE-993D-353AEB41C8DB"/>
+				<Object Name="Str_WeatherLocName" Datatype="StringRAM" Guid="8CA6C399-6B6E-42F8-AC2B-F964402EAFEF"/>
+				<Object Name="Str_WeatherURL" Datatype="StringRAM" Guid="9ED94B53-4514-4E2A-8ED8-EEF5F3DCD32C"/>
+				<Object Name="Str_WeatherUserID" Datatype="StringRAM" Guid="92501C43-CD0A-4201-87F7-DDFC2ED8F621"/>
+			</Objects>
+		</Class>
+		<Class
+			Name     = "_WindIndicator"
+			Datatype = "DINT"
+			Base     = "_MyIO"
+			Size     = "64"
+			Guid     = "508CA429-C164-4B5E-9887-AB29EA75A262">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "_XMLReader"
+			Datatype = "DINT"
+			Size     = "208"
+			Guid     = "CB730E08-556E-4C07-8D84-44A3FA315253">
+			<Types>
+				<Type Name="_XML_PARSE_ERROR" Datatype="UDINT" TypeId="ENUM">
+					<Elements>
+						<Type Name="_PARSE_ERR_NONE" Value="0"/>
+						<Type Name="_PARSE_ERR_NO_HEADER" Value="1"/>
+						<Type Name="_PARSE_ERR_UNEXPECTED_SIGN" Value="2"/>
+						<Type Name="_PARSE_ERR_WRONG_SEQUENCE" Value="3"/>
+						<Type Name="_PARSE_ERR_ATTRIBUTE_TWICE" Value="4"/>
+					</Elements>
+				</Type>
+			</Types>
+			<Servers>
+				<Server Name="ErrorState" Datatype="_XMLReader::_XML_PARSE_ERROR" Guid="C380F29C-105B-4B30-B9E6-A040861CE8AC" WriteProtected="true"/>
+				<Server Name="ErrorLine" Datatype="DINT" Guid="893F9669-D799-4587-852F-3B0AD2CF71C4" WriteProtected="true"/>
+				<Server Name="ErrorSign" Datatype="DINT" Guid="2DD88F4F-2369-4734-8061-F600527C3373" WriteProtected="true"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "AlarmDisplayList"
+			Datatype = "DINT"
+			Base     = "_AlarmDisplay"
+			Size     = "4180"
+			Guid     = "B681CDD4-0999-41FE-8CE0-8F1C06B0C4AB">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="SortAlgorithm" Datatype="DINT" Guid="D64CF382-ECA3-11D6-8BC9-0048545E8899" WriteProtected="false"/>
+				<Server Name="Acknowledge" Datatype="DINT" Guid="7FFC4C42-F15A-11D6-8BC9-0048545E8899" WriteProtected="false"/>
+				<Server Name="Delete" Datatype="DINT" Guid="7FFC4C43-F15A-11D6-8BC9-0048545E8899" WriteProtected="false"/>
+				<Server Name="NoActive" Datatype="UDINT" Guid="B3130461-F86D-11D6-8BC9-0048545E8899" WriteProtected="true"/>
+				<Server Name="HelpTxt" Datatype="DINT" Guid="156C30AF-766C-4659-986D-16746F8A50A9" WriteProtected="false"/>
+				<Server Name="AlaTxtShort" Datatype="STRING" Guid="A808CD88-615A-4578-ADD8-AC25A24224BF" WriteProtected="false"/>
+				<Server Name="AlaTxtLong" Datatype="STRING" Guid="25E41461-5DFD-4185-8170-7ABA528154D8" WriteProtected="false"/>
+			</Servers>
+			<Objects>
+				<Object Name="AlarmTxtLong" Datatype="String" Guid="208F6BFE-2253-4340-BA13-3086C0D6CDF0"/>
+				<Object Name="AlarmTxtShort" Datatype="String" Guid="EF10F060-8F73-4E50-8D5A-6F46839DCA5D"/>
+			</Objects>
+		</Class>
+		<Class
+			Name     = "AlarmTitleLine"
+			Datatype = "DINT"
+			Base     = "TitleLine"
+			Size     = "168"
+			Guid     = "52FEF266-85A8-4A66-93CA-8314895EDEF2">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "Client_Splitter_10"
+			Datatype = "DINT"
+			Base     = "Client_Splitter_Base"
+			Size     = "136"
+			Guid     = "913E6D9E-DF21-11D5-B925-0010609208D7">
+			<Servers>
+				<Server Name="To_Splitt" Datatype="DINT" Guid="913E6D82-DF21-11D5-B925-0010609208D7" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "Client_Splitter_Base"
+			Datatype = "DINT"
+			Size     = "16"
+			Guid     = "913E6D81-DF21-11D5-B925-0010609208D7">
+		</Class>
+		<Class
+			Name     = "DisplaySettings"
+			Datatype = "DINT"
+			Base     = "USB_DataExchange"
+			Size     = "2964"
+			Guid     = "85D369AD-5E9E-4A68-A5C3-748BD87F05E5">
+			<Servers>
+				<Server Name="State" Datatype="DINT" Guid="AAD64C7E-579C-4AF2-A2A8-C93E4578886B" WriteProtected="true"/>
+				<Server Name="Brightness" Datatype="DINT" Guid="EEE3950E-30E4-49F5-B4F2-F893767931F7" WriteProtected="false"/>
+				<Server Name="SwitchBacklight" Datatype="DINT" Guid="409AFA9E-4086-4DE5-90C4-0C3802E11F4B" WriteProtected="false"/>
+				<Server Name="ClassState" Datatype="DINT" Guid="88CE3435-E608-4737-8A0F-444F8517D9DC" WriteProtected="true"/>
+				<Server Name="LogoRedPWM" Datatype="DINT" Guid="9B430016-E7E2-49FA-9CB3-27B9FC8E9046" WriteProtected="false"/>
+				<Server Name="LogoGreenPWM" Datatype="DINT" Guid="345941A6-9101-41AB-8AFA-E6B2688EC428" WriteProtected="false"/>
+				<Server Name="LogoBluePWM" Datatype="DINT" Guid="5EA035B0-EC12-4C4C-BED6-3019AA65685A" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "InputMyIO"
+			Datatype = "DINT"
+			Base     = "_MyIO"
+			Size     = "92"
+			Guid     = "7883B54C-6B79-4E2E-BBDC-173BD1AC194B">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="sXDir" Datatype="DINT" Guid="F73E9BCD-8BEB-4365-A018-A53ABFEAF022" WriteProtected="false"/>
+				<Server Name="sYDir" Datatype="DINT" Guid="49EEEFE9-819C-41EB-82B2-13DBF905D947" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "KeyPadANumStdTemplate"
+			Datatype = "DINT"
+			Base     = "_Screen"
+			Size     = "116"
+			Guid     = "8254FBAE-5118-47E0-85A3-4165B6A13265">
+			<Servers>
+				<Server Name="Screen" Datatype="DINT" Guid="E741BF69-4F63-11D5-8991-00902787C19C" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "KeyPadNumStdTemplate"
+			Datatype = "DINT"
+			Base     = "_Screen"
+			Size     = "84"
+			Guid     = "41760293-5BB3-49DF-A348-439291B77F54">
+			<Servers>
+				<Server Name="Screen" Datatype="DINT" Guid="E741BF69-4F63-11D5-8991-00902787C19C" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "MerkerEx"
+			Datatype = "UDINT"
+			Size     = "44"
+			Guid     = "BDB200DC-DF69-42A8-8520-CB45026F10E9">
+			<Servers>
+				<Server Name="m_udLength" Datatype="UDINT" Guid="A501DB60-4755-4B0D-804B-5150CD0ECAC5" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "NetworkConfig"
+			Datatype = "DINT"
+			Size     = "204"
+			Guid     = "C47A4F1B-D744-4F26-882F-1AF550460DCE">
+		</Class>
+		<Class
+			Name     = "ProjectGlobal"
+			Datatype = "DINT"
+			Base     = "_Global"
+			Size     = "316"
+			Guid     = "32CE6A2A-4575-47CD-8859-2C4DBEC739BB">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="AE55EEC2-6C6D-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="ActScreen" Datatype="UDINT" Guid="1342D1AE-314F-4B0F-B51F-58F3FCDB408E" WriteProtected="true"/>
+				<Server Name="ActWindow" Datatype="UDINT" Guid="72DAFE04-32FA-4626-B614-883E53F3DA1F" WriteProtected="true"/>
+				<Server Name="ActIma" Datatype="_IMA" Guid="0D9D98DB-0C25-4949-AB9B-798A21434FFB" WriteProtected="true"/>
+			</Servers>
+			<Objects>
+				<Object Name="OffDate" Datatype="Ram" Guid="98FA88F6-930B-4CC6-8AE9-F02D5DB59415"/>
+				<Object Name="OffTime" Datatype="Ram" Guid="174EEAFB-6D7C-4C2C-84EA-F68038040918"/>
+			</Objects>
+		</Class>
+		<Class
+			Name     = "Ram"
+			Datatype = "DINT"
+			Size     = "20"
+			Guid     = "67843DDE-277A-11D4-83FF-00902787C17B">
+			<Servers>
+				<Server Name="Data" Datatype="DINT" Guid="67843DDF-277A-11D4-83FF-00902787C17B" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "ScreenSaver"
+			Datatype = "DINT"
+			Base     = "_Global"
+			Size     = "100"
+			Guid     = "095A2B2F-C915-4CBE-BC87-32FC19973850">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="AE55EEC2-6C6D-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="sDelayScreenSaver" Datatype="UDINT" Guid="E0810584-0BA8-4A6A-8B5F-F8DF4FA3A4C7" WriteProtected="false"/>
+				<Server Name="sDelayBacklight" Datatype="UDINT" Guid="C7331A94-E56D-4651-A3C1-087A1FAA3F24" WriteProtected="false"/>
+			</Servers>
+			<Objects>
+				<Object Name="DisplaySettings" Datatype="DisplaySettings" Guid="610B353F-145A-4A20-9B3B-E85D152B9433"/>
+			</Objects>
+		</Class>
+		<Class
+			Name     = "String"
+			Datatype = "UDINT"
+			Base     = "StringInternal"
+			Size     = "60"
+			Guid     = "26C84422-A6E4-4372-A53C-A964595DA01D">
+			<Servers>
+				<Server Name="Data" Datatype="STRING" Guid="81990015-D505-4977-9326-733789F9FEAA" WriteProtected="false"/>
+			</Servers>
+			<Objects>
+				<Object Name="MerkerEx0" Datatype="MerkerEx" Guid="53955FF7-8ABE-4B49-B914-227100C3FDEF"/>
+			</Objects>
+		</Class>
+		<Class
+			Name     = "StringInternal"
+			Datatype = "UDINT"
+			Base     = "VirtualBaseInit"
+			Size     = "48"
+			Guid     = "2C12408A-7CCA-458A-912B-98C634EE4BD9">
+		</Class>
+		<Class
+			Name     = "StringRAM"
+			Datatype = "UDINT"
+			Base     = "StringInternal"
+			Size     = "60"
+			Guid     = "98E72A8A-307A-4EB2-9A52-A75C6DC58534">
+			<Servers>
+				<Server Name="Data" Datatype="STRING" Guid="81990015-D505-4977-9326-733789F9FEAA" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "SystemLogging"
+			Datatype = "DINT"
+			Size     = "96"
+			Guid     = "1C76D14C-2FF2-49B0-A195-51D42B5A2F0E">
+			<Servers>
+				<Server Name="ExtLoggingActive" Datatype="DINT" Guid="E458EE41-51F9-468A-9AF2-9A7CDE56DEDC" WriteProtected="false"/>
+				<Server Name="ErrorCnt" Datatype="UDINT" Guid="3A0CB576-5F2E-43DF-8C63-B34FFE12CB27" WriteProtected="true"/>
+				<Server Name="WarningCnt" Datatype="UDINT" Guid="1B4B9142-19DF-472A-8E60-2CE51E0ACD54" WriteProtected="true"/>
+				<Server Name="DebugCnt" Datatype="UDINT" Guid="761F26BF-6F0B-48CF-BAF7-E72478326DAD" WriteProtected="true"/>
+				<Server Name="InfoCnt" Datatype="UDINT" Guid="0856D59F-18B4-4985-BEE4-E0E2B1613E72" WriteProtected="true"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "TCPCommunicationLogViewer"
+			Datatype = "DINT"
+			Base     = "_ScrollArea2"
+			Size     = "1460"
+			Guid     = "14F2219D-3F51-4BAB-A2B6-A091BF152E6A">
+			<Types>
+				<Type Name="t_e_ExportState" Datatype="UDINT" TypeId="ENUM">
+					<Elements>
+						<Type Name="ExportState_NoAction" Value="0"/>
+						<Type Name="ExportState_Start" Value="1"/>
+						<Type Name="ExportState_Ready" Value="2"/>
+						<Type Name="ExportState_WaitTouch" Value="3"/>
+						<Type Name="ExportState_Error" Value="4"/>
+						<Type Name="ExportState_WaitTouch2" Value="5"/>
+					</Elements>
+				</Type>
+			</Types>
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="ActPos" Datatype="DINT" Guid="A65B69FA-2E4C-4E59-9092-9E74F4FC9378" WriteProtected="false"/>
+				<Server Name="TimeStampRelative" Datatype="DINT" Guid="9830934A-280E-46ED-B5F9-7F83982383BC" WriteProtected="false"/>
+				<Server Name="ExportToUSB" Datatype="TCPCommunicationLogViewer::t_e_ExportState" Guid="DE3D52C7-AFE5-42C1-9438-966763768FD0" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "TitleLine"
+			Datatype = "DINT"
+			Base     = "_MyIO"
+			Size     = "168"
+			Guid     = "43A4D0E6-06B3-4310-8B73-4E23587D5F67">
+		</Class>
+		<Class
+			Name     = "TouchCalib"
+			Datatype = "DINT"
+			Base     = "_MyIO"
+			Size     = "252"
+			Guid     = "7EC29653-88B4-4828-8414-BBEB9EB15527">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="1DFA17C2-8CBB-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="Refresh" Datatype="DINT" Guid="4BE2D441-F26E-11D7-8BCB-0048545E8899" WriteProtected="false"/>
+				<Server Name="State" Datatype="DINT" Guid="C7AAF6ED-4FEB-4830-8B03-90902288CDB9" WriteProtected="true"/>
+				<Server Name="SelectOrderNo" Datatype="DINT" Guid="7B24A7B4-5A21-4CA6-BB49-ECCC2B842DC2" WriteProtected="false"/>
+			</Servers>
+		</Class>
+		<Class
+			Name     = "USB_DataExchange"
+			Datatype = "DINT"
+			Size     = "2752"
+			Guid     = "149A4171-9004-41E5-BB80-6A454CB38E21">
+		</Class>
+		<Class
+			Name     = "USBDetection"
+			Datatype = "DINT"
+			Base     = "_Global"
+			Size     = "136"
+			Guid     = "6F90B4C9-9883-4D43-BB9A-1E6758F62D93">
+			<Servers>
+				<Server Name="Server0" Datatype="DINT" Guid="AE55EEC2-6C6D-11D5-8BC6-0048545E8899" WriteProtected="false"/>
+				<Server Name="USBdetected" Datatype="DINT" Guid="DC2ADB7E-DF1C-4F2F-92B9-FD6715CDF71C" WriteProtected="false"/>
+			</Servers>
+			<Objects>
+				<Object Name="USBDriveLetter" Datatype="String" Guid="1C411560-E619-459A-981E-49A8E0D9D73D"/>
+			</Objects>
+		</Class>
+		<Class
+			Name     = "VirtualBaseInit"
+			Datatype = "UDINT"
+			Size     = "12"
+			Guid     = "9FBB5A34-CCCF-441F-A614-0CCECBD76648">
+		</Class>
+	</Classes>
+	<Objects>
+		<Object Name="_BitAlarmTitle" Datatype="_Bit32" Guid="2094671E-A3ED-4628-B4A3-57B86116AB0C"/>
+		<Object Name="_IPConfigIF1" Datatype="_IPConfigIF" Guid="A8EBD23C-9A1E-435E-BEF5-F27E4778C947"/>
+		<Object Name="_IPConfigMain1" Datatype="_IPConfigMain" Guid="305053AF-58C3-4045-8E02-F3C52444321D"/>
+		<Object Name="_IPConfigStationHMI_IF1" Datatype="_IPConfigStation" Guid="65D6A8D4-3151-4C73-88FF-12F3ABFF0B7F"/>
+		<Object Name="_IPConfigStationMC1_IF1" Datatype="_IPConfigStation" Guid="7DC751D1-027D-442F-BDA0-79C4FA14B5C2"/>
+		<Object Name="_LanguageSelection1" Datatype="_LanguageSelection" Guid="304A4FA2-6419-4F1E-88BD-174E69ACF01E"/>
+		<Object Name="_WeatherForecast1" Datatype="_WeatherForecast" Guid="95ACECE1-2DFD-4AA3-A64A-92EB054A1DFC"/>
+		<Object Name="_WindIndicator1" Datatype="_WindIndicator" Guid="D3B2D2BD-5394-4F00-B7A0-402BFF406763"/>
+		<Object Name="_XMLReader1" Datatype="_XMLReader" Guid="EDD2690F-A00E-440E-AF24-366BDA01FE95"/>
+		<Object Name="AlarmCommunication_HMI" Datatype="_AlarmX0Para" Guid="D4A37546-FE6A-40FE-ABA2-DA6D1EFB2A14"/>
+		<Object Name="AlarmDisplayList" Datatype="AlarmDisplayList" Guid="82C16D43-2CD8-42F0-85DD-E06E84AB20D9"/>
+		<Object Name="AlarmTitle" Datatype="AlarmTitleLine" Guid="CF4097D7-B39A-4ACD-A972-C2EF022CFC31"/>
+		<Object Name="CleanScreenTime" Datatype="Ram" Guid="C962473B-7DBE-4C34-854E-1558A9515346"/>
+		<Object Name="Client_Splitter_101" Datatype="Client_Splitter_10" Guid="345885F8-2BF0-4054-859F-F01E005B53DC"/>
+		<Object Name="GlobalScreen1" Datatype="ProjectGlobal" Guid="206CFC57-2AB0-4362-9A36-EF246C884072"/>
+		<Object Name="InputMyIO1" Datatype="InputMyIO" Guid="4BC31467-9A92-4C44-A5CB-DF4663B95321"/>
+		<Object Name="KeyPadANumStdTemplate" Datatype="KeyPadANumStdTemplate" Guid="C8074AFC-739E-4193-A138-7788DA672E6F"/>
+		<Object Name="KeyPadNumStdTemplate" Datatype="KeyPadNumStdTemplate" Guid="3B59F321-6931-43C7-8488-5DAB5333D8EF"/>
+		<Object Name="Lse" Datatype="_Lse" Guid="1BAB91AD-314E-468B-AFDB-0708C6E2B4A0"/>
+		<Object Name="ScreenSaver1" Datatype="ScreenSaver" Guid="CF28FFE3-C049-4A8B-A7BE-45836E9592B7"/>
+		<Object Name="STDTCPCommunicationLogViewer1" Datatype="TCPCommunicationLogViewer" Guid="1ED6B09D-B693-48EA-9082-62EE7AF79F22"/>
+		<Object Name="SyncTimeHMI" Datatype="_SyncTimeHMI" Guid="C34E219B-F9BC-4722-B2DC-94BF36612973"/>
+		<Object Name="SysDateTime" Datatype="_SysDateTime" Guid="0807F2D5-CFA0-4CAE-B6B2-25B6103F551B"/>
+		<Object Name="SystemLogging1" Datatype="SystemLogging" Guid="72200FE4-7DEC-403E-B956-4C7CE2910354"/>
+		<Object Name="TouchCalib1" Datatype="TouchCalib" Guid="721642B9-BB65-48B8-9ACE-815955B26E54"/>
+		<Object Name="USBDetection1" Datatype="USBDetection" Guid="3624207A-5551-4231-8D3C-55F1B65B8246"/>
+		<Object Name="UsbSearchFileName1" Datatype="StringRAM" Guid="7647AC03-8072-4CAE-B17F-D106CCD578BF"/>
+	</Objects>
+	<UnitDefinitions>
+		<UnitGrp Name="Acceleration">
+			<Units>
+				<Unit Name="mmPsec2" Factor="1" Divisor="1"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Angle">
+			<Units>
+				<Unit Name="deg" Factor="1" Divisor="10000"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Area">
+			<Units>
+				<Unit Name="mm2" Factor="1" Divisor="10"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Force">
+			<Units>
+				<Unit Name="kN" Factor="1" Divisor="1000" Base="N"/>
+				<Unit Name="N" Factor="1" Divisor="1"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Length">
+			<Units>
+				<Unit Name="m" Factor="1" Divisor="1000" Base="mm"/>
+				<Unit Name="mm" Factor="1" Divisor="10000"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Memory">
+			<Units>
+				<Unit Name="GB" Factor="1" Divisor="1024" Base="MB"/>
+				<Unit Name="kB" Factor="1" Divisor="1024"/>
+				<Unit Name="MB" Factor="1" Divisor="1024" Base="kB"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Pressure">
+			<Units>
+				<Unit Name="bar" Factor="1" Divisor="1000"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Revolution">
+			<Units>
+				<Unit Name="RPM" Factor="1" Divisor="1000"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Speed">
+			<Units>
+				<Unit Name="mlpmin" Factor="1" Divisor="1"/>
+				<Unit Name="mmpsec" Factor="1" Divisor="10000"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Time">
+			<Units>
+				<Unit Name="hours" Factor="1" Divisor="60" Base="min"/>
+				<Unit Name="min" Factor="1" Divisor="60" Base="secs"/>
+				<Unit Name="ms" Factor="1" Divisor="1"/>
+				<Unit Name="sec" Factor="1" Divisor="1000"/>
+				<Unit Name="secs" Factor="1" Divisor="1000" Base="ms"/>
+			</Units>
+		</UnitGrp>
+		<UnitGrp Name="Volume">
+			<Units>
+				<Unit Name="ccm" Factor="1" Divisor="1"/>
+			</Units>
+		</UnitGrp>
+	</UnitDefinitions>
+</File>

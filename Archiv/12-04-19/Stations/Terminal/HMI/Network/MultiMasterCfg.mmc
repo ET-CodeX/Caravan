@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<MultiMasterMgr>
+	<RemoteStations>
+		<RemoteStation
+			Name     = "MachineControl"
+			PrjRev   = "0.0"
+			Project  = "MachineControl"
+			IP       = "192.168.1.36"
+			Filename = ".\MachineControl\MachineControl\MachineControl.lcp">
+			<RemoteServers>
+				<RemoteServer Name="SyncTimePLC.SyncDate" GUID_Svr="{2AF2D155-09B5-4068-B68C-C099CF73156D}" DataType="HDINT" GUID_Obj="{EAC7E1DA-C454-4C91-8D5A-E20AF6A3B3BC}" Comment="source date (for input)"/>
+				<RemoteServer Name="SyncTimePLC.SyncTime" GUID_Svr="{F191E791-F1DE-4A48-8893-FE7C6584A1E9}" DataType="HDINT" GUID_Obj="{EAC7E1DA-C454-4C91-8D5A-E20AF6A3B3BC}" Comment="source time (for input)"/>
+				<RemoteServer Name="Level_Class1.Level_Y_S" GUID_Svr="{A9EBEE01-DB03-4E84-8485-59931EF4BB64}" DataType="DINT" GUID_Obj="{C5D7A26B-A17E-417E-B0EA-93A9D0D39B0C}"/>
+				<RemoteServer Name="Level_Class1.Level_X_S" GUID_Svr="{294930F6-9DCE-4926-A233-D1476BC88B3D}" DataType="DINT" GUID_Obj="{C5D7A26B-A17E-417E-B0EA-93A9D0D39B0C}"/>
+				<RemoteServer Name="_IPConfigIF1mc1.ClassSvr" GUID_Svr="{59A390F3-91B7-4B2D-A6E0-6468470AC799}" Class="NetworkConfig" DataType="DINT" GUID_Obj="{E7E3AA58-5A84-4D52-858B-9EAF99297733}" Type="Object Channel" HasNewInst="true" WriteProtected="true"/>
+			</RemoteServers>
+		</RemoteStation>
+	</RemoteStations>
+</MultiMasterMgr>

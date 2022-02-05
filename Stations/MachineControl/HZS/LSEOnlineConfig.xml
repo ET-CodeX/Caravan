@@ -1,0 +1,12 @@
+<XML_ONLINE_CONFIGURATION>
+<HEADER VERSION="108"/>
+<SETTINGS>
+<ONLINE>
+<TCPIP ConfigName="Caravan_MC" BUS="3" Password="" IP="192.168.1.36" PORT="1954" SomeFlags="0" PLCID="" Repeater="0" Favorite="0"/>
+</ONLINE>
+<DOWNLOAD/>
+<PROPERTIES DownlEqualOnl="1"/>
+</SETTINGS>
+<TCPIP ConfigName="Caravan_MC" BUS="3" Password="" IP="192.168.1.36" PORT="1954" SomeFlags="0" PLCID="" Repeater="0" Favorite="0"/>
+</XML_ONLINE_CONFIGURATION>
+

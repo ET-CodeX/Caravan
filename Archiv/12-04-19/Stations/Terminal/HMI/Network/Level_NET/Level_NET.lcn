@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="Level_NET" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "InputMyIO1"
+			GUID       = "{4BC31467-9A92-4C44-A5CB-DF4663B95321}"
+			Class      = "InputMyIO"
+			Position   = "(780,150)"
+			Visualized = "true"
+			Remotely   = "true"
+			CyclicTime = "10 ms">
+			<Channels>
+				<Server Name="Refresh"/>
+				<Server Name="Server0"/>
+				<Server Name="sXDir"/>
+				<Server Name="sYDir"/>
+				<Client Name="Lse"/>
+				<Client Name="oc_Grafix"/>
+			</Channels>
+			<!-- List of Networks in this component -->
+			<Networks>
+				<Network>
+					<!-- List of Components in this network -->
+					<Components>
+						<Object Name="_base" GUID="{C3FA2E8F-A7E7-40B0-871E-D42042B6B0ED}" Class="_MyIO">
+							<Channels>
+								<Server Name="Refresh"/>
+								<Server Name="Server0"/>
+								<Client Name="Graphic"/>
+								<Client Name="Lse"/>
+							</Channels>
+						</Object>
+					</Components>
+					<Connections>
+					</Connections>
+				</Network>
+			</Networks>
+		</Object>
+		<Object
+			Name       = "Koordinates_Class1"
+			GUID       = "{76D5F17D-2AF1-48F1-818C-DE5A360B6F4D}"
+			Class      = "Koordinates_Class"
+			Position   = "(2070,150)"
+			Visualized = "false"
+			CyclicTime = "100 ms">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Client Name="Input_X_C"/>
+				<Client Name="Input_Y_C"/>
+				<Client Name="Output_X_C"/>
+				<Client Name="Output_Y_C"/>
+			</Channels>
+		</Object>
+	</Components>
+	<!-- List of multimaster components in this network -->
+	<RemoteComponents>
+		<RemoteObject Name="MachineControl.Level_Class1.Level_X_S" Position="(1620,210)" Station="MachineControl" Server="Level_Class1.Level_X_S" Objectsize="284"/>
+		<RemoteObject Name="MachineControl.Level_Class1.Level_Y_S" Position="(1620,270)" Station="MachineControl" Server="Level_Class1.Level_Y_S" Objectsize="284"/>
+	</RemoteComponents>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+		<Connection Source="InputMyIO1.Lse" Destination="Lse.Lse"/>
+		<Connection Source="Koordinates_Class1.Output_Y_C" Destination="InputMyIO1.sYDir" Vertices="(2070,420),(1336,420),"/>
+		<Connection Source="Koordinates_Class1.Output_X_C" Destination="InputMyIO1.sXDir" Vertices="(2070,360),(1336,360),"/>
+		<Connection Station="MachineControl" RemoteServer="Level_Class1.Level_X_S" Source="Koordinates_Class1.Input_X_C" Destination="MachineControl%Level_Class1%Level_X_S" Vertices="(2070,240),(1920,240),"/>
+		<Connection Station="MachineControl" RemoteServer="Level_Class1.Level_Y_S" Source="Koordinates_Class1.Input_Y_C" Destination="MachineControl%Level_Class1%Level_Y_S" Vertices="(2070,300),(1920,300),"/>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>

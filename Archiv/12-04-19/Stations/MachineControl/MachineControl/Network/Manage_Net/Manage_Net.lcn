@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<Network Name="Manage_Net" Revision="0.0">
+	<!-- List of Components in this network -->
+	<Components>
+		<Object
+			Name       = "Timer_Class1"
+			GUID       = "{56C4DEC9-2C98-470F-9190-6064E8E6CBBB}"
+			Class      = "Timer_Class"
+			Position   = "(1620,630)"
+			Visualized = "true"
+			Remotely   = "true"
+			CyclicTime = "100 µs">
+			<Channels>
+				<Server Name="ClassSvr"/>
+				<Server Name="Nachtmodus_S"/>
+			</Channels>
+		</Object>
+	</Components>
+	<Comments>
+	</Comments>
+	<!-- List of Connections in this network -->
+	<Connections>
+	</Connections>
+	<!-- Headerfiles -->
+	<Options>
+	</Options>
+</Network>
